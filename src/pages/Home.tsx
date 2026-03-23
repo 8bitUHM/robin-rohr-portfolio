@@ -218,10 +218,12 @@ export default function Home() {
               Featured
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-ivory mb-4">
-              Watch &amp; Listen
+              The Power to Choose Courtyard
             </h2>
             <p className="text-ivory/50 max-w-xl mx-auto">
-              Discover Robin&rsquo;s stories and insights in her own words.
+              A courtyard transformed into an inspirational gathering place for
+              students at Campbell High School &mdash; built on the philosophy
+              of Attitudinal Healing.
             </p>
           </div>
           <div className="fade-in fade-in-delay-1 relative">
