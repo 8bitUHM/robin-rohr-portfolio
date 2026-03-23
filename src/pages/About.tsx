@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 export default function About() {
   useScrollAnimation();
+  const [imgLoaded, setImgLoaded] = useState(false);
 
   return (
     <>
@@ -29,11 +31,17 @@ export default function About() {
             <div className="md:col-span-2 fade-in">
               <div className="relative">
                 <div className="absolute -inset-3 bg-gradient-to-br from-teal-600/20 via-gold/10 to-teal-800/20 rounded-3xl blur-sm" />
-                <div className="relative rounded-2xl overflow-hidden shadow-xl ring-1 ring-teal-800/10">
+                <div className="relative rounded-2xl overflow-hidden shadow-xl ring-1 ring-teal-800/10 bg-teal-50">
+                  {!imgLoaded && (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-10 h-10 border-[3px] border-teal-800/10 border-t-teal-800/60 rounded-full animate-spin" />
+                    </div>
+                  )}
                   <img
-                    src="/images/headshot.jpg"
+                    src="/images/headshot.svg"
                     alt="Robin Stephens Rohr"
-                    className="w-full object-cover"
+                    className={`w-full object-cover transition-opacity duration-500 ${imgLoaded ? "opacity-100" : "opacity-0"}`}
+                    onLoad={() => setImgLoaded(true)}
                   />
                 </div>
               </div>
