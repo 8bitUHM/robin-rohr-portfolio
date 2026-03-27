@@ -8,7 +8,7 @@ export default function Contact() {
       {/* Page header */}
       <section className="relative pt-16 pb-10 md:pt-24 md:pb-14 px-6 text-center overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-10 right-1/3 w-72 h-72 bg-teal-200/10 rounded-full blur-3xl" />
+          <div className="absolute top-10 right-1/3 w-72 h-72 bg-navy-200/10 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-1/3 w-64 h-64 bg-gold/5 rounded-full blur-3xl" />
         </div>
         <div className="relative fade-in">
@@ -18,7 +18,7 @@ export default function Contact() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold gradient-text mb-4">
             Contact
           </h1>
-          <p className="text-teal-700/60 text-lg max-w-xl mx-auto leading-relaxed">
+          <p className="text-navy-700/60 text-lg max-w-xl mx-auto leading-relaxed">
             Interested in Robin&rsquo;s work, speaking engagements, or
             collaborations? Reach out below.
           </p>
@@ -67,12 +67,12 @@ export default function Contact() {
             ].map((item, i) => (
               <div
                 key={i}
-                className={`fade-in fade-in-delay-${i + 1} bg-white rounded-2xl p-6 border border-teal-800/5 shadow-sm text-center relative overflow-hidden`}
+                className={`fade-in fade-in-delay-${i + 1} bg-white rounded-2xl p-6 border border-navy-800/5 shadow-sm text-center relative overflow-hidden`}
               >
                 <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
-                <div className="w-12 h-12 rounded-xl bg-teal-800/5 flex items-center justify-center mx-auto mb-3">
+                <div className="w-12 h-12 rounded-xl bg-navy-800/5 flex items-center justify-center mx-auto mb-3">
                   <svg
-                    className="w-5 h-5 text-teal-800/70"
+                    className="w-5 h-5 text-navy-800/70"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -81,25 +81,25 @@ export default function Contact() {
                     {item.icon}
                   </svg>
                 </div>
-                <p className="text-xs text-teal-700/40 font-semibold tracking-wider uppercase mb-1">
+                <p className="text-xs text-navy-700/40 font-semibold tracking-wider uppercase mb-1">
                   {item.label}
                 </p>
-                <p className="text-teal-800 font-bold text-sm">{item.value}</p>
+                <p className="text-navy-800 font-bold text-sm">{item.value}</p>
               </div>
             ))}
           </div>
 
           {/* Form card */}
           <div className="fade-in relative group">
-            <div className="absolute -inset-px bg-gradient-to-br from-teal-600/10 via-gold/5 to-teal-600/10 rounded-[1.75rem] blur-sm" />
-            <div className="relative bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-teal-800/5 overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-800 via-teal-600 to-gold" />
+            <div className="absolute -inset-px bg-gradient-to-br from-navy-600/10 via-gold/5 to-navy-600/10 rounded-[1.75rem] blur-sm" />
+            <div className="relative bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-navy-800/5 overflow-hidden">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-navy-800 via-navy-600 to-gold" />
 
               <div className="text-center mb-10">
-                <h2 className="text-2xl font-bold text-teal-800 mb-2">
+                <h2 className="text-2xl font-bold text-navy-800 mb-2">
                   Send a Message
                 </h2>
-                <p className="text-teal-700/50 text-sm">
+                <p className="text-navy-700/50 text-sm">
                   Fill out the form below and we&rsquo;ll get back to you.
                 </p>
               </div>
@@ -110,50 +110,50 @@ export default function Contact() {
               >
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-semibold text-teal-800 mb-2.5">
+                    <label className="block text-sm font-semibold text-navy-800 mb-2.5">
                       Name
                     </label>
                     <input
                       type="text"
-                      className="w-full px-5 py-3.5 rounded-xl border border-teal-800/10 bg-ivory/80 font-quicksand text-teal-900 placeholder:text-teal-700/30 focus:outline-none focus:ring-2 focus:ring-teal-600/20 focus:border-teal-600/30 transition-all"
+                      className="w-full px-5 py-3.5 rounded-xl border border-navy-800/10 bg-ivory/80 font-quicksand text-navy-900 placeholder:text-navy-700/30 focus:outline-none focus:ring-2 focus:ring-navy-600/20 focus:border-navy-600/30 transition-all"
                       placeholder="Your name"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-teal-800 mb-2.5">
+                    <label className="block text-sm font-semibold text-navy-800 mb-2.5">
                       Email
                     </label>
                     <input
                       type="email"
-                      className="w-full px-5 py-3.5 rounded-xl border border-teal-800/10 bg-ivory/80 font-quicksand text-teal-900 placeholder:text-teal-700/30 focus:outline-none focus:ring-2 focus:ring-teal-600/20 focus:border-teal-600/30 transition-all"
+                      className="w-full px-5 py-3.5 rounded-xl border border-navy-800/10 bg-ivory/80 font-quicksand text-navy-900 placeholder:text-navy-700/30 focus:outline-none focus:ring-2 focus:ring-navy-600/20 focus:border-navy-600/30 transition-all"
                       placeholder="you@example.com"
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-teal-800 mb-2.5">
+                  <label className="block text-sm font-semibold text-navy-800 mb-2.5">
                     Subject
                   </label>
                   <input
                     type="text"
-                    className="w-full px-5 py-3.5 rounded-xl border border-teal-800/10 bg-ivory/80 font-quicksand text-teal-900 placeholder:text-teal-700/30 focus:outline-none focus:ring-2 focus:ring-teal-600/20 focus:border-teal-600/30 transition-all"
+                    className="w-full px-5 py-3.5 rounded-xl border border-navy-800/10 bg-ivory/80 font-quicksand text-navy-900 placeholder:text-navy-700/30 focus:outline-none focus:ring-2 focus:ring-navy-600/20 focus:border-navy-600/30 transition-all"
                     placeholder="What is this regarding?"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-teal-800 mb-2.5">
+                  <label className="block text-sm font-semibold text-navy-800 mb-2.5">
                     Message
                   </label>
                   <textarea
                     rows={5}
-                    className="w-full px-5 py-3.5 rounded-xl border border-teal-800/10 bg-ivory/80 font-quicksand text-teal-900 placeholder:text-teal-700/30 focus:outline-none focus:ring-2 focus:ring-teal-600/20 focus:border-teal-600/30 transition-all resize-none"
+                    className="w-full px-5 py-3.5 rounded-xl border border-navy-800/10 bg-ivory/80 font-quicksand text-navy-900 placeholder:text-navy-700/30 focus:outline-none focus:ring-2 focus:ring-navy-600/20 focus:border-navy-600/30 transition-all resize-none"
                     placeholder="Your message..."
                   />
                 </div>
                 <div className="text-center pt-4">
                   <button
                     type="submit"
-                    className="group/btn inline-flex items-center gap-2 px-10 py-4 bg-teal-800 text-ivory rounded-2xl font-semibold hover:bg-teal-700 transition-all shadow-lg shadow-teal-800/20 hover:shadow-xl hover:shadow-teal-800/25 hover:-translate-y-0.5"
+                    className="group/btn inline-flex items-center gap-2 px-10 py-4 bg-navy-800 text-ivory rounded-2xl font-semibold hover:bg-navy-700 transition-all shadow-lg shadow-navy-800/20 hover:shadow-xl hover:shadow-navy-800/25 hover:-translate-y-0.5"
                   >
                     Send Message
                     <svg
@@ -170,7 +170,7 @@ export default function Contact() {
                       />
                     </svg>
                   </button>
-                  <p className="text-teal-700/35 text-xs mt-5">
+                  <p className="text-navy-700/35 text-xs mt-5">
                     This is a static site &mdash; messages are not submitted.
                   </p>
                 </div>

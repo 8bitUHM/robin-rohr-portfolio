@@ -19,11 +19,11 @@ export default function Layout() {
 
   return (
     <div className="min-h-screen flex flex-col bg-ivory font-quicksand">
-      <header className="sticky top-0 z-50 bg-ivory/80 backdrop-blur-xl border-b border-teal-800/[0.06] shadow-sm shadow-teal-900/[0.03]">
+      <header className="sticky top-0 z-50 bg-ivory/80 backdrop-blur-xl border-b border-navy-800/[0.06] shadow-sm shadow-navy-900/[0.03]">
         <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <NavLink
             to="/"
-            className="text-xl sm:text-2xl font-bold tracking-tight text-teal-800"
+            className="text-xl sm:text-2xl font-bold tracking-tight text-navy-800"
           >
             Robin Stephens Rohr
           </NavLink>
@@ -37,8 +37,8 @@ export default function Layout() {
                   className={({ isActive }) =>
                     `relative px-4 py-2 rounded-xl text-sm font-semibold tracking-wide uppercase transition-all ${
                       isActive
-                        ? "text-teal-800 bg-teal-800/[0.06]"
-                        : "text-teal-700/50 hover:text-teal-800 hover:bg-teal-800/[0.03]"
+                        ? "text-navy-800 bg-navy-800/[0.06]"
+                        : "text-navy-700/50 hover:text-navy-800 hover:bg-navy-800/[0.03]"
                     }`
                   }
                 >
@@ -61,13 +61,13 @@ export default function Layout() {
             aria-label="Toggle menu"
           >
             <span
-              className={`block w-6 h-0.5 bg-teal-800 transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
+              className={`block w-6 h-0.5 bg-navy-800 transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
             />
             <span
-              className={`block w-6 h-0.5 bg-teal-800 transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
+              className={`block w-6 h-0.5 bg-navy-800 transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
             />
             <span
-              className={`block w-6 h-0.5 bg-teal-800 transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+              className={`block w-6 h-0.5 bg-navy-800 transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
             />
           </button>
         </nav>
@@ -83,7 +83,7 @@ export default function Layout() {
                   end={link.to === "/"}
                   className={({ isActive }) =>
                     `block py-2.5 text-sm font-semibold tracking-wide uppercase ${
-                      isActive ? "text-teal-800" : "text-teal-700/60"
+                      isActive ? "text-navy-800" : "text-navy-700/60"
                     }`
                   }
                   onClick={() => setMenuOpen(false)}
@@ -100,7 +100,7 @@ export default function Layout() {
         <Outlet />
       </main>
 
-      <footer className="bg-teal-900 text-ivory">
+      <footer className="bg-navy-900 text-ivory">
         {/* Top decorative border */}
         <div className="h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
 

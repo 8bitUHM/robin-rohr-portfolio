@@ -10,7 +10,7 @@
   body {
     font-family: "Quicksand", sans-serif;
     background-color: #fffdf7;
-    color: #134e4a;
+    color: #142d52;
   }
 }
 
@@ -54,7 +54,7 @@
   }
 
   .gradient-text {
-    background: linear-gradient(135deg, #115e59, #0f766e, #115e59);
+    background: linear-gradient(135deg, #1c3d6e, #234c85, #1c3d6e);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

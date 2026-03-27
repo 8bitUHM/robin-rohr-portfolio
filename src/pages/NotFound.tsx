@@ -7,9 +7,9 @@ export default function NotFound() {
   return (
     <section className="relative py-28 md:py-44 px-6 text-center overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-1/3 w-72 h-72 bg-teal-200/10 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-1/3 w-72 h-72 bg-navy-200/10 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-1/3 w-96 h-96 bg-gold/5 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] border border-teal-800/[0.03] rounded-full" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] border border-navy-800/[0.03] rounded-full" />
       </div>
 
       <div className="max-w-2xl mx-auto relative fade-in">
@@ -19,13 +19,13 @@ export default function NotFound() {
         <h1 className="text-8xl sm:text-9xl font-bold gradient-text mb-6">
           404
         </h1>
-        <p className="text-teal-700/60 text-lg sm:text-xl mb-10 leading-relaxed max-w-md mx-auto">
+        <p className="text-navy-700/60 text-lg sm:text-xl mb-10 leading-relaxed max-w-md mx-auto">
           The page you&rsquo;re looking for doesn&rsquo;t exist or has been
           moved.
         </p>
         <Link
           to="/"
-          className="group inline-flex items-center gap-2 px-8 py-4 bg-teal-800 text-ivory rounded-2xl font-semibold text-sm hover:bg-teal-700 transition-all shadow-lg shadow-teal-800/20 hover:shadow-xl hover:shadow-teal-800/25 hover:-translate-y-0.5"
+          className="group inline-flex items-center gap-2 px-8 py-4 bg-navy-800 text-ivory rounded-2xl font-semibold text-sm hover:bg-navy-700 transition-all shadow-lg shadow-navy-800/20 hover:shadow-xl hover:shadow-navy-800/25 hover:-translate-y-0.5"
         >
           <svg
             className="w-4 h-4 transition-transform group-hover:-translate-x-1"
