@@ -1,18 +1,17 @@
-import { useScrollAnimation } from "../hooks/useScrollAnimation";
-
 export default function Contact() {
-  useScrollAnimation();
-
   return (
     <>
       {/* Page header */}
-      <section className="relative pt-16 pb-10 md:pt-24 md:pb-14 px-6 text-center overflow-hidden">
+      <section
+        id="contact"
+        className="relative pt-12 pb-10 md:pt-20 md:pb-14 px-6 text-center overflow-hidden"
+      >
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-10 right-1/3 w-72 h-72 bg-navy-200/10 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-1/3 w-64 h-64 bg-gold/5 rounded-full blur-3xl" />
         </div>
         <div className="relative fade-in">
-          <p className="text-gold font-semibold tracking-[0.3em] uppercase text-xs mb-4 ornament-line">
+          <p className="text-gold font-semibold tracking-[0.3em] uppercase text-xs mb-4">
             Get in Touch
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold gradient-text mb-4">

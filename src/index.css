@@ -5,12 +5,38 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    font-size: 110%;
+    /* Scales all rem-based type with the viewport for easier reading */
+    font-size: clamp(125%, 0.5rem + 0.85vw, 150%);
+    background-color: #fffdf7;
   }
   body {
     font-family: "Quicksand", sans-serif;
     background-color: #fffdf7;
     color: #142d52;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  section[id] {
+    scroll-margin-top: 2rem;
+  }
+}
+
+@layer components {
+  .section-divider {
+    margin-top: -1px;
+    margin-bottom: -1px;
+    line-height: 0;
+  }
+
+  .section-divider__wave {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    display: block;
+    width: 100%;
+    height: calc(100% + 4px);
   }
 }
 
@@ -32,25 +58,6 @@
   }
   .fade-in-delay-3 {
     transition-delay: 0.45s;
-  }
-
-  .ornament-line {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    justify-content: center;
-  }
-  .ornament-line::before,
-  .ornament-line::after {
-    content: "";
-    height: 1px;
-    width: 3rem;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(200, 168, 78, 0.5),
-      transparent
-    );
   }
 
   .gradient-text {
