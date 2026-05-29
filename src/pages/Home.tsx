@@ -36,8 +36,8 @@ function StatBlock({
     <div
       className={`${showDivider ? "pt-5 border-t border-navy-800/5" : ""} ${align === "right" ? "text-right" : ""}`}
     >
-      <span className="text-4xl font-bold text-navy-800">{value}</span>
-      <span className="block text-sm text-navy-700/75 font-semibold tracking-wider uppercase mt-1">
+      <span className="text-5xl md:text-6xl font-bold text-navy-800">{value}</span>
+      <span className="block text-base sm:text-lg text-navy-700/75 font-bold tracking-wider uppercase mt-1">
         {label}
       </span>
     </div>
@@ -52,7 +52,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-28 pb-16 md:pt-36 md:pb-24 px-6 overflow-hidden">
+      <section className="relative pt-28 pb-0 md:pt-36 md:pb-2 px-6 overflow-hidden bg-ivory">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-20 left-1/4 w-72 h-72 bg-navy-200/10 rounded-full blur-3xl" />
           <div className="absolute bottom-10 right-1/4 w-96 h-96 bg-gold/5 rounded-full blur-3xl" />
@@ -61,19 +61,17 @@ export default function Home() {
         </div>
 
         <div className="max-w-6xl mx-auto relative">
-          <div className="text-center mb-12 md:mb-16">
-            <p className="text-gold font-semibold tracking-[0.3em] uppercase text-sm sm:text-base mb-6 fade-in ornament-line">
+          <div className="text-center mb-16 md:mb-20">
+            <p className="text-gold font-semibold tracking-[0.2em] min-[400px]:tracking-[0.3em] uppercase text-xs min-[400px]:text-sm sm:text-base mb-6 fade-in ornament-line whitespace-nowrap">
               Author &middot; Journalist &middot; Advocate
             </p>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[1.05] fade-in fade-in-delay-1 md:whitespace-nowrap">
-              <span className="gradient-text">Robin Stephens</span>
-              <br className="md:hidden" />
-              {" "}
+            <h1 className="text-3xl min-[400px]:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1.05] fade-in fade-in-delay-1 whitespace-nowrap">
+              <span className="gradient-text">Robin Stephens</span>{" "}
               <span className="text-navy-800">Rohr</span>
             </h1>
-            <blockquote className="fade-in fade-in-delay-2 relative text-[1.35rem] sm:text-[1.65rem] md:text-[2.05rem] lg:text-[2.5rem] text-coral italic font-bold leading-snug mx-auto px-4 sm:px-6 max-w-3xl">
-              <p className="text-center">
-                <span className="block">
+            <blockquote className="fade-in fade-in-delay-2 relative text-[1.15rem] min-[400px]:text-[1.35rem] sm:text-[1.65rem] md:text-[2.05rem] lg:text-[2.5rem] text-coral italic font-bold leading-snug mx-auto px-4 sm:px-6">
+              <p className="flex flex-col items-center">
+                <span className="whitespace-nowrap">
                   <span
                     aria-hidden="true"
                     className="text-[1.4em] text-gold opacity-50 font-serif leading-none inline-block align-[-0.1em] mr-1 sm:mr-2 select-none"
@@ -82,8 +80,10 @@ export default function Home() {
                   </span>
                   There is only one thing in life,
                 </span>
-                <span className="block">and that is the continual renewal</span>
-                <span className="block">
+                <span className="whitespace-nowrap">
+                  and that is the continual renewal
+                </span>
+                <span className="whitespace-nowrap">
                   of inspiration... and creativity.
                   <span
                     aria-hidden="true"
@@ -95,20 +95,22 @@ export default function Home() {
               </p>
             </blockquote>
           </div>
+        </div>
 
-          <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-start fade-in fade-in-delay-3">
-            <div className="relative max-w-md mx-auto md:mx-0 w-full">
+        <div className="relative w-full md:pl-6 lg:pl-10 md:pr-6 lg:pr-10">
+          <div className="grid md:grid-cols-[minmax(0,calc(32rem*0.765))_minmax(0,1fr)] lg:grid-cols-[minmax(0,calc(36rem*0.765))_minmax(0,1.35fr)] gap-12 md:gap-10 items-start fade-in fade-in-delay-3 w-full">
+            <div className="relative w-full max-w-md mx-auto md:mx-0 md:max-w-none">
               <div className="absolute -inset-3 bg-gradient-to-br from-navy-600/20 via-gold/10 to-navy-800/20 rounded-3xl blur-sm" />
-              <div className="relative rounded-2xl overflow-hidden shadow-xl ring-1 ring-navy-800/10 bg-navy-50 aspect-[4/5]">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl ring-1 ring-navy-800/10 bg-navy-50 aspect-[3/5] w-full">
                 {!imgLoaded && (
-                  <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="absolute inset-0 flex items-center justify-center z-10">
                     <div className="w-10 h-10 border-[3px] border-navy-800/10 border-t-navy-800/60 rounded-full animate-spin" />
                   </div>
                 )}
                 <img
                   src={imgSrc}
                   alt="Robin Stephens Rohr"
-                  className={`w-full h-full object-cover transition-opacity duration-500 ${imgLoaded ? "opacity-100" : "opacity-0"}`}
+                  className={`w-full h-full object-cover object-top transition-opacity duration-500 ${imgLoaded ? "opacity-100" : "opacity-0"}`}
                   onLoad={() => setImgLoaded(true)}
                   onError={() => {
                     if (imgSrc !== "/images/headshot.svg") {
@@ -120,28 +122,30 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="text-left space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-coral">
-                My journey
+            <div className="text-left min-w-0 space-y-3 md:space-y-3">
+              <h2 className="site-heading text-coral mb-4 md:mb-6">
+                My Journey
               </h2>
-              <p className="text-navy-800/90 leading-relaxed text-lg sm:text-xl">
-                My journey has been the quest to alleviate human suffering in
-                its many forms and has driven my sense of mission for a
-                lifetime. The potential of the human being to evolve and to
+              <p className="reading-text-narrative">
+                The quest to alleviate human suffering in
+                its many forms has driven my sense of mission for a
+                lifetime. {" "}
+                <br className="hidden lg:block" />
+                The potential of the human being to evolve and to
                 heal is far vaster than ever imagined. Collecting the wisdom
                 filled stories of Elders from many cultures and exploring the modalities of
                 Integrative Medicine, have been a gift for me, and have helped so
                 many others reclaim their lives.
               </p>
-              <div className="bg-navy-50/80 rounded-2xl p-6 border border-navy-800/5 border-l-4 border-l-coral">
-                <p className="text-navy-800/85 leading-relaxed text-lg sm:text-xl italic">
+              <div className="bg-navy-50/80 rounded-2xl p-4 border border-navy-800/5 border-l-4 border-l-coral">
+                <p className="reading-text-narrative-muted italic">
                   As strange as it seems, there is a commonality between
                   collecting the stories of Elder wisdom and pursuing the
                   possibilities that Integrative Medicine presents to us. It
                   seems that these two divergent paths do not have much in
                   common, and yet they both have a mission.
                 </p>
-                <p className="text-navy-800 font-medium leading-relaxed mt-4 text-lg sm:text-xl">
+                <p className="reading-text-narrative text-navy-800 mt-2">
                   I have found that the tools of Integrative Medicine and the
                   gifts of elder wisdom have a common goal.
                 </p>
@@ -151,30 +155,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Wave divider */}
-      <div className="relative h-16 md:h-24 -mb-1">
-        <svg
-          viewBox="0 0 1440 96"
-          fill="none"
-          className="absolute bottom-0 w-full h-full"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0 96V56C240 8 480 0 720 24C960 48 1200 56 1440 32V96H0Z"
-            fill="#eef3fb"
-          />
-        </svg>
-      </div>
+      <SectionDivider
+        from={SECTION_COLORS.ivory}
+        to={SECTION_COLORS.navy50}
+        wave="gentle"
+        className="h-6 md:h-8"
+      />
 
       {/* Theme sections */}
-      <section className="bg-navy-50/50 py-16 md:py-24 px-6">
-        <div className="max-w-4xl mx-auto space-y-16 md:space-y-20">
+      <section className="bg-navy-50 pt-3 pb-6 md:pt-4 md:pb-8 px-6">
+        <div className="max-w-5xl mx-auto site-section-stack">
           <article className="fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold text-coral leading-snug mb-6">
-              The wisdom of our Elders: the power of stories to guide and to
-              heal.
+            <h2 className="site-heading text-coral mb-4 flex justify-center">
+              <span className="inline-block rounded-xl border-4 border-coral/80 px-4 py-2 md:px-5 md:py-3 leading-[1.12] text-center">
+                <span className="block lg:whitespace-nowrap">The Wisdom of our Elders:</span>
+                <span className="block lg:whitespace-nowrap italic">
+                  The &lsquo;Power of Story&rsquo; to Guide and to Heal.
+                </span>
+              </span>
             </h2>
-            <p className="text-navy-800/90 leading-relaxed text-lg sm:text-xl">
+            <p className="reading-text">
               The nervous system can respond to stories as real experiences, and
               they can be transformative to our health and well-being. There is
               impressive research from neuroscience and narrative medicine,
@@ -187,10 +187,13 @@ export default function Home() {
           <div className="w-full h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
 
           <article className="fade-in fade-in-delay-1">
-            <h2 className="text-3xl md:text-4xl font-bold text-coral leading-snug mb-6">
-              Integrative Medicine: Ushering in a new age of possibilities
+            <h2 className="site-heading text-coral mb-4 flex justify-center">
+              <span className="leading-[1.12] text-center">
+                <span className="block lg:whitespace-nowrap">Integrative Medicine: Ushering in</span>
+                <span className="block lg:whitespace-nowrap italic">A New Age of Possibilities</span>
+              </span>
             </h2>
-            <p className="text-navy-700/80 italic leading-relaxed text-lg sm:text-xl">
+            <p className="reading-text-muted italic">
               Content coming soon.
             </p>
           </article>
@@ -198,17 +201,18 @@ export default function Home() {
       </section>
 
       {/* Work layout */}
-      <section className="bg-navy-50/50 pb-20 md:pb-28 px-6 relative">
+      <section className="bg-navy-50 pb-6 md:pb-8 px-6 relative">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-64 h-64 bg-gold/5 rounded-full blur-3xl" />
         </div>
 
-        <div className="max-w-6xl mx-auto relative space-y-8">
+        <div className="relative w-full md:pl-6 lg:pl-10 md:pr-6 lg:pr-10">
+        <div className="relative space-y-6 w-full">
           {/* Books — full width */}
           <div className="fade-in group bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-navy-800/5 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-navy-800 via-navy-600 to-navy-400" />
             <div className="mb-8">
-              <p className="text-gold font-semibold tracking-[0.2em] uppercase text-lg sm:text-xl md:text-2xl mb-3">
+              <p className="text-gold font-bold tracking-[0.2em] uppercase text-3xl md:text-4xl lg:text-4xl leading-snug mb-3">
                 Best Selling Author
               </p>
               <div className="h-1 bg-gradient-to-r from-navy-800 via-navy-600 to-navy-400 rounded-full" />
@@ -230,12 +234,12 @@ export default function Home() {
             </div>
 
             <div className="space-y-10 lg:space-y-12">
-              <div className="grid lg:grid-cols-[1fr_11rem] lg:gap-x-10 lg:items-stretch gap-4">
-                <div className="text-navy-700/65 leading-relaxed text-lg sm:text-xl">
-                  <h3 className="text-2xl font-bold text-navy-800 mb-3">
+              <div className="grid lg:grid-cols-[1fr_13rem] lg:gap-x-10 lg:items-stretch gap-4">
+                <div>
+                  <h3 className="site-subheading text-navy-800 mb-3">
                     Powerstones: Letters to a Goddess
                   </h3>
-                  <p>
+                  <p className="reading-text">
                     Fascinated by Hawaiian Culture, Robin Co-Authored the
                     Bestseller{" "}
                     <em className="text-navy-800/90">
@@ -261,12 +265,12 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="grid lg:grid-cols-[1fr_11rem] lg:gap-x-10 lg:items-stretch gap-4">
-                <div className="text-navy-700/65 leading-relaxed text-lg sm:text-xl">
-                  <h3 className="text-2xl font-bold text-navy-800 mb-3">
+              <div className="grid lg:grid-cols-[1fr_13rem] lg:gap-x-10 lg:items-stretch gap-4">
+                <div>
+                  <h3 className="site-subheading text-navy-800 mb-3">
                     Chicken Soup from the Soul of Hawai&rsquo;i
                   </h3>
-                  <p>
+                  <p className="reading-text">
                     Her next project documented the inspirational stories of
                     beloved Island elders, resulting in{" "}
                     <em className="text-navy-800/90">
@@ -278,7 +282,7 @@ export default function Home() {
                     the Wai&rsquo;anae Coast and in Hawai&rsquo;i&rsquo;s public
                     schools.
                   </p>
-                  <p className="mt-4">
+                  <p className="reading-text mt-4">
                     This celebrated book was the culmination of a five year
                     journey of gathering stories from Hawai&rsquo;i&rsquo;s
                     finest storytellers. It is a remarkable collection of Island
@@ -299,10 +303,10 @@ export default function Home() {
                 {testimonials.map((t, i) => (
                   <blockquote
                     key={i}
-                    className="border-l-2 border-gold/30 pl-4 italic text-navy-800/85 text-lg sm:text-xl"
+                    className="border-l-2 border-gold/30 pl-4 reading-text-muted italic"
                   >
                     <p>&ldquo;{t.quote}&rdquo;</p>
-                    <footer className="mt-2 text-navy-800 font-semibold not-italic text-base sm:text-lg">
+                    <footer className="reading-text mt-2 not-italic">
                       &mdash; {t.author}
                     </footer>
                   </blockquote>
@@ -330,13 +334,13 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-navy-800 mb-3">Column</h3>
-              <p className="text-navy-800/90 leading-relaxed text-lg sm:text-xl mb-4">
+              <h3 className="site-subheading text-navy-800 mb-3">Column</h3>
+              <p className="reading-text mb-4">
                 A weekly storytelling column reaching over 285,000 families
                 across the Hawaiian islands. For over seven years, its readership
                 has been delighted and uplifted by these inspirational stories.
               </p>
-              <p className="text-navy-700/80 italic text-lg mb-6">
+              <p className="reading-text-muted italic mb-6">
                 Quote coming soon.
               </p>
               <StatBlock value="285K" label="Families Reached" />
@@ -359,20 +363,21 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-navy-800 mb-3">
+              <h3 className="site-subheading text-navy-800 mb-3">
                 Integrative Medicine
               </h3>
-              <p className="text-navy-800/90 leading-relaxed text-lg sm:text-xl mb-4">
+              <p className="reading-text mb-4">
                 Over two decades of work in integrative medicine, including
                 collaborating with MDs and PAs in a hospital setting, utilizing
                 microcurrent technology for the alleviation of chronic pain.
               </p>
-              <p className="text-navy-700/80 italic text-lg mb-6">
+              <p className="reading-text-muted italic mb-6">
                 Content coming soon.
               </p>
               <StatBlock value="20+" label="Years of Service" />
             </div>
           </div>
+        </div>
         </div>
       </section>
 
@@ -380,6 +385,7 @@ export default function Home() {
         from={SECTION_COLORS.navy50}
         to={SECTION_COLORS.navy900}
         wave="deep"
+        className="h-10 md:h-14"
       />
 
       <Media />
@@ -388,18 +394,19 @@ export default function Home() {
         from={SECTION_COLORS.navy900}
         to={SECTION_COLORS.ivory}
         wave="gentle"
+        className="h-10 md:h-14"
       />
 
       {/* Additional info */}
       <section
         id="closing"
-        className="relative py-20 md:py-28 px-6 bg-ivory overflow-hidden"
+        className="relative site-section-y px-6 bg-ivory overflow-hidden"
       >
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-navy-100/30 rounded-full blur-3xl" />
         </div>
-        <div className="max-w-3xl mx-auto relative fade-in">
-          <p className="text-navy-800/90 leading-relaxed text-lg sm:text-xl text-center">
+        <div className="max-w-5xl mx-auto relative fade-in">
+          <p className="reading-text text-center">
             The wisdom of our elders, and the possibilities that Integrative
             medicine is bringing into our lives for the betterment of humanity,
             will &ldquo;echo throughout eternity.&rdquo; My journey of seeking

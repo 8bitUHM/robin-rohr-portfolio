@@ -17,7 +17,7 @@ export default function Contact() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold gradient-text mb-4">
             Contact
           </h1>
-          <p className="text-navy-700/60 text-lg max-w-xl mx-auto leading-relaxed">
+          <p className="reading-text max-w-xl mx-auto text-center">
             Interested in Robin&rsquo;s work, speaking engagements, or
             collaborations? Reach out below.
           </p>
@@ -95,7 +95,7 @@ export default function Contact() {
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-navy-800 via-navy-600 to-gold" />
 
               <div className="text-center mb-10">
-                <h2 className="text-2xl font-bold text-navy-800 mb-2">
+                <h2 className="site-subheading text-navy-800 mb-2">
                   Send a Message
                 </h2>
                 <p className="text-navy-700/50 text-sm">

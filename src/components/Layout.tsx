@@ -1,11 +1,14 @@
 import { Outlet } from "react-router-dom";
 
+import CoralColorPlayground from "./CoralColorPlayground";
+
 const LINKEDIN_URL =
   "https://www.linkedin.com/in/robin-stephens-rohr-631418287?utm_source=share_via&utm_content=profile&utm_medium=member_ios";
 
 export default function Layout() {
   return (
     <div className="min-h-screen flex flex-col bg-ivory font-quicksand">
+      <CoralColorPlayground />
       <main className="flex-1">
         <Outlet />
       </main>
@@ -13,13 +16,13 @@ export default function Layout() {
       <footer className="bg-navy-900 text-ivory">
         <div className="h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
 
-        <div className="max-w-6xl mx-auto px-6 pt-16 pb-10">
-          <div className="grid sm:grid-cols-2 gap-12 sm:gap-8 mb-14">
+        <div className="max-w-6xl mx-auto px-6 pt-8 pb-8">
+          <div className="grid sm:grid-cols-2 gap-8 sm:gap-6 mb-8">
             <div>
-              <p className="text-coral font-bold text-2xl tracking-tight mb-4">
+              <p className="text-coral font-bold site-heading tracking-tight mb-4">
                 Robin Stephens Rohr
               </p>
-              <p className="text-ivory/75 text-base sm:text-lg leading-relaxed">
+              <p className="reading-text-on-dark">
                 Author, journalist, and integrative health advocate based in
                 Hawai&rsquo;i.
               </p>
@@ -33,7 +36,7 @@ export default function Layout() {
                 href={LINKEDIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-ivory/85 hover:text-coral transition-colors text-base sm:text-lg font-medium"
+                className="inline-flex items-center gap-2 text-ivory/90 hover:text-coral transition-colors text-base sm:text-lg font-bold"
               >
                 <svg
                   className="w-6 h-6 shrink-0"

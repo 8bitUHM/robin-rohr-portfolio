@@ -2,11 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --coral: 245 124 53; /* #F57C35 */
+  --coral-dark: 224 106 36; /* #E06A24 */
+  --coral-light: 255 160 96; /* #FFA060 */
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
-    /* Scales all rem-based type with the viewport for easier reading */
-    font-size: clamp(125%, 0.5rem + 0.85vw, 150%);
+    /* ~80% of prior scale — matches 80% browser zoom at 100% zoom */
+    font-size: clamp(100%, 0.4rem + 0.68vw, 120%);
     background-color: #fffdf7;
   }
   body {
@@ -23,6 +29,43 @@
 }
 
 @layer components {
+  .reading-text {
+    @apply text-3xl md:text-4xl font-bold leading-snug text-navy-800/90;
+  }
+
+  .reading-text-muted {
+    @apply text-3xl md:text-4xl font-bold leading-snug text-navy-800/85;
+  }
+
+  .reading-text-on-dark {
+    @apply text-3xl md:text-4xl font-bold leading-snug text-ivory/90;
+  }
+
+  .reading-text-narrative {
+    @apply text-3xl md:text-4xl font-bold leading-snug text-navy-800/90;
+  }
+
+  .reading-text-narrative-muted {
+    @apply text-3xl md:text-4xl font-bold leading-snug text-navy-800/85;
+  }
+
+  .site-heading {
+    @apply text-4xl md:text-5xl font-bold leading-snug;
+  }
+
+  .site-subheading {
+    @apply text-4xl md:text-5xl font-bold leading-snug;
+  }
+
+  /* Tighter vertical rhythm below the hero / elders intro */
+  .site-section-y {
+    @apply py-6 md:py-8;
+  }
+
+  .site-section-stack {
+    @apply space-y-8 md:space-y-10;
+  }
+
   .section-divider {
     margin-top: -1px;
     margin-bottom: -1px;

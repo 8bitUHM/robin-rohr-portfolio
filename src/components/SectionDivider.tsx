@@ -13,8 +13,8 @@ const WAVE_PATHS: Record<WaveShape, string> = {
 
 export const SECTION_COLORS = {
   ivory: "#FFFDF7",
-  navy50: "#eef3fb",
-  navy900: "#142d52",
+  navy50: "#EEF3FB",
+  navy900: "#142D52",
 } as const;
 
 type SectionDividerProps = {
@@ -32,7 +32,7 @@ export default function SectionDivider({
 }: SectionDividerProps) {
   return (
     <div
-      className={`section-divider relative block h-20 md:h-28 ${className}`}
+      className={`section-divider relative block ${className || "h-20 md:h-28"}`}
       style={{ backgroundColor: from }}
       aria-hidden
     >

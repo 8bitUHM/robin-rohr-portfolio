@@ -14,9 +14,9 @@ export default {
           dark: "#A08530",
         },
         coral: {
-          DEFAULT: "#F57C35",
-          dark: "#E06A24",
-          light: "#FFA060",
+          DEFAULT: "rgb(var(--coral) / <alpha-value>)",
+          dark: "rgb(var(--coral-dark) / <alpha-value>)",
+          light: "rgb(var(--coral-light) / <alpha-value>)",
         },
         navy: {
           50: "#eef3fb",

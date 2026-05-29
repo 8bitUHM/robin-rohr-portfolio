@@ -37,12 +37,12 @@ export default function About() {
 
           {/* Title + narrative */}
           <div className="md:col-span-3">
-            <h2 className="fade-in text-4xl sm:text-5xl font-bold gradient-text tracking-tight mb-6 md:mb-8">
+            <h2 className="fade-in site-heading gradient-text tracking-tight mb-6 md:mb-8">
               My Journey
             </h2>
 
-            <div className="space-y-6 text-navy-700/80 leading-relaxed text-base sm:text-lg">
-              <p className="fade-in text-xl sm:text-2xl text-navy-800/90 font-medium leading-relaxed">
+            <div className="space-y-6">
+              <p className="fade-in reading-text">
                 Author and journalist Robin Stephens Rohr holds a
                 Master&rsquo;s in Psychology and focuses her work on
                 science-based, cutting-edge technologies to heal and to
@@ -51,19 +51,19 @@ export default function About() {
 
               <div className="fade-in fade-in-delay-1 w-16 h-px bg-gradient-to-r from-gold/60 to-transparent my-8" />
 
-              <p className="fade-in fade-in-delay-1">
+              <p className="fade-in fade-in-delay-1 reading-text">
                 Fascinated by Hawaiian culture, she co-authored the bestseller{" "}
-                <em className="text-navy-800/90 font-medium">
+                <em className="text-navy-800/90">
                   Powerstones: Letters to a Goddess
                 </em>{" "}
                 &mdash; a provocative book set against Hawaiian mythology that
                 queries some of the finest minds of our time about the power of
                 belief in creating our lives.
               </p>
-              <p className="fade-in fade-in-delay-2">
+              <p className="fade-in fade-in-delay-2 reading-text">
                 Her next project documented the inspirational stories of
                 beloved Island elders, resulting in{" "}
-                <em className="text-navy-800/90 font-medium">
+                <em className="text-navy-800/90">
                   Chicken Soup from the Soul of Hawai&rsquo;i: Stories of Aloha
                   to Create Paradise Wherever You Are
                 </em>{" "}
@@ -92,16 +92,16 @@ export default function About() {
                 </div>
               </div>
 
-              <p className="fade-in">
+              <p className="fade-in reading-text">
                 Robin produces a weekly storytelling column,{" "}
-                <em className="text-navy-800/90 font-medium">
+                <em className="text-navy-800/90">
                   Chasing The Light
                 </em>
                 , that for seven years has reached almost 300,000 families in
                 Hawai&rsquo;i &mdash; stories that uplift, inspire, and
                 celebrate the &ldquo;ah-ha&rdquo; moments in human experience.
               </p>
-              <p className="fade-in">
+              <p className="fade-in reading-text">
                 Over two decades, Robin has been drawn to integrative medicine.
                 In 2011, she joined a three-star general and community leaders
                 to launch a hospital program using microcurrent technology on
@@ -109,7 +109,7 @@ export default function About() {
                 depression, and insomnia. She led the program for a decade
                 alongside MDs, PAs, and Acupuncturists.
               </p>
-              <p className="fade-in">
+              <p className="fade-in reading-text">
                 She is now collaborating with Terry Shintani, MD, JD, MPH
                 &mdash; an official Living Treasure of Hawai&rsquo;i &mdash; on
                 a research initiative targeting Hawai&rsquo;i&rsquo;s diabetic

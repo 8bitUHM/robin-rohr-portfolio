@@ -1,31 +1,54 @@
 import { useState } from "react";
 
-const articles = [
+type Article = {
+  title: string;
+  file: string;
+  desc: string;
+  type: "pdf" | "image";
+};
+
+const articles: Article[] = [
   {
     title: "Chasing The Light — Column I",
     file: "/images/Midweek 1.pdf",
+    type: "pdf",
     desc: "A weekly storytelling column featured in MidWeek, reaching families across the Hawaiian Islands.",
   },
   {
     title: "Chasing The Light — Column II",
     file: "/images/Midweek 2.pdf",
+    type: "pdf",
     desc: "Stories that uplift, inspire, and celebrate the quiet \u201cah-ha\u201d moments in human experience.",
   },
   {
     title: "Chasing The Light — Column III",
     file: "/images/Midweek 3.pdf",
+    type: "pdf",
     desc: "Seven years of illuminating narratives, touching families across Hawai\u2019i.",
+  },
+  {
+    title: "Powerstones — Honolulu Advertiser",
+    file: "/images/IMG_7210.jpg",
+    type: "image",
+    desc: "\u2018Powerstones\u2019 unearths the myth behind \u2018Pele\u2019s Curse\u2019 \u2014 Island Life feature by Bob Krauss, November 22, 1994.",
+  },
+  {
+    title: "Press Feature — Island Life",
+    file: "/images/SKM_550i26040917160.pdf",
+    type: "pdf",
+    desc: "Featured press coverage from Robin\u2019s work in Hawaiian storytelling and publishing.",
   },
 ];
 
-function PdfCard({
+function ArticleCard({
   article,
   index,
 }: {
-  article: (typeof articles)[0];
+  article: Article;
   index: number;
 }) {
   const [loaded, setLoaded] = useState(false);
+  const badge = article.type === "pdf" ? "PDF" : "Photo";
 
   return (
     <div className={`fade-in fade-in-delay-${index + 1} group relative h-full`}>
@@ -34,7 +57,7 @@ function PdfCard({
       <div className="relative bg-white rounded-3xl overflow-hidden shadow-sm border border-navy-800/5 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
         <div className="h-1 bg-gradient-to-r from-navy-800 via-navy-600 to-gold" />
 
-        <div className="aspect-[3/4] bg-gradient-to-b from-navy-50 to-ivory relative">
+        <div className="aspect-[3/4] bg-gradient-to-b from-navy-50 to-ivory relative overflow-hidden">
           {!loaded && (
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 z-10">
               <div className="w-10 h-10 border-[3px] border-navy-800/10 border-t-navy-800/60 rounded-full animate-spin" />
@@ -43,62 +66,72 @@ function PdfCard({
               </p>
             </div>
           )}
-          <object
-            data={article.file}
-            type="application/pdf"
-            className={`w-full h-full transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
-            onLoad={() => setLoaded(true)}
-          >
-            <div className="flex items-center justify-center h-full p-8 text-center">
-              <div>
-                <div className="w-20 h-20 rounded-2xl bg-navy-800/5 flex items-center justify-center mx-auto mb-5">
-                  <svg
-                    className="w-10 h-10 text-navy-800/25"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={1}
+
+          {article.type === "image" ? (
+            <img
+              src={article.file}
+              alt={article.title}
+              className={`w-full h-full object-cover object-top transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
+              onLoad={() => setLoaded(true)}
+            />
+          ) : (
+            <object
+              data={article.file}
+              type="application/pdf"
+              className={`w-full h-full transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
+              onLoad={() => setLoaded(true)}
+            >
+              <div className="flex items-center justify-center h-full p-8 text-center">
+                <div>
+                  <div className="w-20 h-20 rounded-2xl bg-navy-800/5 flex items-center justify-center mx-auto mb-5">
+                    <svg
+                      className="w-10 h-10 text-navy-800/25"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={1}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
+                      />
+                    </svg>
+                  </div>
+                  <p className="text-navy-700/70 text-base mb-5">
+                    PDF preview unavailable
+                  </p>
+                  <a
+                    href={article.file}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-6 py-3 bg-navy-800 text-ivory rounded-xl font-semibold text-base hover:bg-navy-700 transition-colors shadow-sm"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
-                    />
-                  </svg>
+                    View Article
+                  </a>
                 </div>
-                <p className="text-navy-700/70 text-base mb-5">
-                  PDF preview unavailable
-                </p>
-                <a
-                  href={article.file}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-6 py-3 bg-navy-800 text-ivory rounded-xl font-semibold text-base hover:bg-navy-700 transition-colors shadow-sm"
-                >
-                  View Article
-                </a>
               </div>
-            </div>
-          </object>
+            </object>
+          )}
         </div>
 
         <div className="p-7 flex flex-col flex-1">
           <div className="flex items-start justify-between gap-4 mb-3">
-            <h3 className="text-xl font-bold text-navy-800">
+            <h3 className="text-2xl sm:text-3xl font-bold text-navy-800 leading-snug">
               {article.title}
             </h3>
             <span className="shrink-0 text-sm font-bold tracking-wider uppercase text-gold bg-gold/10 px-3 py-1 rounded-full">
-              PDF
+              {badge}
             </span>
           </div>
-          <p className="text-navy-800/85 text-base sm:text-lg leading-relaxed mb-5 flex-1">
+          <p className="text-navy-800/85 text-lg sm:text-xl font-bold leading-snug mb-5 flex-1">
             {article.desc}
           </p>
           <a
             href={article.file}
             target="_blank"
             rel="noopener noreferrer"
-            className="group/link inline-flex items-center gap-2 text-navy-800 font-semibold text-base hover:text-navy-600 transition-colors"
+            className="group/link inline-flex items-center gap-2 text-navy-800 font-bold text-lg hover:text-navy-600 transition-colors"
           >
             Open Full Article
             <svg
@@ -125,29 +158,29 @@ export default function Media() {
   return (
     <section
       id="press"
-      className="relative py-20 md:py-28 px-6 bg-navy-900 overflow-hidden"
+      className="relative site-section-y px-6 bg-navy-900 overflow-hidden"
     >
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-20 -right-20 w-80 h-80 bg-gold/5 rounded-full blur-3xl" />
         <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-navy-400/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-6xl mx-auto relative space-y-16 md:space-y-20">
+      <div className="max-w-6xl mx-auto relative site-section-stack">
         <div className="fade-in text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-ivory mb-4">
+          <h2 className="site-heading text-ivory mb-4">
             In the Media
           </h2>
-          <p className="text-ivory/80 max-w-2xl mx-auto text-xl sm:text-2xl leading-relaxed">
+          <p className="reading-text-on-dark max-w-2xl mx-auto">
             Featured video and columns from Robin&rsquo;s work in storytelling,
             healing, and community.
           </p>
         </div>
 
         <div className="fade-in fade-in-delay-1">
-          <h3 className="text-2xl md:text-3xl font-bold text-ivory mb-3 text-center">
+          <h3 className="site-subheading text-ivory mb-3 text-center">
             The Power to Choose Courtyard
           </h3>
-          <p className="text-ivory/80 max-w-xl mx-auto text-center mb-8 text-lg sm:text-xl leading-relaxed">
+          <p className="reading-text-on-dark max-w-xl mx-auto text-center mb-6">
             A courtyard transformed into an inspirational gathering place for
             students at Campbell High School &mdash; built on the philosophy of
             Attitudinal Healing.
@@ -167,15 +200,16 @@ export default function Media() {
         </div>
 
         <div>
-          <h3 className="text-2xl md:text-3xl font-bold text-ivory mb-2 text-center fade-in">
+          <h3 className="site-subheading text-ivory mb-2 text-center fade-in">
             Chasing The Light
           </h3>
-          <p className="text-ivory/80 text-center mb-10 max-w-xl mx-auto fade-in text-lg sm:text-xl leading-relaxed">
-            Weekly columns featured in MidWeek across the Hawaiian Islands.
+          <p className="reading-text-on-dark text-center mb-6 max-w-xl mx-auto fade-in">
+            Weekly columns and press features from MidWeek and Island Life
+            across the Hawaiian Islands.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {articles.map((article, i) => (
-              <PdfCard key={i} article={article} index={i} />
+              <ArticleCard key={article.file} article={article} index={i} />
             ))}
           </div>
         </div>
