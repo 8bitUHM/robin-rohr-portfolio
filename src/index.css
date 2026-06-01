@@ -21,8 +21,8 @@
   --text-media-body: 13.5px;
   --text-page-title: 27px;
   --text-hero-quote: 17.25px;
-  --text-hero-title: 25px;
-  --text-hero-tagline: 13.25px;
+  --text-hero-title: 33px;
+  --text-hero-tagline: 16px;
   --text-ui: 12px;
   --text-ui-lg: 13.5px;
 }
@@ -30,8 +30,8 @@
 @media (min-width: 400px) {
   :root {
     --text-hero-quote: 20.25px;
-    --text-hero-title: 30px;
-    --text-hero-tagline: 15px;
+    --text-hero-title: 33px;
+    --text-hero-tagline: 16.5px;
     --text-ui: 13.5px;
   }
 }
@@ -40,7 +40,7 @@
   :root {
     --text-hero-quote: 24.75px;
     --text-hero-title: 40px;
-    --text-hero-tagline: 16.5px;
+    --text-hero-tagline: 18px;
     --text-stat-label: 15px;
     --text-media-title: 22.5px;
     --text-media-body: 15px;

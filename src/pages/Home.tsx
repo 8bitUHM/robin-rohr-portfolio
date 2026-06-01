@@ -69,8 +69,10 @@ export default function Home() {
 
         <div className="max-w-6xl mx-auto relative">
           <div className="text-center mb-16 md:mb-20">
-            <p className="hero-tagline text-gold font-bold tracking-[0.2em] min-[400px]:tracking-[0.3em] uppercase mb-6 fade-in ornament-line whitespace-nowrap">
-              Author &middot; Journalist &middot; Advocate
+            <p className="hero-tagline text-gold font-bold tracking-[0.2em] min-[400px]:tracking-[0.3em] uppercase mb-6 fade-in ornament-line text-center sm:whitespace-nowrap">
+              <span className="block sm:inline">Author &middot; Journalist</span>
+              <span className="hidden sm:inline"> &middot; </span>
+              <span className="block sm:inline">Advocate</span>
             </p>
             <h1 className="hero-title mb-8 fade-in fade-in-delay-1 whitespace-nowrap">
               <span className="gradient-text">Robin Stephens</span>{" "}
