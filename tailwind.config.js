@@ -9,9 +9,9 @@ export default {
       colors: {
         ivory: "#FFFDF7",
         gold: {
-          DEFAULT: "#C8A84E",
-          light: "#E8D48A",
-          dark: "#A08530",
+          DEFAULT: "rgb(var(--gold) / <alpha-value>)",
+          light: "rgb(var(--gold-light) / <alpha-value>)",
+          dark: "rgb(var(--gold-dark) / <alpha-value>)",
         },
         coral: {
           DEFAULT: "rgb(var(--coral) / <alpha-value>)",

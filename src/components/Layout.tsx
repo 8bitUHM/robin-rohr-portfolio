@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 
-import CoralColorPlayground from "./CoralColorPlayground";
+import ColorPlayground from "./ColorPlayground";
 
 const LINKEDIN_URL =
   "https://www.linkedin.com/in/robin-stephens-rohr-631418287?utm_source=share_via&utm_content=profile&utm_medium=member_ios";
@@ -8,7 +8,7 @@ const LINKEDIN_URL =
 export default function Layout() {
   return (
     <div className="min-h-screen flex flex-col bg-ivory font-quicksand">
-      <CoralColorPlayground />
+      <ColorPlayground />
       <main className="flex-1">
         <Outlet />
       </main>

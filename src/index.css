@@ -6,6 +6,9 @@
   --coral: 245 124 53; /* #F57C35 */
   --coral-dark: 224 106 36; /* #E06A24 */
   --coral-light: 255 160 96; /* #FFA060 */
+  --gold: 200 168 78; /* #C8A84E */
+  --gold-dark: 160 133 48; /* #A08530 */
+  --gold-light: 232 212 138; /* #E8D48A */
 
   /* Typography — body 22.5px mobile / 34px desktop; other roles scaled from prior Tailwind ratios */
   --text-body: 22.5px;
