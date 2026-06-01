@@ -180,14 +180,17 @@ export default function Home() {
                 The nervous system can respond to stories as real experience and
                 they can be transformative to our health and well-being.
               </p>
-              <p className="reading-text">
-                Robin had the pleasure of sitting with Hawai&rsquo;i&rsquo;s
-                beloved elders, the <em>kupuna</em>, over a four year period. The
-                knowledge they shared speaks of values that are universal and oh
-                so necessary as we enter the future: Aloha (compassion and
-                sharing); Koa (courage); Ahonui (patience); Ho&rsquo;omaika&rsquo;i
-                (gratitude); Kupono (honesty); Kalana (forgiveness); and more.
-              </p>
+              <div className="bg-navy-50/80 rounded-2xl p-4 md:p-5 border border-navy-800/5 border-l-4 border-l-coral">
+                <p className="reading-text">
+                  Robin had the pleasure of sitting with Hawai&rsquo;i&rsquo;s
+                  beloved elders, the <em>kupuna</em>, over a four year period.
+                  The knowledge they shared speaks of values that are universal
+                  and oh so necessary as we enter the future: Aloha (compassion
+                  and sharing); koa (courage); ahonui (patience);
+                  ho&rsquo;omaika&rsquo;i (gratitude); kupono (honesty); kalana
+                  (forgiveness); and more.
+                </p>
+              </div>
               <p className="reading-text">
                 The stories and the values they promote are how they entertain
                 and encourage each other, how they teach their children and how
@@ -206,7 +209,7 @@ export default function Home() {
             <div className="space-y-5">
               <p className="reading-text">
                 Over the last two decades, Robin has been intrigued by the field
-                of integrative medicine, utilizing non-addictive, non-toxic,
+                of Integrative Medicine, utilizing non-addictive, non-toxic,
                 FDA-accepted technologies to help alleviate human suffering. In
                 2011, she joined with a group of respected community leaders and
                 impassioned MDs to create a program at a Hawai&rsquo;i hospital.
@@ -248,55 +251,30 @@ export default function Home() {
               </p>
               <div className="h-1 bg-gradient-to-r from-navy-800 via-navy-600 to-navy-400 rounded-full" />
             </div>
-            <div className="w-14 h-14 rounded-2xl bg-navy-800/10 flex items-center justify-center mb-8 lg:mb-10">
-              <svg
-                className="w-7 h-7 text-navy-800"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={1.5}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                />
-              </svg>
-            </div>
 
             <div className="space-y-10 lg:space-y-12">
-              <div className="grid w-full grid-cols-[9rem_1fr] sm:grid-cols-[11rem_1fr] lg:grid-cols-[19rem_1fr_auto] gap-4 lg:gap-x-6 items-stretch">
-                <div className="lg:self-start">
-                  <img
-                    src="/images/SKM_550i26040917172-Edit-Edit-Edit.jpg"
-                    alt="Book cover: Powerstones — Letters to a Goddess by Linda Ching and Robin Stephens Rohr"
-                    width={480}
-                    height={720}
-                    loading="lazy"
-                    className="block w-full h-auto rounded-xl shadow-md border border-navy-800/10"
-                  />
-                </div>
-                <div className="min-w-0">
-                  <h3 className="site-subheading text-navy-800 mb-3">
-                    Powerstones: Letters to a Goddess
-                  </h3>
-                  <p className="reading-text">
-                    Fascinated by Hawaiian Culture, Robin Co-Authored the
-                    Bestseller{" "}
-                    <em className="text-navy-800/90">
+              <div className="flex flex-col gap-5 md:gap-6">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+                  <div className="min-w-0 flex-1">
+                    <h3 className="site-subheading text-navy-800 mb-3 italic">
                       Powerstones: Letters to a Goddess
-                    </em>
-                    . Set against the backdrop of Hawaiian mythology. She
-                    queried some of the finest minds of our time about the power
-                    of belief in creating our lives. These interviews included
-                    the Dalai Lama; Dr. Maya Angelou, &ldquo;Living Treasure of
-                    Hawai&rsquo;i&rdquo; Nainoa Thompson, and other renowned
-                    thinkers and achievers. They were asked to share their
-                    wisdom about the potential of the human being as we move
-                    through the 21st century.
-                  </p>
-                </div>
-                <div className="col-span-2 lg:col-span-1 flex flex-col justify-end items-end">
+                    </h3>
+                    <p className="reading-text">
+                      Fascinated by Hawaiian Culture, Robin Co-Authored the
+                      Bestseller{" "}
+                      <em className="text-navy-800/90 italic">
+                        Powerstones: Letters to a Goddess
+                      </em>
+                      . Set against the backdrop of Hawaiian mythology. She
+                      queried some of the finest minds of our time about the power
+                      of belief in creating our lives. These interviews included
+                      the Dalai Lama; Dr. Maya Angelou, &ldquo;Living Treasure of
+                      Hawai&rsquo;i&rdquo; Nainoa Thompson, and other renowned
+                      thinkers and achievers. They were asked to share their
+                      wisdom about the potential of the human being as we move
+                      through the 21st century.
+                    </p>
+                  </div>
                   <StatBlock
                     value="15K+"
                     label="Copies Sold"
@@ -304,43 +282,41 @@ export default function Home() {
                     align="right"
                   />
                 </div>
+                <img
+                  src="/images/SKM_550i26040917172-Edit-Edit-Edit.jpg"
+                  alt="Book cover: Powerstones — Letters to a Goddess by Linda Ching and Robin Stephens Rohr"
+                  width={480}
+                  height={720}
+                  loading="lazy"
+                  className="block w-full h-auto rounded-xl shadow-md border border-navy-800/10 md:max-w-md lg:max-w-xl"
+                />
               </div>
 
-              <div className="grid w-full grid-cols-[9rem_1fr] sm:grid-cols-[11rem_1fr] lg:grid-cols-[19rem_1fr_auto] gap-4 lg:gap-x-6 items-stretch">
-                <div className="lg:self-start">
-                  <img
-                    src="/images/SKM_550i26040917171-Edit-Edit.jpg"
-                    alt="Book cover: Chicken Soup from the Soul of Hawai'i"
-                    width={480}
-                    height={720}
-                    loading="lazy"
-                    className="block w-full h-auto rounded-xl shadow-md border border-navy-800/10"
-                  />
-                </div>
-                <div className="min-w-0">
-                  <h3 className="site-subheading text-navy-800 mb-3">
-                    Chicken Soup from the Soul of Hawai&rsquo;i
-                  </h3>
-                  <p className="reading-text">
-                    Her next project documented the inspirational stories of
-                    beloved Island elders, resulting in{" "}
-                    <em className="text-navy-800/90">
-                      Chicken Soup from the Soul of Hawai&rsquo;i: Stories of
-                      Aloha to Create Paradise Wherever You Are
-                    </em>
-                    . It was the best seller of the decade in Hawai&rsquo;i with
-                    over 100,000 copies sold. Its proceeds funded projects on
-                    the Wai&rsquo;anae Coast and in Hawai&rsquo;i&rsquo;s public
-                    schools.
-                  </p>
-                  <p className="reading-text mt-4">
-                    This celebrated book was the culmination of a five year
-                    journey of gathering stories from Hawai&rsquo;i&rsquo;s
-                    finest storytellers. It is a remarkable collection of Island
-                    wisdom and will be passed on from generation to generation.
-                  </p>
-                </div>
-                <div className="col-span-2 lg:col-span-1 flex flex-col justify-end items-end">
+              <div className="flex flex-col gap-5 md:gap-6">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+                  <div className="min-w-0 flex-1">
+                    <h3 className="site-subheading text-navy-800 mb-3 italic">
+                      Chicken Soup from the Soul of Hawai&rsquo;i
+                    </h3>
+                    <p className="reading-text">
+                      Her next project documented the inspirational stories of
+                      beloved Island elders, resulting in{" "}
+                      <em className="text-navy-800/90 italic">
+                        Chicken Soup from the Soul of Hawai&rsquo;i: Stories of
+                        Aloha to Create Paradise Wherever You Are
+                      </em>
+                      . It was the best seller of the decade in Hawai&rsquo;i with
+                      over 100,000 copies sold. Its proceeds funded projects on
+                      the Wai&rsquo;anae Coast and in Hawai&rsquo;i&rsquo;s public
+                      schools.
+                    </p>
+                    <p className="reading-text mt-4">
+                      This celebrated book was the culmination of a five year
+                      journey of gathering stories from Hawai&rsquo;i&rsquo;s
+                      finest storytellers. It is a remarkable collection of Island
+                      wisdom and will be passed on from generation to generation.
+                    </p>
+                  </div>
                   <StatBlock
                     value="100K+"
                     label="Copies Sold"
@@ -348,6 +324,14 @@ export default function Home() {
                     align="right"
                   />
                 </div>
+                <img
+                  src="/images/SKM_550i26040917171-Edit-Edit.jpg"
+                  alt="Book cover: Chicken Soup from the Soul of Hawai'i"
+                  width={480}
+                  height={720}
+                  loading="lazy"
+                  className="block w-full h-auto rounded-xl shadow-md border border-navy-800/10 md:max-w-md lg:max-w-xl"
+                />
               </div>
 
               <div className="grid md:grid-cols-1 gap-6 pt-2">
@@ -418,7 +402,7 @@ export default function Home() {
                 Integrative Medicine
               </h3>
               <p className="reading-text mb-4">
-                Over two decades of work in integrative medicine, including
+                Over two decades of work in Integrative Medicine, including
                 collaborating with MDs and PAs in a hospital setting, utilizing
                 microcurrent technology for the alleviation of chronic pain.
               </p>
@@ -465,7 +449,7 @@ export default function Home() {
                 medicine is bringing into our lives for the betterment of humanity,
                 will &ldquo;echo throughout eternity.&rdquo; My journey of seeking
                 the wisdom of the elders and my fascination with the possibilities
-                of integrative medicine have a common theme: to uplift, elevate, and
+                of Integrative Medicine have a common theme: to uplift, elevate, and
                 possibly transform the human experience. Data driven statistically
                 based technologies are emerging from research labs around the world,
                 showing that our possibilities for our quality of life and our human
