@@ -69,7 +69,7 @@ export default function Home() {
 
         <div className="max-w-6xl mx-auto relative">
           <div className="text-center mb-16 md:mb-20">
-            <p className="hero-tagline text-gold font-semibold tracking-[0.2em] min-[400px]:tracking-[0.3em] uppercase mb-6 fade-in ornament-line whitespace-nowrap">
+            <p className="hero-tagline text-gold font-bold tracking-[0.2em] min-[400px]:tracking-[0.3em] uppercase mb-6 fade-in ornament-line whitespace-nowrap">
               Author &middot; Journalist &middot; Advocate
             </p>
             <h1 className="hero-title mb-8 fade-in fade-in-delay-1 whitespace-nowrap">

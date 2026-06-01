@@ -180,6 +180,9 @@
 
   .hero-tagline {
     font-size: var(--text-hero-tagline);
+    font-weight: 700;
+    -webkit-text-stroke: 0.35px currentColor;
+    paint-order: stroke fill;
   }
 
   .text-ui {
