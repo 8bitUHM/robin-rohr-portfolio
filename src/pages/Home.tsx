@@ -8,7 +8,7 @@ const testimonials = [
   {
     quote:
       "If everyone who has ever been loved, guided or healed by a kupuna of these Islands, lit one candle in tribute to these wise and gracious Elders at midnight, the Islands would look like they were drenched in the blazingly noonday sun.",
-    author: "Kupuna, Jon DeFries",
+    author: "Beloved Hawaiian Leader, Jon DeFries",
   },
   {
     quote:
@@ -18,7 +18,13 @@ const testimonials = [
   {
     quote:
       "Aloha is the ability to put yourself in the mind, heart, and soul of another. These priceless stories from our kupuna, speak of courage, adventure, forgiveness, and compassion that take us on a journey of understanding.",
-    author: "Kenneth F. Brown, A \u201cLiving Treasure of Hawai\u2019i.\u201d",
+    author: (
+      <>
+        Kenneth F. Brown, a &ldquo;
+        <em className="italic">Living Treasure of Hawai&rsquo;i.</em>
+        &rdquo;
+      </>
+    ),
   },
 ];
 
@@ -183,7 +189,7 @@ export default function Home() {
               <div className="bg-navy-50/80 rounded-2xl p-4 md:p-5 border border-navy-800/5 border-l-4 border-l-coral">
                 <p className="reading-text">
                   Robin had the pleasure of sitting with Hawai&rsquo;i&rsquo;s
-                  beloved elders, the <em>kupuna</em>, over a four year period.
+                  beloved elders, the <em>kupuna</em>, over a five year period.
                   The knowledge they shared speaks of values that are universal
                   and oh so necessary as we enter the future: Aloha (compassion
                   and sharing); koa (courage); ahonui (patience);
@@ -254,6 +260,14 @@ export default function Home() {
 
             <div className="space-y-10 lg:space-y-12">
               <div className="flex flex-col gap-5 md:gap-6">
+                <img
+                  src="/images/SKM_550i26040917172-Edit-Edit-Edit.jpg"
+                  alt="Book cover: Powerstones — Letters to a Goddess by Linda Ching and Robin Stephens Rohr"
+                  width={480}
+                  height={720}
+                  loading="lazy"
+                  className="block w-full h-auto rounded-xl shadow-md border border-navy-800/10 md:max-w-md lg:max-w-xl"
+                />
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
                   <div className="min-w-0 flex-1">
                     <h3 className="site-subheading text-navy-800 mb-3 italic">
@@ -268,8 +282,11 @@ export default function Home() {
                       . Set against the backdrop of Hawaiian mythology. She
                       queried some of the finest minds of our time about the power
                       of belief in creating our lives. These interviews included
-                      the Dalai Lama; Dr. Maya Angelou, &ldquo;Living Treasure of
-                      Hawai&rsquo;i&rdquo; Nainoa Thompson, and other renowned
+                      the Dalai Lama; Dr. Maya Angelou,{" "}
+                      <em className="text-navy-800/90 italic">
+                        Living Treasure of Hawai&rsquo;i
+                      </em>{" "}
+                      Nainoa Thompson, and other renowned
                       thinkers and achievers. They were asked to share their
                       wisdom about the potential of the human being as we move
                       through the 21st century.
@@ -282,17 +299,17 @@ export default function Home() {
                     align="right"
                   />
                 </div>
+              </div>
+
+              <div className="flex flex-col gap-5 md:gap-6">
                 <img
-                  src="/images/SKM_550i26040917172-Edit-Edit-Edit.jpg"
-                  alt="Book cover: Powerstones — Letters to a Goddess by Linda Ching and Robin Stephens Rohr"
+                  src="/images/SKM_550i26040917171-Edit-Edit.jpg"
+                  alt="Book cover: Chicken Soup from the Soul of Hawai'i"
                   width={480}
                   height={720}
                   loading="lazy"
                   className="block w-full h-auto rounded-xl shadow-md border border-navy-800/10 md:max-w-md lg:max-w-xl"
                 />
-              </div>
-
-              <div className="flex flex-col gap-5 md:gap-6">
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
                   <div className="min-w-0 flex-1">
                     <h3 className="site-subheading text-navy-800 mb-3 italic">
@@ -305,7 +322,10 @@ export default function Home() {
                         Chicken Soup from the Soul of Hawai&rsquo;i: Stories of
                         Aloha to Create Paradise Wherever You Are
                       </em>
-                      . It was the best seller of the decade in Hawai&rsquo;i with
+                      .
+                    </p>
+                    <p className="reading-text mt-4">
+                      It was the best seller of the decade in Hawai&rsquo;i with
                       over 100,000 copies sold. Its proceeds funded projects on
                       the Wai&rsquo;anae Coast and in Hawai&rsquo;i&rsquo;s public
                       schools.
@@ -324,14 +344,6 @@ export default function Home() {
                     align="right"
                   />
                 </div>
-                <img
-                  src="/images/SKM_550i26040917171-Edit-Edit.jpg"
-                  alt="Book cover: Chicken Soup from the Soul of Hawai'i"
-                  width={480}
-                  height={720}
-                  loading="lazy"
-                  className="block w-full h-auto rounded-xl shadow-md border border-navy-800/10 md:max-w-md lg:max-w-xl"
-                />
               </div>
 
               <div className="grid md:grid-cols-1 gap-6 pt-2">
