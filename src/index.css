@@ -6,13 +6,78 @@
   --coral: 245 124 53; /* #F57C35 */
   --coral-dark: 224 106 36; /* #E06A24 */
   --coral-light: 255 160 96; /* #FFA060 */
+
+  /* Typography — body 22.5px mobile / 34px desktop; other roles scaled from prior Tailwind ratios */
+  --text-body: 22.5px;
+  --text-heading: 27px;
+  --text-subheading: 27px;
+  --text-stat: 36px;
+  --text-stat-label: 12px;
+  --text-section-label: 22.5px;
+  --text-media-title: 18px;
+  --text-media-body: 13.5px;
+  --text-page-title: 27px;
+  --text-hero-quote: 17.25px;
+  --text-hero-title: 22.5px;
+  --text-ui: 12px;
+  --text-ui-lg: 13.5px;
+}
+
+@media (min-width: 400px) {
+  :root {
+    --text-hero-quote: 20.25px;
+    --text-hero-title: 27px;
+    --text-ui: 13.5px;
+  }
+}
+
+@media (min-width: 640px) {
+  :root {
+    --text-hero-quote: 24.75px;
+    --text-hero-title: 36px;
+    --text-stat-label: 15px;
+    --text-media-title: 22.5px;
+    --text-media-body: 15px;
+    --text-ui-lg: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --text-body: 34px;
+    --text-heading: 45.33px;
+    --text-subheading: 45.33px;
+    --text-stat: 56.67px;
+    --text-stat-label: 17px;
+    --text-section-label: 34px;
+    --text-media-title: 28.33px;
+    --text-media-body: 18.89px;
+    --text-page-title: 45.33px;
+    --text-hero-quote: 32.8px;
+    --text-hero-title: 45.33px;
+    --text-ui: 15.11px;
+    --text-ui-lg: 17px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --text-page-title: 56.67px;
+    --text-hero-quote: 40px;
+    --text-hero-title: 56.67px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --text-hero-title: 68px;
+  }
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
-    /* ~80% of prior scale — matches 80% browser zoom at 100% zoom */
-    font-size: clamp(100%, 0.4rem + 0.68vw, 120%);
+    font-size: 16px;
     background-color: #fffdf7;
   }
   body {
@@ -30,31 +95,86 @@
 
 @layer components {
   .reading-text {
-    @apply text-3xl md:text-4xl font-bold leading-snug text-navy-800/90;
+    font-size: var(--text-body);
+    @apply font-bold leading-snug text-navy-800/90;
   }
 
   .reading-text-muted {
-    @apply text-3xl md:text-4xl font-bold leading-snug text-navy-800/85;
+    font-size: var(--text-body);
+    @apply font-bold leading-snug text-navy-800/85;
   }
 
   .reading-text-on-dark {
-    @apply text-3xl md:text-4xl font-bold leading-snug text-ivory/90;
+    font-size: var(--text-body);
+    @apply font-bold leading-snug text-ivory/90;
   }
 
   .reading-text-narrative {
-    @apply text-3xl md:text-4xl font-bold leading-snug text-navy-800/90;
+    font-size: var(--text-body);
+    @apply font-bold leading-snug text-navy-800/90;
   }
 
   .reading-text-narrative-muted {
-    @apply text-3xl md:text-4xl font-bold leading-snug text-navy-800/85;
+    font-size: var(--text-body);
+    @apply font-bold leading-snug text-navy-800/85;
   }
 
   .site-heading {
-    @apply text-4xl md:text-5xl font-bold leading-snug;
+    font-size: var(--text-heading);
+    @apply font-bold leading-snug;
   }
 
   .site-subheading {
-    @apply text-4xl md:text-5xl font-bold leading-snug;
+    font-size: var(--text-subheading);
+    @apply font-bold leading-snug;
+  }
+
+  .site-stat-value {
+    font-size: var(--text-stat);
+    @apply font-bold text-navy-800;
+  }
+
+  .site-stat-label {
+    font-size: var(--text-stat-label);
+    @apply font-bold tracking-wider uppercase text-navy-700/75;
+  }
+
+  .site-section-label {
+    font-size: var(--text-section-label);
+    @apply font-bold leading-snug;
+  }
+
+  .site-page-title {
+    font-size: var(--text-page-title);
+    @apply font-bold leading-snug;
+  }
+
+  .media-card-title {
+    font-size: var(--text-media-title);
+    @apply font-bold text-navy-800 leading-snug;
+  }
+
+  .media-card-body {
+    font-size: var(--text-media-body);
+    @apply font-bold leading-snug text-navy-800/85;
+  }
+
+  .hero-quote {
+    font-size: var(--text-hero-quote);
+    @apply font-bold leading-snug;
+  }
+
+  .hero-title {
+    font-size: var(--text-hero-title);
+    @apply font-bold leading-[1.05];
+  }
+
+  .text-ui {
+    font-size: var(--text-ui);
+  }
+
+  .text-ui-lg {
+    font-size: var(--text-ui-lg);
   }
 
   /* Tighter vertical rhythm below the hero / elders intro */

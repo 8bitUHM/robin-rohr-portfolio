@@ -37,8 +37,8 @@ function StatBlock({
     <div
       className={`${showDivider ? "pt-5 border-t border-navy-800/5" : ""} ${align === "right" ? "text-right" : ""}`}
     >
-      <span className="text-5xl md:text-6xl font-bold text-navy-800">{value}</span>
-      <span className="block text-base sm:text-lg text-navy-700/75 font-bold tracking-wider uppercase mt-1">
+      <span className="site-stat-value">{value}</span>
+      <span className="site-stat-label block mt-1">
         {label}
       </span>
     </div>
@@ -63,14 +63,14 @@ export default function Home() {
 
         <div className="max-w-6xl mx-auto relative">
           <div className="text-center mb-16 md:mb-20">
-            <p className="text-gold font-semibold tracking-[0.2em] min-[400px]:tracking-[0.3em] uppercase text-xs min-[400px]:text-sm sm:text-base mb-6 fade-in ornament-line whitespace-nowrap">
+            <p className="text-gold font-semibold tracking-[0.2em] min-[400px]:tracking-[0.3em] uppercase text-ui min-[400px]:text-ui-lg mb-6 fade-in ornament-line whitespace-nowrap">
               Author &middot; Journalist &middot; Advocate
             </p>
-            <h1 className="text-3xl min-[400px]:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1.05] fade-in fade-in-delay-1 whitespace-nowrap">
+            <h1 className="hero-title mb-8 fade-in fade-in-delay-1 whitespace-nowrap">
               <span className="gradient-text">Robin Stephens</span>{" "}
               <span className="text-navy-800">Rohr</span>
             </h1>
-            <blockquote className="fade-in fade-in-delay-2 relative text-[1.15rem] min-[400px]:text-[1.35rem] sm:text-[1.65rem] md:text-[2.05rem] lg:text-[2.5rem] text-coral italic font-bold leading-snug mx-auto px-4 sm:px-6">
+            <blockquote className="fade-in fade-in-delay-2 relative hero-quote text-coral italic mx-auto px-4 sm:px-6">
               <p className="flex flex-col items-center">
                 <span className="whitespace-nowrap">
                   <span
@@ -123,34 +123,33 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="text-left min-w-0 space-y-3 md:space-y-3">
-              <h2 className="site-heading text-coral mb-4 md:mb-6">
-                My Journey
-              </h2>
+            <div className="text-left min-w-0 space-y-3 md:space-y-4">
               <p className="reading-text-narrative">
-                The quest to alleviate human suffering in
-                its many forms has driven my sense of mission for a
-                lifetime. {" "}
-                <br className="hidden lg:block" />
-                The potential of the human being to evolve and to
-                heal is far vaster than ever imagined. Collecting the wisdom
-                filled stories of Elders from many cultures and exploring the modalities of
-                Integrative Medicine, have been a gift for me, and have helped so
-                many others reclaim their lives.
+                Best-selling author and journalist Robin Stephens Rohr holds a
+                Master&rsquo;s degree in Psychology and focuses her work on science
+                based, data-driven technologies to heal and to elevate the human
+                experience.
               </p>
-              <div className="bg-navy-50/80 rounded-2xl p-4 border border-navy-800/5 border-l-4 border-l-coral">
+              <div className="bg-navy-50/80 rounded-2xl p-4 md:p-5 border border-navy-800/5 border-l-4 border-l-coral">
                 <p className="reading-text-narrative-muted italic">
-                  As strange as it seems, there is a commonality between
-                  collecting the stories of Elder wisdom and pursuing the
-                  possibilities that Integrative Medicine presents to us. It
-                  seems that these two divergent paths do not have much in
-                  common, and yet they both have a mission.
-                </p>
-                <p className="reading-text-narrative text-navy-800 mt-2">
-                  I have found that the tools of Integrative Medicine and the
-                  gifts of elder wisdom have a common goal.
+                  Robin shares, &ldquo;The quest to help alleviate human suffering
+                  in its many forms has driven my sense of mission for a lifetime.
+                  Having worked alongside and in collaboration with brilliant
+                  MD&rsquo;s and inspirational psychologists, it has become clear
+                  that the potential of the human being to heal and to evolve, is
+                  far vaster than ever imagined.&rdquo;
                 </p>
               </div>
+              <p className="reading-text-narrative">
+                Additionally, Robin&rsquo;s passion for collecting the wisdom of
+                elders from many cultures has led to the creation of two
+                best-selling books.
+              </p>
+              <p className="reading-text-narrative">
+                She found that there is a surprising link between that kind of
+                wisdom-filled storytelling and the healing possibilities that
+                Integrative Medicine pursues.
+              </p>
             </div>
           </div>
         </div>
@@ -165,20 +164,34 @@ export default function Home() {
 
       {/* Theme sections */}
       <section className="bg-navy-50 pt-3 pb-6 md:pt-4 md:pb-8 px-6">
-        <div className="max-w-5xl mx-auto space-y-8 md:space-y-10">
+        <div className="max-w-7xl mx-auto space-y-8 md:space-y-10">
           <ThemeTopicCard
             label="Elder wisdom"
-            titleLine1="The Wisdom of our Elders:"
+            titleLine1="The Wisdom of Our Elders:"
             titleLine2="The ‘Power of Story’ to Guide and to Heal."
           >
             <div className="space-y-5">
               <p className="reading-text">
-                The nervous system can respond to stories as real experiences,
-                and they can be transformative to our health and well-being.
                 There is impressive research from neuroscience and narrative
-                medicine, suggesting that meaningful, wisdom-filled stories
-                &mdash; can positively affect the mind and have a profound and
-                beneficial impact on our human biology.
+                medicine, suggesting that wisdom-filled stories can positively
+                affect the mind and have a beneficial impact on our human biology.
+              </p>
+              <p className="reading-text">
+                The nervous system can respond to stories as real experience and
+                they can be transformative to our health and well-being.
+              </p>
+              <p className="reading-text">
+                Robin had the pleasure of sitting with Hawai&rsquo;i&rsquo;s
+                beloved elders, the <em>kupuna</em>, over a four year period. The
+                knowledge they shared speaks of values that are universal and oh
+                so necessary as we enter the future: Aloha (compassion and
+                sharing); Koa (courage); Ahonui (patience); Ho&rsquo;omaika&rsquo;i
+                (gratitude); Kupono (honesty); Kalana (forgiveness); and more.
+              </p>
+              <p className="reading-text">
+                The stories and the values they promote are how they entertain
+                and encourage each other, how they teach their children and how
+                we can teach ourselves.
               </p>
             </div>
           </ThemeTopicCard>
@@ -187,11 +200,33 @@ export default function Home() {
             className="fade-in-delay-1"
             label="Integrative health"
             titleLine1="Integrative Medicine: Ushering in"
-            titleLine2="A New Age of Possibilities"
+            titleLine2="a New Age of Possibilities"
+            italicTitleLine2={false}
           >
-            <p className="reading-text-muted italic text-center">
-              Content coming soon.
-            </p>
+            <div className="space-y-5">
+              <p className="reading-text">
+                Over the last two decades, Robin has been intrigued by the field
+                of integrative medicine, utilizing non-addictive, non-toxic,
+                FDA-accepted technologies to help alleviate human suffering. In
+                2011, she joined with a group of respected community leaders and
+                impassioned MDs to create a program at a Hawai&rsquo;i hospital.
+                The program focused on utilizing micro-current technology on
+                acupuncture meridians of the body to alleviate chronic pain and to
+                help relieve anxiety, depression, and insomnia.
+              </p>
+              <p className="reading-text">
+                Collaborating with MDs, PAs, and acupuncturists, she worked with
+                patients for a decade, helping countless men and women to reclaim
+                their lives.
+              </p>
+              <p className="reading-text">
+                Robin is now collaborating with Terry Shintani, MD, JD, MPH, an
+                official Living Treasure of Hawai&rsquo;i. This is a designation
+                he received for his extraordinary contributions to the field of
+                medicine. They are working with researchers and MDs to be helpful
+                to Hawai&rsquo;i&rsquo;s diabetes community.
+              </p>
+            </div>
           </ThemeTopicCard>
         </div>
       </section>
@@ -208,7 +243,7 @@ export default function Home() {
           <div className="fade-in group bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-navy-800/5 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-navy-800 via-navy-600 to-navy-400" />
             <div className="mb-8">
-              <p className="text-gold font-bold tracking-[0.2em] uppercase text-3xl md:text-4xl lg:text-4xl leading-snug mb-3">
+              <p className="text-gold font-bold tracking-[0.2em] uppercase site-section-label leading-snug mb-3">
                 Best Selling Author
               </p>
               <div className="h-1 bg-gradient-to-r from-navy-800 via-navy-600 to-navy-400 rounded-full" />

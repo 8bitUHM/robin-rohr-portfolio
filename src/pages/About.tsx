@@ -76,7 +76,7 @@ export default function About() {
               <div className="fade-in fade-in-delay-2 bg-navy-50/80 rounded-2xl p-6 border border-navy-800/5 my-8">
                 <div className="flex items-center gap-6">
                   <div className="text-center">
-                    <span className="text-4xl font-bold text-navy-800">
+                    <span className="site-heading text-navy-800">
                       100K+
                     </span>
                     <span className="block text-xs text-navy-700/50 font-semibold tracking-wider uppercase mt-1">

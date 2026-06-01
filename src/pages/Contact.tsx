@@ -11,10 +11,10 @@ export default function Contact() {
           <div className="absolute bottom-0 left-1/3 w-64 h-64 bg-gold/5 rounded-full blur-3xl" />
         </div>
         <div className="relative fade-in">
-          <p className="text-gold font-semibold tracking-[0.3em] uppercase text-xs mb-4">
+          <p className="text-gold font-semibold tracking-[0.3em] uppercase text-ui mb-4">
             Get in Touch
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold gradient-text mb-4">
+          <h1 className="site-page-title gradient-text mb-4">
             Contact
           </h1>
           <p className="reading-text max-w-xl mx-auto text-center">

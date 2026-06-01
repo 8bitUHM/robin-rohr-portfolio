@@ -117,21 +117,21 @@ function ArticleCard({
 
         <div className="p-7 flex flex-col flex-1">
           <div className="flex items-start justify-between gap-4 mb-3">
-            <h3 className="text-2xl sm:text-3xl font-bold text-navy-800 leading-snug">
+            <h3 className="media-card-title">
               {article.title}
             </h3>
             <span className="shrink-0 text-sm font-bold tracking-wider uppercase text-gold bg-gold/10 px-3 py-1 rounded-full">
               {badge}
             </span>
           </div>
-          <p className="text-navy-800/85 text-lg sm:text-xl font-bold leading-snug mb-5 flex-1">
+          <p className="media-card-body mb-5 flex-1">
             {article.desc}
           </p>
           <a
             href={article.file}
             target="_blank"
             rel="noopener noreferrer"
-            className="group/link inline-flex items-center gap-2 text-navy-800 font-bold text-lg hover:text-navy-600 transition-colors"
+            className="group/link inline-flex items-center gap-2 text-navy-800 font-bold media-card-body hover:text-navy-600 transition-colors"
           >
             Open Full Article
             <svg
