@@ -7,6 +7,7 @@ type ThemeTopicCardProps = {
   children: ReactNode;
   className?: string;
   italicTitleLine2?: boolean;
+  compactBodyTop?: boolean;
 };
 
 export default function ThemeTopicCard({
@@ -16,6 +17,7 @@ export default function ThemeTopicCard({
   children,
   className = "",
   italicTitleLine2 = true,
+  compactBodyTop = false,
 }: ThemeTopicCardProps) {
   return (
     <article className={`fade-in ${className}`.trim()}>
@@ -35,7 +37,9 @@ export default function ThemeTopicCard({
             </span>
           </h2>
           <div
-            className="mx-auto mt-6 mb-8 w-20 h-1 rounded-full bg-gradient-to-r from-coral to-gold"
+            className={`mx-auto mt-6 w-20 h-1 rounded-full bg-gradient-to-r from-coral to-gold ${
+              compactBodyTop ? "mb-4" : "mb-8"
+            }`}
             aria-hidden
           />
         </header>

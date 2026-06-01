@@ -141,7 +141,7 @@ export default function Home() {
                   Robin shares, &ldquo;The quest to help alleviate human suffering
                   in its many forms has driven my sense of mission for a lifetime.
                   Having worked alongside and in collaboration with brilliant
-                  MD&rsquo;s and inspirational psychologists, it has become clear
+                  MDs and inspirational psychologists, it has become clear
                   that the potential of the human being to heal and to evolve, is
                   far vaster than ever imagined.&rdquo;
                 </p>
@@ -175,6 +175,7 @@ export default function Home() {
             label="Elder wisdom"
             titleLine1="The Wisdom of Our Elders:"
             titleLine2="The ‘Power of Story’ to Guide and to Heal."
+            compactBodyTop
           >
             <div className="space-y-5">
               <p className="reading-text">
@@ -199,7 +200,7 @@ export default function Home() {
               </div>
               <p className="reading-text">
                 The stories and the values they promote are how they entertain
-                and encourage each other, how they teach their children and how
+                and encourage us all, how they teach their children and how
                 we can teach ourselves.
               </p>
             </div>
@@ -249,7 +250,7 @@ export default function Home() {
         <div className="relative w-full md:pl-6 lg:pl-10 md:pr-6 lg:pr-10">
         <div className="relative space-y-6 w-full">
           {/* Books — full width */}
-          <div className="fade-in group bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-navy-800/5 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+          <div className="fade-in group bg-white rounded-3xl px-8 pt-5 pb-8 md:px-10 md:pt-8 md:pb-10 shadow-sm border border-navy-800/5 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-navy-800 via-navy-600 to-navy-400" />
             <div className="mb-8">
               <p className="text-gold font-bold tracking-[0.2em] uppercase site-section-label leading-snug mb-3">
@@ -274,7 +275,7 @@ export default function Home() {
                       Powerstones: Letters to a Goddess
                     </h3>
                     <p className="reading-text">
-                      Fascinated by Hawaiian Culture, Robin Co-Authored the
+                      Fascinated by Hawaiian Culture, Robin co-authored the
                       Bestseller{" "}
                       <em className="text-navy-800/90 italic">
                         Powerstones: Letters to a Goddess
@@ -316,7 +317,7 @@ export default function Home() {
                       Chicken Soup from the Soul of Hawai&rsquo;i
                     </h3>
                     <p className="reading-text">
-                      Her next project documented the inspirational stories of
+                      This project documented the inspirational stories of
                       beloved Island elders, resulting in{" "}
                       <em className="text-navy-800/90 italic">
                         Chicken Soup from the Soul of Hawai&rsquo;i: Stories of
