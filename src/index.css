@@ -18,7 +18,8 @@
   --text-media-body: 13.5px;
   --text-page-title: 27px;
   --text-hero-quote: 17.25px;
-  --text-hero-title: 22.5px;
+  --text-hero-title: 25px;
+  --text-hero-tagline: 13.25px;
   --text-ui: 12px;
   --text-ui-lg: 13.5px;
 }
@@ -26,7 +27,8 @@
 @media (min-width: 400px) {
   :root {
     --text-hero-quote: 20.25px;
-    --text-hero-title: 27px;
+    --text-hero-title: 30px;
+    --text-hero-tagline: 15px;
     --text-ui: 13.5px;
   }
 }
@@ -34,7 +36,8 @@
 @media (min-width: 640px) {
   :root {
     --text-hero-quote: 24.75px;
-    --text-hero-title: 36px;
+    --text-hero-title: 40px;
+    --text-hero-tagline: 16.5px;
     --text-stat-label: 15px;
     --text-media-title: 22.5px;
     --text-media-body: 15px;
@@ -54,7 +57,8 @@
     --text-media-body: 18.89px;
     --text-page-title: 45.33px;
     --text-hero-quote: 32.8px;
-    --text-hero-title: 45.33px;
+    --text-hero-title: 50px;
+    --text-hero-tagline: 18.75px;
     --text-ui: 15.11px;
     --text-ui-lg: 17px;
   }
@@ -64,13 +68,15 @@
   :root {
     --text-page-title: 56.67px;
     --text-hero-quote: 40px;
-    --text-hero-title: 56.67px;
+    --text-hero-title: 62px;
+    --text-hero-tagline: 18.75px;
   }
 }
 
 @media (min-width: 1280px) {
   :root {
-    --text-hero-title: 68px;
+    --text-hero-title: 75px;
+    --text-hero-tagline: 18.75px;
   }
 }
 
@@ -167,6 +173,10 @@
   .hero-title {
     font-size: var(--text-hero-title);
     @apply font-bold leading-[1.05];
+  }
+
+  .hero-tagline {
+    font-size: var(--text-hero-tagline);
   }
 
   .text-ui {
