@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import SectionDivider, { SECTION_COLORS } from "../components/SectionDivider";
+import ThemeTopicCard from "../components/ThemeTopicCard";
 import Media from "./Media";
 
 const testimonials = [
@@ -164,39 +165,34 @@ export default function Home() {
 
       {/* Theme sections */}
       <section className="bg-navy-50 pt-3 pb-6 md:pt-4 md:pb-8 px-6">
-        <div className="max-w-5xl mx-auto site-section-stack">
-          <article className="fade-in">
-            <h2 className="site-heading text-coral mb-4 flex justify-center">
-              <span className="inline-block rounded-xl border-4 border-coral/80 px-4 py-2 md:px-5 md:py-3 leading-[1.12] text-center">
-                <span className="block lg:whitespace-nowrap">The Wisdom of our Elders:</span>
-                <span className="block lg:whitespace-nowrap italic">
-                  The &lsquo;Power of Story&rsquo; to Guide and to Heal.
-                </span>
-              </span>
-            </h2>
-            <p className="reading-text">
-              The nervous system can respond to stories as real experiences, and
-              they can be transformative to our health and well-being. There is
-              impressive research from neuroscience and narrative medicine,
-              suggesting that meaningful, wisdom-filled stories &mdash; can
-              positively affect the mind and have a profound and beneficial
-              impact on our human biology.
-            </p>
-          </article>
+        <div className="max-w-5xl mx-auto space-y-8 md:space-y-10">
+          <ThemeTopicCard
+            label="Elder wisdom"
+            titleLine1="The Wisdom of our Elders:"
+            titleLine2="The ‘Power of Story’ to Guide and to Heal."
+          >
+            <div className="space-y-5">
+              <p className="reading-text">
+                The nervous system can respond to stories as real experiences,
+                and they can be transformative to our health and well-being.
+                There is impressive research from neuroscience and narrative
+                medicine, suggesting that meaningful, wisdom-filled stories
+                &mdash; can positively affect the mind and have a profound and
+                beneficial impact on our human biology.
+              </p>
+            </div>
+          </ThemeTopicCard>
 
-          <div className="w-full h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
-
-          <article className="fade-in fade-in-delay-1">
-            <h2 className="site-heading text-coral mb-4 flex justify-center">
-              <span className="leading-[1.12] text-center">
-                <span className="block lg:whitespace-nowrap">Integrative Medicine: Ushering in</span>
-                <span className="block lg:whitespace-nowrap italic">A New Age of Possibilities</span>
-              </span>
-            </h2>
-            <p className="reading-text-muted italic">
+          <ThemeTopicCard
+            className="fade-in-delay-1"
+            label="Integrative health"
+            titleLine1="Integrative Medicine: Ushering in"
+            titleLine2="A New Age of Possibilities"
+          >
+            <p className="reading-text-muted italic text-center">
               Content coming soon.
             </p>
-          </article>
+          </ThemeTopicCard>
         </div>
       </section>
 
@@ -234,8 +230,18 @@ export default function Home() {
             </div>
 
             <div className="space-y-10 lg:space-y-12">
-              <div className="grid lg:grid-cols-[1fr_13rem] lg:gap-x-10 lg:items-stretch gap-4">
-                <div>
+              <div className="grid w-full grid-cols-[9rem_1fr] sm:grid-cols-[11rem_1fr] lg:grid-cols-[19rem_1fr_auto] gap-4 lg:gap-x-6 items-stretch">
+                <div className="lg:self-start">
+                  <img
+                    src="/images/SKM_550i26040917172-Edit-Edit-Edit.jpg"
+                    alt="Book cover: Powerstones — Letters to a Goddess by Linda Ching and Robin Stephens Rohr"
+                    width={480}
+                    height={720}
+                    loading="lazy"
+                    className="block w-full h-auto rounded-xl shadow-md border border-navy-800/10"
+                  />
+                </div>
+                <div className="min-w-0">
                   <h3 className="site-subheading text-navy-800 mb-3">
                     Powerstones: Letters to a Goddess
                   </h3>
@@ -255,7 +261,7 @@ export default function Home() {
                     through the 21st century.
                   </p>
                 </div>
-                <div className="flex flex-col justify-end items-end mt-2 lg:mt-0">
+                <div className="col-span-2 lg:col-span-1 flex flex-col justify-end items-end">
                   <StatBlock
                     value="15K+"
                     label="Copies Sold"
@@ -265,8 +271,18 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="grid lg:grid-cols-[1fr_13rem] lg:gap-x-10 lg:items-stretch gap-4">
-                <div>
+              <div className="grid w-full grid-cols-[9rem_1fr] sm:grid-cols-[11rem_1fr] lg:grid-cols-[19rem_1fr_auto] gap-4 lg:gap-x-6 items-stretch">
+                <div className="lg:self-start">
+                  <img
+                    src="/images/SKM_550i26040917171-Edit-Edit.jpg"
+                    alt="Book cover: Chicken Soup from the Soul of Hawai'i"
+                    width={480}
+                    height={720}
+                    loading="lazy"
+                    className="block w-full h-auto rounded-xl shadow-md border border-navy-800/10"
+                  />
+                </div>
+                <div className="min-w-0">
                   <h3 className="site-subheading text-navy-800 mb-3">
                     Chicken Soup from the Soul of Hawai&rsquo;i
                   </h3>
@@ -289,7 +305,7 @@ export default function Home() {
                     wisdom and will be passed on from generation to generation.
                   </p>
                 </div>
-                <div className="flex flex-col justify-end items-end mt-2 lg:mt-0">
+                <div className="col-span-2 lg:col-span-1 flex flex-col justify-end items-end">
                   <StatBlock
                     value="100K+"
                     label="Copies Sold"
@@ -406,21 +422,36 @@ export default function Home() {
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-navy-100/30 rounded-full blur-3xl" />
         </div>
         <div className="max-w-5xl mx-auto relative fade-in">
-          <p className="reading-text text-center">
-            The wisdom of our elders, and the possibilities that Integrative
-            medicine is bringing into our lives for the betterment of humanity,
-            will &ldquo;echo throughout eternity.&rdquo; My journey of seeking
-            the wisdom of the elders and my fascination with the possibilities
-            of integrative medicine have a common theme: to uplift, elevate, and
-            possibly transform the human experience. Data driven statistically
-            based technologies are emerging from research labs around the world,
-            showing that our possibilities for our quality of life and our human
-            longevity is far vaster than ever imagined. In the next few years,
-            the velocity of this profound research will be dazzling in its depth
-            and breadth. Fasten your seatbelts, it&rsquo;s a thrilling time to be
-            alive! The velocity of this emerging data will give greater
-            possibilities to the human experience than ever imagined.
-          </p>
+          <div className="bg-white rounded-3xl border border-navy-800/5 shadow-sm overflow-hidden">
+            <div className="h-1.5 bg-gradient-to-r from-coral via-gold to-navy-800" />
+            <div className="relative px-6 py-8 md:px-10 md:py-10 lg:px-12 lg:py-12">
+              <p className="reading-text text-center max-w-4xl mx-auto">
+                The wisdom of our elders, and the possibilities that Integrative
+                medicine is bringing into our lives for the betterment of humanity,
+                will &ldquo;echo throughout eternity.&rdquo; My journey of seeking
+                the wisdom of the elders and my fascination with the possibilities
+                of integrative medicine have a common theme: to uplift, elevate, and
+                possibly transform the human experience. Data driven statistically
+                based technologies are emerging from research labs around the world,
+                showing that our possibilities for our quality of life and our human
+                longevity is far vaster than ever imagined. In the next few years,
+                the velocity of this profound research will be dazzling in its depth
+                and breadth. Fasten your seatbelts, it&rsquo;s a thrilling time to be
+                alive! The velocity of this emerging data will give greater
+                possibilities to the human experience than ever imagined.
+              </p>
+              <div
+                className="flex items-center justify-center gap-3 mt-8 md:mt-10"
+                aria-hidden
+              >
+                <span className="h-px w-12 sm:w-16 bg-gradient-to-r from-transparent to-gold/50" />
+                <span className="w-2 h-2 rounded-full bg-coral/70" />
+                <span className="w-1.5 h-1.5 rounded-full bg-gold" />
+                <span className="w-2 h-2 rounded-full bg-coral/70" />
+                <span className="h-px w-12 sm:w-16 bg-gradient-to-l from-transparent to-gold/50" />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>
