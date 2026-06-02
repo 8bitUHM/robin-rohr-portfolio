@@ -1,5 +1,6 @@
 import {
   adjustHex,
+  goldOutlineTriplet,
   hexToRgbTriplet,
   normalizeHex,
   readStoredHex,
@@ -15,6 +16,7 @@ export function applyGoldTheme(hex: string): void {
   root.style.setProperty("--gold", hexToRgbTriplet(normalized));
   root.style.setProperty("--gold-dark", hexToRgbTriplet(adjustHex(normalized, -35)));
   root.style.setProperty("--gold-light", hexToRgbTriplet(adjustHex(normalized, 42)));
+  root.style.setProperty("--gold-outline", goldOutlineTriplet(normalized));
 }
 
 export function getStoredGoldHex(): string | null {

@@ -29,6 +29,14 @@ export function adjustHex(hex: string, amount: number): string {
   return `#${channels.map((channel) => channel.toString(16).padStart(2, "0")).join("").toUpperCase()}`;
 }
 
+export function goldOutlineTriplet(hex: string): string {
+  const normalized = normalizeHex(hex).slice(1);
+  const r = parseInt(normalized.slice(0, 2), 16);
+  const g = parseInt(normalized.slice(2, 4), 16);
+  const b = parseInt(normalized.slice(4, 6), 16);
+  return `${Math.round(r * 0.4)} ${Math.round(g * 0.28)} ${Math.round(b * 0.14)}`;
+}
+
 export function readStoredHex(key: string): string | null {
   try {
     const stored = localStorage.getItem(key);

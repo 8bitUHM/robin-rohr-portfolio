@@ -9,6 +9,7 @@
   --gold: 200 168 78; /* #C8A84E */
   --gold-dark: 160 133 48; /* #A08530 */
   --gold-light: 232 212 138; /* #E8D48A */
+  --gold-outline: 80 47 11; /* brown-gold outline from #C8A84E */
 
   /* Typography — body 22.5px mobile / 34px desktop; other roles scaled from prior Tailwind ratios */
   --text-body: 22.5px;
@@ -181,13 +182,12 @@
   .hero-tagline {
     font-size: var(--text-hero-tagline);
     font-weight: 700;
-    -webkit-text-stroke: 5px rgb(var(--coral));
+    -webkit-text-stroke: 4px rgb(var(--gold-outline));
     paint-order: stroke fill;
     text-shadow:
-      0.85px 0 0 rgb(var(--coral)),
-      -0.85px 0 0 rgb(var(--coral)),
-      0 0.85px 0 rgb(var(--coral)),
-      0 -0.85px 0 rgb(var(--coral));
+      1px 1px 0 rgb(var(--gold-outline)),
+      1.25px 1.25px 0 rgb(var(--gold-outline)),
+      -0.35px -0.35px 0 rgb(var(--gold-light));
   }
 
   .text-ui {
