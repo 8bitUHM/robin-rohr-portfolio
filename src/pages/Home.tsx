@@ -97,14 +97,14 @@ export default function Home() {
 
         <div className="max-w-6xl mx-auto relative">
           <div className="text-center mb-16 md:mb-20">
-            <p className="hero-tagline text-gold gold-outline-text uppercase mb-8 fade-in ornament-line text-center sm:whitespace-nowrap">
+            <p className="hero-tagline text-gold uppercase mb-8 fade-in ornament-line text-center sm:whitespace-nowrap">
               <span className="block sm:inline">Author &middot; Journalist</span>
               <span className="hidden sm:inline"> &middot; </span>
               <span className="block sm:inline">Advocate</span>
             </p>
             <h1 className="hero-title mb-8 fade-in fade-in-delay-1 whitespace-nowrap">
-              <span className="text-navy-800 gold-outline-text">Robin Stephens</span>{" "}
-              <span className="text-navy-800 gold-outline-text">Rohr</span>
+              <span className="text-navy-800">Robin Stephens</span>{" "}
+              <span className="text-navy-800">Rohr</span>
             </h1>
             <blockquote className="fade-in fade-in-delay-2 relative hero-quote text-coral italic mx-auto px-4 sm:px-6">
               <p className="flex flex-col items-center">
@@ -115,17 +115,13 @@ export default function Home() {
                   >
                     &ldquo;
                   </span>
-                  <span className="gold-outline-text">
-                    There is only one thing in life,
-                  </span>
+                  <span>There is only one thing in life,</span>
                 </span>
-                <span className="whitespace-nowrap gold-outline-text">
+                <span className="whitespace-nowrap">
                   and that is the continual renewal
                 </span>
                 <span className="whitespace-nowrap">
-                  <span className="gold-outline-text">
-                    of inspiration... and creativity.
-                  </span>
+                  of inspiration... and creativity.
                   <span
                     aria-hidden="true"
                     className="text-[1.4em] text-gold opacity-50 font-serif leading-none inline-block align-[-0.1em] ml-1 sm:ml-2 select-none"
@@ -400,7 +396,7 @@ export default function Home() {
                         t.coral
                           ? "reading-text text-coral"
                           : t.gold
-                            ? "reading-text text-gold gold-outline-text"
+                            ? "reading-text text-gold"
                             : undefined
                       }
                     >
@@ -408,7 +404,7 @@ export default function Home() {
                     </p>
                     <footer
                       className={`reading-text mt-2 not-italic ${
-                        t.coral ? "text-coral" : t.gold ? "text-gold gold-outline-text" : ""
+                        t.coral ? "text-coral" : t.gold ? "text-gold" : ""
                       }`}
                     >
                       &mdash; {t.author}

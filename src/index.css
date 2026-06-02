@@ -151,7 +151,7 @@
 
   .site-section-label {
     font-size: var(--text-section-label);
-    @apply font-bold leading-snug gold-outline-text;
+    @apply font-bold leading-snug;
   }
 
   .site-page-title {
@@ -177,30 +177,6 @@
   .hero-title {
     font-size: var(--text-hero-title);
     @apply font-bold leading-[1.05];
-  }
-
-  .gold-outline-text {
-    -webkit-text-stroke: 1px rgb(var(--gold-outline));
-    paint-order: stroke fill;
-    text-shadow:
-      0.75px 0.75px 0 rgb(var(--gold-outline)),
-      -0.35px -0.35px 0 rgb(var(--gold-light));
-  }
-
-  .coral-outline-text {
-    -webkit-text-stroke: 1px rgb(var(--coral-dark));
-    paint-order: stroke fill;
-    text-shadow:
-      0.75px 0.75px 0 rgb(var(--coral-dark)),
-      -0.35px -0.35px 0 rgb(var(--coral-light));
-  }
-
-  .navy-outline-text {
-    -webkit-text-stroke: 1px #1c3d6e;
-    paint-order: stroke fill;
-    text-shadow:
-      0.75px 0.75px 0 #1c3d6e,
-      -0.35px -0.35px 0 rgba(255, 255, 255, 0.3);
   }
 
   .hero-tagline {

@@ -11,7 +11,7 @@ export default function Contact() {
           <div className="absolute bottom-0 left-1/3 w-64 h-64 bg-gold/5 rounded-full blur-3xl" />
         </div>
         <div className="relative fade-in">
-          <p className="text-gold font-semibold tracking-[0.3em] uppercase text-ui mb-4 gold-outline-text">
+          <p className="text-gold font-semibold tracking-[0.3em] uppercase text-ui mb-4">
             Get in Touch
           </p>
           <h1 className="site-page-title gradient-text mb-4">
