@@ -21,7 +21,7 @@
   --text-media-title: 18px;
   --text-media-body: 13.5px;
   --text-page-title: 27px;
-  --text-hero-quote: 17.25px;
+  --text-hero-quote: 19px;
   --text-hero-title: 33px;
   --text-hero-tagline: 21px;
   --text-ui: 12px;
@@ -30,7 +30,7 @@
 
 @media (min-width: 400px) {
   :root {
-    --text-hero-quote: 20.25px;
+    --text-hero-quote: 22px;
     --text-hero-title: 33px;
     --text-hero-tagline: 21px;
     --text-ui: 13.5px;
@@ -39,7 +39,7 @@
 
 @media (min-width: 640px) {
   :root {
-    --text-hero-quote: 24.75px;
+    --text-hero-quote: 27px;
     --text-hero-title: 40px;
     --text-hero-tagline: 24px;
     --text-stat-label: 15px;
@@ -60,7 +60,7 @@
     --text-media-title: 28.33px;
     --text-media-body: 18.89px;
     --text-page-title: 45.33px;
-    --text-hero-quote: 32.8px;
+    --text-hero-quote: 36px;
     --text-hero-title: 50px;
     --text-hero-tagline: 28px;
     --text-ui: 15.11px;
@@ -71,7 +71,7 @@
 @media (min-width: 1024px) {
   :root {
     --text-page-title: 56.67px;
-    --text-hero-quote: 40px;
+    --text-hero-quote: 44px;
     --text-hero-title: 62px;
     --text-hero-tagline: 31px;
   }
@@ -180,11 +180,27 @@
   }
 
   .gold-outline-text {
-    -webkit-text-stroke: 1.5px rgb(var(--gold-outline));
+    -webkit-text-stroke: 1px rgb(var(--gold-outline));
     paint-order: stroke fill;
     text-shadow:
       0.75px 0.75px 0 rgb(var(--gold-outline)),
       -0.35px -0.35px 0 rgb(var(--gold-light));
+  }
+
+  .coral-outline-text {
+    -webkit-text-stroke: 1px rgb(var(--coral-dark));
+    paint-order: stroke fill;
+    text-shadow:
+      0.75px 0.75px 0 rgb(var(--coral-dark)),
+      -0.35px -0.35px 0 rgb(var(--coral-light));
+  }
+
+  .navy-outline-text {
+    -webkit-text-stroke: 1px #1c3d6e;
+    paint-order: stroke fill;
+    text-shadow:
+      0.75px 0.75px 0 #1c3d6e,
+      -0.35px -0.35px 0 rgba(255, 255, 255, 0.3);
   }
 
   .hero-tagline {
