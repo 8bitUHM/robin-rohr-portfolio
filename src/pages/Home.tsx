@@ -15,6 +15,7 @@ const testimonials = [
     quote:
       "This is a collection of powerful mini Band-Aids for the heart and mind, prescribed for any mood or mishap because if one place on earth inspires the deepest wisdom and spiritual medicines pertinent to our human condition, it is Hawai\u02BBi.",
     author: "Edgy Lee, author & filmmaker",
+    gold: true,
   },
   {
     quote:
@@ -389,15 +390,25 @@ export default function Home() {
                     className={`border-l-2 pl-4 italic ${
                       t.coral
                         ? "border-coral/50"
-                        : "border-gold/30 reading-text-muted"
+                        : t.gold
+                          ? "border-gold/50"
+                          : "border-gold/30 reading-text-muted"
                     }`}
                   >
-                    <p className={t.coral ? "reading-text text-coral" : undefined}>
+                    <p
+                      className={
+                        t.coral
+                          ? "reading-text text-coral"
+                          : t.gold
+                            ? "reading-text text-gold gold-outline-text"
+                            : undefined
+                      }
+                    >
                       &ldquo;{t.quote}&rdquo;
                     </p>
                     <footer
                       className={`reading-text mt-2 not-italic ${
-                        t.coral ? "text-coral" : ""
+                        t.coral ? "text-coral" : t.gold ? "text-gold gold-outline-text" : ""
                       }`}
                     >
                       &mdash; {t.author}
@@ -405,9 +416,12 @@ export default function Home() {
                   </blockquote>
                 ))}
 
-                <div className="bg-navy-50/80 rounded-2xl p-4 md:p-5 border border-navy-800/5 border-l-4 border-l-coral space-y-5">
+                <div className="rounded-2xl p-4 md:p-5 border border-coral space-y-5">
                   {alohaQuotes.map((t, i) => (
-                    <blockquote key={i} className="reading-text-muted italic">
+                    <blockquote
+                      key={i}
+                      className="reading-text-muted italic"
+                    >
                       <p>&ldquo;{t.quote}&rdquo;</p>
                       <footer className="reading-text mt-2 not-italic">
                         &mdash; {t.author}
