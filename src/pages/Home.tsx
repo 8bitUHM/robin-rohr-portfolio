@@ -102,8 +102,8 @@ export default function Home() {
               <span className="block sm:inline">Advocate</span>
             </p>
             <h1 className="hero-title mb-8 fade-in fade-in-delay-1 whitespace-nowrap">
-              <span className="text-navy-800 coral-outline-text">Robin Stephens</span>{" "}
-              <span className="text-navy-800 coral-outline-text">Rohr</span>
+              <span className="text-navy-800 gold-outline-text">Robin Stephens</span>{" "}
+              <span className="text-navy-800 gold-outline-text">Rohr</span>
             </h1>
             <blockquote className="fade-in fade-in-delay-2 relative hero-quote text-coral italic mx-auto px-4 sm:px-6">
               <p className="flex flex-col items-center">
@@ -114,15 +114,15 @@ export default function Home() {
                   >
                     &ldquo;
                   </span>
-                  <span className="navy-outline-text">
+                  <span className="gold-outline-text">
                     There is only one thing in life,
                   </span>
                 </span>
-                <span className="whitespace-nowrap navy-outline-text">
+                <span className="whitespace-nowrap gold-outline-text">
                   and that is the continual renewal
                 </span>
                 <span className="whitespace-nowrap">
-                  <span className="navy-outline-text">
+                  <span className="gold-outline-text">
                     of inspiration... and creativity.
                   </span>
                   <span
