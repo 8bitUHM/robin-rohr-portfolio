@@ -24,7 +24,7 @@ export default function Layout() {
               </p>
               <p className="reading-text-on-dark">
                 Author, journalist, and integrative health advocate based in
-                Hawai&rsquo;i.
+                Hawai&#699;i.
               </p>
             </div>
 
@@ -60,7 +60,7 @@ export default function Layout() {
               rights reserved.
             </p>
             <p className="text-ivory/60 text-sm sm:text-base">
-              Hawai&rsquo;i &middot; Author &middot; Journalist &middot;
+              Hawai&#699;i &middot; Author &middot; Journalist &middot;
               Advocate
             </p>
           </div>

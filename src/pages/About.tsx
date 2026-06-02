@@ -64,12 +64,12 @@ export default function About() {
                 Her next project documented the inspirational stories of
                 beloved Island elders, resulting in{" "}
                 <em className="text-navy-800/90">
-                  Chicken Soup from the Soul of Hawai&rsquo;i: Stories of Aloha
+                  Chicken Soup from the Soul of Hawai&#699;i: Stories of Aloha
                   to Create Paradise Wherever You Are
                 </em>{" "}
-                &mdash; the best seller of the decade in Hawai&rsquo;i with
+                &mdash; the best seller of the decade in Hawai&#699;i with
                 over 100,000 copies sold. Its proceeds funded projects on the
-                Wai&rsquo;anae Coast and in Hawai&rsquo;i&rsquo;s public
+                Wai&rsquo;anae Coast and in Hawai&#699;i&#39;s public
                 schools.
               </p>
 
@@ -85,8 +85,8 @@ export default function About() {
                   </div>
                   <div className="w-px h-12 bg-navy-800/10" />
                   <p className="text-navy-700/60 text-sm leading-relaxed flex-1">
-                    <em>Chicken Soup from the Soul of Hawai&rsquo;i</em> became
-                    the best seller of the decade in Hawai&rsquo;i, funding
+                    <em>Chicken Soup from the Soul of Hawai&#699;i</em> became
+                    the best seller of the decade in Hawai&#699;i, funding
                     community projects across the Islands.
                   </p>
                 </div>
@@ -98,7 +98,7 @@ export default function About() {
                   Chasing The Light
                 </em>
                 , that for seven years has reached almost 300,000 families in
-                Hawai&rsquo;i &mdash; stories that uplift, inspire, and
+                Hawai&#699;i &mdash; stories that uplift, inspire, and
                 celebrate the &ldquo;ah-ha&rdquo; moments in human experience.
               </p>
               <p className="fade-in reading-text">
@@ -111,8 +111,8 @@ export default function About() {
               </p>
               <p className="fade-in reading-text">
                 She is now collaborating with Terry Shintani, MD, JD, MPH
-                &mdash; an official Living Treasure of Hawai&rsquo;i &mdash; on
-                a research initiative targeting Hawai&rsquo;i&rsquo;s diabetic
+                &mdash; an official Living Treasure of Hawai&#699;i &mdash; on
+                a research initiative targeting Hawai&#699;i&#39;s diabetic
                 epidemic, which carries an annual cost of $1.5 billion.
               </p>
             </div>

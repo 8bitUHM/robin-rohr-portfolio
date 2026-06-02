@@ -24,7 +24,7 @@ const articles: Article[] = [
     title: "Chasing The Light — Column III",
     file: "/images/Midweek 3.pdf",
     type: "pdf",
-    desc: "Seven years of illuminating narratives, touching families across Hawai\u2019i.",
+    desc: "Seven years of illuminating narratives, touching families across Hawai\u02BBi.",
   },
   {
     title: "Powerstones — Honolulu Advertiser",

@@ -7,12 +7,13 @@ import Media from "./Media";
 const testimonials = [
   {
     quote:
-      "If everyone who has ever been loved, guided or healed by a kupuna of these Islands, lit one candle in tribute to these wise and gracious Elders at midnight, the Islands would look like they were drenched in the blazingly noonday sun.",
-    author: "Beloved Hawaiian Leader, Jon DeFries",
+      "If anyone who has ever been loved, guided or healed by a kupuna of these Islands, lit one candle in tribute to these wise and gracious Elders at midnight, the Islands would look like they were drenched in the blazingly noonday sun.",
+    author: "Beloved Hawaiian Leader, John DeFries",
+    coral: true,
   },
   {
     quote:
-      "This is a collection of powerful mini Band-Aids for the heart and mind, prescribed for any mood or mishap because if one place on earth inspires the deepest wisdom and spiritual medicines pertinent to our human condition, it is Hawai\u2019i.",
+      "This is a collection of powerful mini Band-Aids for the heart and mind, prescribed for any mood or mishap because if one place on earth inspires the deepest wisdom and spiritual medicines pertinent to our human condition, it is Hawai\u02BBi.",
     author: "Edgy Lee, author & filmmaker",
   },
   {
@@ -21,10 +22,22 @@ const testimonials = [
     author: (
       <>
         Kenneth F. Brown, a &ldquo;
-        <em className="italic">Living Treasure of Hawai&rsquo;i.</em>
+        <em className="italic">Living Treasure of Hawai&#699;i.</em>
         &rdquo;
       </>
     ),
+  },
+];
+
+const alohaQuotes = [
+  {
+    quote:
+      "Aloha is not a greeting. It is a feeling... we feeling that God is present.",
+    author: "Reverend Abraham Akaka",
+  },
+  {
+    quote: "Aloha is my religion. I practice it everyday.",
+    author: "Palahi Paki",
   },
 ];
 
@@ -33,18 +46,32 @@ function StatBlock({
   label,
   showDivider = true,
   align = "left",
+  compactMobile = false,
 }: {
   value: string;
   label: string;
   showDivider?: boolean;
   align?: "left" | "right";
+  compactMobile?: boolean;
 }) {
   return (
     <div
-      className={`${showDivider ? "pt-5 border-t border-navy-800/5" : ""} ${align === "right" ? "text-right" : ""}`}
+      className={`${showDivider ? "pt-5 border-t border-navy-800/5" : ""} ${
+        compactMobile ? "max-sm:py-0" : ""
+      } ${align === "right" ? "sm:text-right" : ""}`}
     >
-      <span className="site-stat-value">{value}</span>
-      <span className="site-stat-label block mt-1">
+      <span
+        className={`site-stat-value block ${
+          compactMobile ? "max-sm:text-[2rem] max-sm:leading-none" : ""
+        }`}
+      >
+        {value}
+      </span>
+      <span
+        className={`site-stat-label block ${
+          compactMobile ? "max-sm:mt-0.5" : "mt-1"
+        }`}
+      >
         {label}
       </span>
     </div>
@@ -69,7 +96,7 @@ export default function Home() {
 
         <div className="max-w-6xl mx-auto relative">
           <div className="text-center mb-16 md:mb-20">
-            <p className="hero-tagline text-gold font-bold tracking-[0.2em] min-[400px]:tracking-[0.3em] uppercase mb-6 fade-in ornament-line text-center sm:whitespace-nowrap">
+            <p className="hero-tagline text-gold uppercase mb-8 fade-in ornament-line text-center sm:whitespace-nowrap">
               <span className="block sm:inline">Author &middot; Journalist</span>
               <span className="hidden sm:inline"> &middot; </span>
               <span className="block sm:inline">Advocate</span>
@@ -191,12 +218,12 @@ export default function Home() {
               </p>
               <div className="bg-navy-50/80 rounded-2xl p-4 md:p-5 border border-navy-800/5 border-l-4 border-l-coral">
                 <p className="reading-text">
-                  Robin had the pleasure of sitting with Hawai&rsquo;i&rsquo;s
+                  Robin had the pleasure of sitting with Hawai&#699;i&#39;s
                   beloved elders, the <em>kupuna</em>, over a five year period.
                   The knowledge they shared speaks of values that are universal
                   and oh so necessary as we enter the future: Aloha (compassion
                   and sharing); koa (courage); ahonui (patience);
-                  ho&rsquo;omaika&rsquo;i (gratitude); kupono (honesty); kalana
+                  ho&#699;omaika&#699;i (gratitude); kupono (honesty); kalana
                   (forgiveness); and more.
                 </p>
               </div>
@@ -221,7 +248,7 @@ export default function Home() {
                 of Integrative Medicine, utilizing non-addictive, non-toxic,
                 FDA-accepted technologies to help alleviate human suffering. In
                 2011, she joined with a group of respected community leaders and
-                impassioned MDs to create a program at a Hawai&rsquo;i hospital.
+                impassioned MDs to create a program at a Hawai&#699;i hospital.
                 The program focused on utilizing micro-current technology on
                 acupuncture meridians of the body to alleviate chronic pain and to
                 help relieve anxiety, depression, and insomnia.
@@ -233,10 +260,10 @@ export default function Home() {
               </p>
               <p className="reading-text">
                 Robin is now collaborating with Terry Shintani, MD, JD, MPH, an
-                official Living Treasure of Hawai&rsquo;i. This is a designation
+                official Living Treasure of Hawai&#699;i. This is a designation
                 he received for his extraordinary contributions to the field of
                 medicine. They are working with researchers and MDs to be helpful
-                to Hawai&rsquo;i&rsquo;s diabetes community.
+                to Hawai&#699;i&#39;s diabetes community.
               </p>
             </div>
           </ThemeTopicCard>
@@ -256,7 +283,7 @@ export default function Home() {
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-navy-800 via-navy-600 to-navy-400" />
             <div className="mb-8">
               <p className="text-gold font-bold tracking-[0.2em] uppercase site-section-label leading-snug mb-3">
-                Best Selling Author
+                Best-Selling Author
               </p>
               <div className="h-1 bg-gradient-to-r from-navy-800 via-navy-600 to-navy-400 rounded-full" />
             </div>
@@ -271,7 +298,7 @@ export default function Home() {
                   loading="lazy"
                   className="block w-full h-auto rounded-xl shadow-md border border-navy-800/10 md:max-w-md lg:max-w-xl"
                 />
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
                   <div className="min-w-0 flex-1">
                     <h3 className="site-subheading text-navy-800 mb-3 italic">
                       Powerstones: Letters to a Goddess
@@ -287,7 +314,7 @@ export default function Home() {
                       of belief in creating our lives. These interviews included
                       the Dalai Lama; Dr. Maya Angelou,{" "}
                       <em className="text-navy-800/90 italic">
-                        Living Treasure of Hawai&rsquo;i
+                        Living Treasure of Hawai&#699;i
                       </em>{" "}
                       Nainoa Thompson, and other renowned
                       thinkers and achievers. They were asked to share their
@@ -300,6 +327,7 @@ export default function Home() {
                     label="Copies Sold"
                     showDivider={false}
                     align="right"
+                    compactMobile
                   />
                 </div>
               </div>
@@ -307,35 +335,35 @@ export default function Home() {
               <div className="flex flex-col gap-5 md:gap-6">
                 <img
                   src="/images/SKM_550i26040917171-Edit-Edit.jpg"
-                  alt="Book cover: Chicken Soup from the Soul of Hawai'i"
+                  alt="Book cover: Chicken Soup from the Soul of Hawaiʻi"
                   width={480}
                   height={720}
                   loading="lazy"
                   className="block w-full h-auto rounded-xl shadow-md border border-navy-800/10 md:max-w-md lg:max-w-xl"
                 />
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
                   <div className="min-w-0 flex-1">
                     <h3 className="site-subheading text-navy-800 mb-3 italic">
-                      Chicken Soup from the Soul of Hawai&rsquo;i
+                      Chicken Soup from the Soul of Hawai&#699;i
                     </h3>
                     <p className="reading-text">
                       This project documented the inspirational stories of
                       beloved Island elders, resulting in{" "}
                       <em className="text-navy-800/90 italic">
-                        Chicken Soup from the Soul of Hawai&rsquo;i: Stories of
+                        Chicken Soup from the Soul of Hawai&#699;i: Stories of
                         Aloha to Create Paradise Wherever You Are
                       </em>
                       .
                     </p>
                     <p className="reading-text mt-4">
-                      It was the best seller of the decade in Hawai&rsquo;i with
+                      It was the best seller of the decade in Hawai&#699;i with
                       over 100,000 copies sold. Its proceeds funded projects on
-                      the Wai&rsquo;anae Coast and in Hawai&rsquo;i&rsquo;s public
+                      the Wai&rsquo;anae Coast and in Hawai&#699;i&#39;s public
                       schools.
                     </p>
                     <p className="reading-text mt-4">
                       This celebrated book was the culmination of a five year
-                      journey of gathering stories from Hawai&rsquo;i&rsquo;s
+                      journey of gathering stories from Hawai&#699;i&#39;s
                       finest storytellers. It is a remarkable collection of Island
                       wisdom and will be passed on from generation to generation.
                     </p>
@@ -345,6 +373,7 @@ export default function Home() {
                     label="Copies Sold"
                     showDivider={false}
                     align="right"
+                    compactMobile
                   />
                 </div>
               </div>
@@ -353,14 +382,35 @@ export default function Home() {
                 {testimonials.map((t, i) => (
                   <blockquote
                     key={i}
-                    className="border-l-2 border-gold/30 pl-4 reading-text-muted italic"
+                    className={`border-l-2 pl-4 italic ${
+                      t.coral
+                        ? "border-coral/50"
+                        : "border-gold/30 reading-text-muted"
+                    }`}
                   >
-                    <p>&ldquo;{t.quote}&rdquo;</p>
-                    <footer className="reading-text mt-2 not-italic">
+                    <p className={t.coral ? "reading-text text-coral" : undefined}>
+                      &ldquo;{t.quote}&rdquo;
+                    </p>
+                    <footer
+                      className={`reading-text mt-2 not-italic ${
+                        t.coral ? "text-coral" : ""
+                      }`}
+                    >
                       &mdash; {t.author}
                     </footer>
                   </blockquote>
                 ))}
+
+                <div className="bg-navy-50/80 rounded-2xl p-4 md:p-5 border border-navy-800/5 border-l-4 border-l-coral space-y-5">
+                  {alohaQuotes.map((t, i) => (
+                    <blockquote key={i} className="reading-text-muted italic">
+                      <p>&ldquo;{t.quote}&rdquo;</p>
+                      <footer className="reading-text mt-2 not-italic">
+                        &mdash; {t.author}
+                      </footer>
+                    </blockquote>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

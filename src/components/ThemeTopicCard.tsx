@@ -21,11 +21,11 @@ export default function ThemeTopicCard({
 }: ThemeTopicCardProps) {
   return (
     <article className={`fade-in ${className}`.trim()}>
-      <div className="relative bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-navy-800/5 overflow-hidden">
+      <div className="relative bg-white rounded-3xl px-8 pt-5 pb-8 md:px-10 md:pt-7 md:pb-10 shadow-sm border border-navy-800/5 overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-coral via-gold to-coral/50" />
 
-        <header className="max-w-[72rem] mx-auto text-center pt-1">
-          <p className="text-gold font-bold tracking-[0.2em] uppercase text-ui sm:text-ui-lg mb-4">
+        <header className="max-w-[72rem] mx-auto text-center">
+          <p className="text-gold font-bold tracking-[0.2em] uppercase text-ui sm:text-ui-lg mb-3">
             {label}
           </p>
           <h2 className="site-heading text-coral leading-[1.12]">

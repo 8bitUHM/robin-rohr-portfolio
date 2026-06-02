@@ -23,7 +23,7 @@
   --text-page-title: 27px;
   --text-hero-quote: 17.25px;
   --text-hero-title: 33px;
-  --text-hero-tagline: 16px;
+  --text-hero-tagline: 21px;
   --text-ui: 12px;
   --text-ui-lg: 13.5px;
 }
@@ -32,7 +32,7 @@
   :root {
     --text-hero-quote: 20.25px;
     --text-hero-title: 33px;
-    --text-hero-tagline: 16.5px;
+    --text-hero-tagline: 21px;
     --text-ui: 13.5px;
   }
 }
@@ -41,7 +41,7 @@
   :root {
     --text-hero-quote: 24.75px;
     --text-hero-title: 40px;
-    --text-hero-tagline: 18px;
+    --text-hero-tagline: 24px;
     --text-stat-label: 15px;
     --text-media-title: 22.5px;
     --text-media-body: 15px;
@@ -62,7 +62,7 @@
     --text-page-title: 45.33px;
     --text-hero-quote: 32.8px;
     --text-hero-title: 50px;
-    --text-hero-tagline: 18.75px;
+    --text-hero-tagline: 28px;
     --text-ui: 15.11px;
     --text-ui-lg: 17px;
   }
@@ -73,14 +73,14 @@
     --text-page-title: 56.67px;
     --text-hero-quote: 40px;
     --text-hero-title: 62px;
-    --text-hero-tagline: 18.75px;
+    --text-hero-tagline: 31px;
   }
 }
 
 @media (min-width: 1280px) {
   :root {
     --text-hero-title: 75px;
-    --text-hero-tagline: 18.75px;
+    --text-hero-tagline: 34px;
   }
 }
 
@@ -182,11 +182,11 @@
   .hero-tagline {
     font-size: var(--text-hero-tagline);
     font-weight: 700;
-    -webkit-text-stroke: 4px rgb(var(--gold-outline));
+    letter-spacing: 0.2em;
+    -webkit-text-stroke: 2px rgb(var(--gold-outline));
     paint-order: stroke fill;
     text-shadow:
-      1px 1px 0 rgb(var(--gold-outline)),
-      1.25px 1.25px 0 rgb(var(--gold-outline)),
+      0.75px 0.75px 0 rgb(var(--gold-outline)),
       -0.35px -0.35px 0 rgb(var(--gold-light));
   }
 

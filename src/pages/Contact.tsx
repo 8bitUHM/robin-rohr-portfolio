@@ -39,7 +39,7 @@ export default function Contact() {
                   />
                 ),
                 label: "Location",
-                value: "Hawai\u2019i",
+                value: "Hawai\u02BBi",
               },
               {
                 icon: (
