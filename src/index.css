@@ -151,7 +151,7 @@
 
   .site-section-label {
     font-size: var(--text-section-label);
-    @apply font-bold leading-snug;
+    @apply font-bold leading-snug gold-outline-text;
   }
 
   .site-page-title {
@@ -179,15 +179,18 @@
     @apply font-bold leading-[1.05];
   }
 
-  .hero-tagline {
-    font-size: var(--text-hero-tagline);
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    -webkit-text-stroke: 1px rgb(var(--gold-outline));
+  .gold-outline-text {
+    -webkit-text-stroke: 1.5px rgb(var(--gold-outline));
     paint-order: stroke fill;
     text-shadow:
       0.75px 0.75px 0 rgb(var(--gold-outline)),
       -0.35px -0.35px 0 rgb(var(--gold-light));
+  }
+
+  .hero-tagline {
+    font-size: var(--text-hero-tagline);
+    font-weight: 700;
+    letter-spacing: 0.2em;
   }
 
   .text-ui {

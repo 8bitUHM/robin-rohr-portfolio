@@ -96,7 +96,7 @@ export default function Home() {
 
         <div className="max-w-6xl mx-auto relative">
           <div className="text-center mb-16 md:mb-20">
-            <p className="hero-tagline text-gold uppercase mb-8 fade-in ornament-line text-center sm:whitespace-nowrap">
+            <p className="hero-tagline text-gold gold-outline-text uppercase mb-8 fade-in ornament-line text-center sm:whitespace-nowrap">
               <span className="block sm:inline">Author &middot; Journalist</span>
               <span className="hidden sm:inline"> &middot; </span>
               <span className="block sm:inline">Advocate</span>

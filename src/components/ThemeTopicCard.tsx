@@ -25,7 +25,7 @@ export default function ThemeTopicCard({
         <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-coral via-gold to-coral/50" />
 
         <header className="max-w-[72rem] mx-auto text-center">
-          <p className="text-gold font-bold tracking-[0.2em] uppercase text-ui sm:text-ui-lg mb-3">
+          <p className="text-gold font-bold tracking-[0.2em] uppercase text-ui sm:text-ui-lg mb-3 gold-outline-text">
             {label}
           </p>
           <h2 className="site-heading text-coral leading-[1.12]">
