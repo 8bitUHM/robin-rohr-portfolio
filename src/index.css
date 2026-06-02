@@ -181,13 +181,13 @@
   .hero-tagline {
     font-size: var(--text-hero-tagline);
     font-weight: 700;
-    -webkit-text-stroke: 5px #1c3d6e;
+    -webkit-text-stroke: 5px rgb(var(--coral));
     paint-order: stroke fill;
     text-shadow:
-      0.85px 0 0 #1c3d6e,
-      -0.85px 0 0 #1c3d6e,
-      0 0.85px 0 #1c3d6e,
-      0 -0.85px 0 #1c3d6e;
+      0.85px 0 0 rgb(var(--coral)),
+      -0.85px 0 0 rgb(var(--coral)),
+      0 0.85px 0 rgb(var(--coral)),
+      0 -0.85px 0 rgb(var(--coral));
   }
 
   .text-ui {
