@@ -304,24 +304,44 @@ export default function Home() {
                     <h3 className="site-subheading text-navy-800 mb-3 italic">
                       Powerstones: Letters to a Goddess
                     </h3>
-                    <p className="reading-text">
-                      Fascinated by Hawaiian Culture, Robin co-authored the
-                      Bestseller{" "}
-                      <em className="text-navy-800/90 italic">
-                        Powerstones: Letters to a Goddess
-                      </em>
-                      . Set against the backdrop of Hawaiian mythology. She
-                      queried some of the finest minds of our time about the power
-                      of belief in creating our lives. These interviews included
-                      the Dalai Lama; Dr. Maya Angelou,{" "}
-                      <em className="text-navy-800/90 italic">
-                        Living Treasure of Hawai&#699;i
-                      </em>{" "}
-                      Nainoa Thompson, and other renowned
-                      thinkers and achievers. They were asked to share their
-                      wisdom about the potential of the human being as we move
-                      through the 21st century.
-                    </p>
+                    <div className="space-y-4">
+                      <p className="reading-text">
+                        Fascinated by Hawaiian culture, Robin co-authored the
+                        best-seller{" "}
+                        <em className="text-navy-800/90 italic">
+                          Powerstones: Letters to a Goddess.
+                        </em>
+                      </p>
+                      <p className="reading-text">
+                        Set against the backdrop of Hawaiian mythology, she
+                        queried some of the finest minds of our time about the
+                        power of belief in creating our lives.
+                      </p>
+                      <div className="bg-navy-50/80 rounded-2xl p-4 md:p-5 border border-navy-800/5 border-l-4 border-l-coral">
+                        <p className="reading-text">
+                          These interviews included the Dalai Lama; Dr. Maya
+                          Angelou;{" "}
+                          <em className="text-navy-800/90 italic">
+                            Living Treasure of Hawai&#699;i
+                          </em>{" "}
+                          Nainoa Thompson; and other renowned thinkers and
+                          achievers—people whose own lives illustrate how beliefs
+                          become realities. As Hawaiians project spirit and energy
+                          into sacred rocks, do respected power thinkers project
+                          their own will to succeed—to find truth—to make magic in
+                          the world around them? In research labs throughout the
+                          world, data is emerging that human potential is far
+                          vaster than ever imagined. The potential of the human
+                          being as we move through the 21st century is mysterious,
+                          miraculous, and quite possibly limitless. Perhaps the real
+                          gift of the story of{" "}
+                          <em className="text-navy-800/90 italic">Powerstones</em>{" "}
+                          has been to make us question what we choose to
+                          believe—and to illustrate the power of belief in shaping
+                          our perceptions, our dreams, and our lives.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                   <StatBlock
                     value="15K+"

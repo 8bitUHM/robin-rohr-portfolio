@@ -183,7 +183,8 @@
   }
 
   .hero-quote {
-    font-size: var(--text-hero-quote);
+    font-family: var(--hero-quote-font-family, "Quicksand", sans-serif);
+    font-size: var(--hero-quote-size, var(--text-hero-quote));
     font-weight: var(--hero-quote-weight, 700);
     font-style: var(--hero-quote-style, italic);
     color: rgb(var(--hero-quote-color, var(--coral)));
@@ -194,7 +195,8 @@
   }
 
   .hero-title {
-    font-size: var(--text-hero-title);
+    font-family: var(--hero-title-font-family, "Quicksand", sans-serif);
+    font-size: var(--hero-title-size, var(--text-hero-title));
     font-weight: var(--hero-title-weight, 700);
     font-style: var(--hero-title-style, normal);
     color: rgb(var(--hero-title-color, 28 61 110));
