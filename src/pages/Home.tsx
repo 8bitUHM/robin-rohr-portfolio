@@ -317,7 +317,7 @@ export default function Home() {
                         queried some of the finest minds of our time about the
                         power of belief in creating our lives.
                       </p>
-                      <div className="bg-navy-50/80 rounded-2xl p-4 md:p-5 border border-navy-800/5 border-l-4 border-l-coral">
+                      <div className="bg-navy-50/80 rounded-2xl p-4 md:p-5 border border-navy-800/5 border-l-4 border-l-coral space-y-4">
                         <p className="reading-text">
                           These interviews included the Dalai Lama; Dr. Maya
                           Angelou;{" "}
@@ -326,18 +326,28 @@ export default function Home() {
                           </em>{" "}
                           Nainoa Thompson; and other renowned thinkers and
                           achievers—people whose own lives illustrate how beliefs
-                          become realities. As Hawaiians project spirit and energy
-                          into sacred rocks, do respected power thinkers project
-                          their own will to succeed—to find truth—to make magic in
-                          the world around them? In research labs throughout the
-                          world, data is emerging that human potential is far
-                          vaster than ever imagined. The potential of the human
-                          being as we move through the 21st century is mysterious,
-                          miraculous, and quite possibly limitless. Perhaps the real
-                          gift of the story of{" "}
+                          become realities.
+                        </p>
+                        <p className="reading-text">
+                          As Hawaiians project spirit and energy into sacred
+                          rocks, do respected power thinkers project their own will
+                          to succeed—to find truth—to make magic in the world around
+                          them?
+                        </p>
+                        <p className="reading-text">
+                          In research labs throughout the world, data is emerging
+                          that human potential is far greater than ever imagined.
+                        </p>
+                        <p className="reading-text">
+                          The potential of the human being as we move through the
+                          21st century is mysterious, miraculous, and quite possibly
+                          limitless.
+                        </p>
+                        <p className="reading-text">
+                          Perhaps the real gift of the story of{" "}
                           <em className="text-navy-800/90 italic">Powerstones</em>{" "}
                           has been to make us question what we choose to
-                          believe—and to illustrate the power of belief in shaping
+                          believe—and it illustrates the power of belief in shaping
                           our perceptions, our dreams, and our lives.
                         </p>
                       </div>
