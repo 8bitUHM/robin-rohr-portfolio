@@ -9,7 +9,20 @@
   --gold: 200 168 78; /* #C8A84E */
   --gold-dark: 160 133 48; /* #A08530 */
   --gold-light: 232 212 138; /* #E8D48A */
+  --gold-shimmer-bright: 255 236 176; /* highlight peak for tagline shimmer */
   --gold-outline: 80 47 11; /* brown-gold outline from #C8A84E */
+
+  /* Hero text playground (title + quote); applied via JS, fallbacks below */
+  --hero-title-color: 28 61 110;
+  --hero-title-stroke-color: 28 61 110;
+  --hero-title-stroke-width: 0px;
+  --hero-title-weight: 700;
+  --hero-title-style: normal;
+  --hero-quote-color: 245 124 53;
+  --hero-quote-stroke-color: 28 61 110;
+  --hero-quote-stroke-width: 0px;
+  --hero-quote-weight: 700;
+  --hero-quote-style: italic;
 
   /* Typography — body 22.5px mobile / 34px desktop; other roles scaled from prior Tailwind ratios */
   --text-body: 22.5px;
@@ -171,18 +184,77 @@
 
   .hero-quote {
     font-size: var(--text-hero-quote);
-    @apply font-bold leading-snug;
+    font-weight: var(--hero-quote-weight, 700);
+    font-style: var(--hero-quote-style, italic);
+    color: rgb(var(--hero-quote-color, var(--coral)));
+    -webkit-text-stroke: var(--hero-quote-stroke-width, 0px)
+      rgb(var(--hero-quote-stroke-color, 28 61 110));
+    paint-order: stroke fill;
+    @apply leading-snug;
   }
 
   .hero-title {
     font-size: var(--text-hero-title);
-    @apply font-bold leading-[1.05];
+    font-weight: var(--hero-title-weight, 700);
+    font-style: var(--hero-title-style, normal);
+    color: rgb(var(--hero-title-color, 28 61 110));
+    -webkit-text-stroke: var(--hero-title-stroke-width, 0px)
+      rgb(var(--hero-title-stroke-color, 28 61 110));
+    paint-order: stroke fill;
+    @apply leading-[1.05];
   }
 
   .hero-tagline {
     font-size: var(--text-hero-tagline);
     font-weight: 700;
     letter-spacing: 0.2em;
+    -webkit-text-stroke: 1px rgb(var(--gold-outline));
+    paint-order: stroke fill;
+    text-shadow:
+      0.75px 0.75px 0 rgb(var(--gold-outline)),
+      -0.35px -0.35px 0 rgb(var(--gold-light));
+  }
+
+  html.hero-tagline-shimmer-on .hero-tagline {
+    -webkit-text-stroke: 1px rgb(var(--gold));
+    text-shadow:
+      0.5px 0.5px 0 rgb(var(--gold)),
+      -0.25px -0.25px 0 rgb(var(--gold-light));
+    background: linear-gradient(
+      118deg,
+      rgb(var(--gold-light)) 0%,
+      rgb(var(--gold)) 22%,
+      rgb(var(--gold-shimmer-bright)) 44%,
+      rgb(var(--gold-shimmer-bright)) 56%,
+      rgb(var(--gold)) 78%,
+      rgb(var(--gold-light)) 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: hero-tagline-shimmer 4.5s ease-in-out infinite;
+  }
+
+  @keyframes hero-tagline-shimmer {
+    0%,
+    100% {
+      background-position: 0% 50%;
+      filter: brightness(1.06) saturate(1.08);
+    }
+    50% {
+      background-position: 100% 50%;
+      filter: brightness(1.14) saturate(1.12);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html.hero-tagline-shimmer-on .hero-tagline {
+      animation: none;
+      background-position: 50% 50%;
+      filter: brightness(1.1) saturate(1.08);
+    }
   }
 
   .text-ui {

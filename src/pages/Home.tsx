@@ -103,10 +103,10 @@ export default function Home() {
               <span className="block sm:inline">Advocate</span>
             </p>
             <h1 className="hero-title mb-8 fade-in fade-in-delay-1 whitespace-nowrap">
-              <span className="text-navy-800">Robin Stephens</span>{" "}
-              <span className="text-navy-800">Rohr</span>
+              <span>Robin Stephens</span>{" "}
+              <span>Rohr</span>
             </h1>
-            <blockquote className="fade-in fade-in-delay-2 relative hero-quote text-coral italic mx-auto px-4 sm:px-6">
+            <blockquote className="fade-in fade-in-delay-2 relative hero-quote mx-auto px-4 sm:px-6">
               <p className="flex flex-col items-center">
                 <span className="whitespace-nowrap">
                   <span
