@@ -16,6 +16,7 @@ const testimonials = [
       "This is a collection of powerful mini Band-Aids for the heart and mind, prescribed for any mood or mishap because if one place on earth inspires the deepest wisdom and spiritual medicines pertinent to our human condition, it is Hawai\u02BBi.",
     author: "Edgy Lee, author & filmmaker",
     gold: true,
+    goldQuoteOutline: true,
   },
   {
     quote:
@@ -283,7 +284,7 @@ export default function Home() {
           <div className="fade-in group bg-white rounded-3xl px-8 pt-5 pb-8 md:px-10 md:pt-8 md:pb-10 shadow-sm border border-navy-800/5 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-navy-800 via-navy-600 to-navy-400" />
             <div className="mb-8">
-              <p className="text-gold font-bold tracking-[0.2em] uppercase site-section-label leading-snug mb-3">
+              <p className="text-gold gold-label-outline font-bold tracking-[0.2em] uppercase site-section-label leading-snug mb-3">
                 Best-Selling Author
               </p>
               <div className="h-1 bg-gradient-to-r from-navy-800 via-navy-600 to-navy-400 rounded-full" />
@@ -426,7 +427,7 @@ export default function Home() {
                         t.coral
                           ? "reading-text text-coral"
                           : t.gold
-                            ? "reading-text text-gold"
+                            ? `reading-text text-gold${t.goldQuoteOutline ? " gold-quote-outline" : ""}`
                             : undefined
                       }
                     >
@@ -434,7 +435,11 @@ export default function Home() {
                     </p>
                     <footer
                       className={`reading-text mt-2 not-italic ${
-                        t.coral ? "text-coral" : t.gold ? "text-gold" : ""
+                        t.coral
+                          ? "text-coral"
+                          : t.gold
+                            ? `text-gold${t.goldQuoteOutline ? " gold-quote-outline" : ""}`
+                            : ""
                       }`}
                     >
                       &mdash; {t.author}
