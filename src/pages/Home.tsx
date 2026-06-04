@@ -48,8 +48,7 @@ const testimonials: Testimonial[] = [
       name: "Kenneth F. Brown",
       designation: (
         <>
-          a &ldquo;
-          <em className="italic">Living Treasure of Hawai&#699;i</em>&rdquo;
+          <em className="italic">Living Treasure of Hawai&#699;i</em>
         </>
       ),
     },
@@ -87,12 +86,11 @@ function TestimonialBlock({
     <blockquote className={borderClassName}>
       <p className={quoteClass}>&ldquo;{quote}&rdquo;</p>
       <footer className={`testimonial-attribution mt-2 not-italic ${attrColor}`}>
-        &mdash; {author.name}
+        <span className="block">&mdash; {author.name}</span>
         {author.designation ? (
-          <>
-            {", "}
-            <span className="font-semibold opacity-90">{author.designation}</span>
-          </>
+          <span className="block font-semibold opacity-90 mt-0.5">
+            {author.designation}
+          </span>
         ) : null}
       </footer>
     </blockquote>
