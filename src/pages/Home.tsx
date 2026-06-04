@@ -178,7 +178,7 @@ export default function Home() {
                   and that is the continual renewal
                 </span>
                 <span className="whitespace-nowrap">
-                  of inspiration... and creativity.
+                  of inspiration and creativity...
                   <span
                     aria-hidden="true"
                     className="text-[1.4em] text-gold opacity-50 font-serif leading-none inline-block align-[-0.1em] ml-1 sm:ml-2 select-none"
