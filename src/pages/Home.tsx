@@ -1,47 +1,99 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import SectionDivider, { SECTION_COLORS } from "../components/SectionDivider";
 import ThemeTopicCard from "../components/ThemeTopicCard";
 import Media from "./Media";
 
-const testimonials = [
+type TestimonialAuthor = {
+  name: string;
+  designation?: ReactNode;
+};
+
+type Testimonial = {
+  quote: string;
+  author: TestimonialAuthor;
+  coral?: boolean;
+  gold?: boolean;
+  goldQuoteOutline?: boolean;
+};
+
+const testimonials: Testimonial[] = [
   {
     quote:
       "If anyone who has ever been loved, guided or healed by a kupuna of these Islands, lit one candle in tribute to these wise and gracious Elders at midnight, the Islands would look like they were drenched in the blazingly noonday sun.",
-    author: "Beloved Hawaiian Leader, John DeFries",
+    author: {
+      name: "John DeFries",
+      designation: "a beloved Island Son",
+    },
     coral: true,
   },
   {
     quote:
       "This is a collection of powerful mini Band-Aids for the heart and mind, prescribed for any mood or mishap because if one place on earth inspires the deepest wisdom and spiritual medicines pertinent to our human condition, it is Hawai\u02BBi.",
-    author: "Edgy Lee, author & filmmaker",
+    author: {
+      name: "Edgy Lee",
+      designation: "author & filmmaker",
+    },
     gold: true,
     goldQuoteOutline: true,
   },
   {
     quote:
       "Aloha is the ability to put yourself in the mind, heart, and soul of another. These priceless stories from our kupuna, speak of courage, adventure, forgiveness, and compassion that take us on a journey of understanding.",
-    author: (
-      <>
-        Kenneth F. Brown, a &ldquo;
-        <em className="italic">Living Treasure of Hawai&#699;i.</em>
-        &rdquo;
-      </>
-    ),
+    author: {
+      name: "Kenneth F. Brown",
+      designation: (
+        <>
+          a &ldquo;
+          <em className="italic">Living Treasure of Hawai&#699;i</em>&rdquo;
+        </>
+      ),
+    },
   },
 ];
 
-const alohaQuotes = [
+const alohaQuotes: Testimonial[] = [
   {
     quote:
       "Aloha is not a greeting. It is a feeling... we feeling that God is present.",
-    author: "Reverend Abraham Akaka",
+    author: { name: "Reverend Abraham Akaka" },
   },
   {
     quote: "Aloha is my religion. I practice it everyday.",
-    author: "Palahi Paki",
+    author: { name: "Palahi Paki" },
   },
 ];
+
+function TestimonialBlock({
+  quote,
+  author,
+  coral,
+  gold,
+  goldQuoteOutline,
+  borderClassName = "border-l-2 pl-4 italic",
+}: Testimonial & { borderClassName?: string }) {
+  const quoteClass = coral
+    ? "reading-text text-coral"
+    : gold
+      ? `reading-text text-gold${goldQuoteOutline ? " gold-quote-outline" : ""}`
+      : "reading-text-muted";
+  const attrColor = coral ? "text-coral" : gold ? "text-gold" : "text-navy-800/85";
+
+  return (
+    <blockquote className={borderClassName}>
+      <p className={quoteClass}>&ldquo;{quote}&rdquo;</p>
+      <footer className={`testimonial-attribution mt-2 not-italic ${attrColor}`}>
+        &mdash; {author.name}
+        {author.designation ? (
+          <>
+            {", "}
+            <span className="font-semibold opacity-90">{author.designation}</span>
+          </>
+        ) : null}
+      </footer>
+    </blockquote>
+  );
+}
 
 function StatBlock({
   value,
@@ -421,52 +473,26 @@ export default function Home() {
 
               <div className="grid md:grid-cols-1 gap-6 pt-2">
                 {testimonials.map((t, i) => (
-                  <blockquote
+                  <TestimonialBlock
                     key={i}
-                    className={`border-l-2 pl-4 italic ${
+                    {...t}
+                    borderClassName={`border-l-2 pl-4 italic ${
                       t.coral
                         ? "border-coral/50"
                         : t.gold
                           ? "border-gold/50"
-                          : "border-gold/30 reading-text-muted"
+                          : "border-gold/30"
                     }`}
-                  >
-                    <p
-                      className={
-                        t.coral
-                          ? "reading-text text-coral"
-                          : t.gold
-                            ? `reading-text text-gold${t.goldQuoteOutline ? " gold-quote-outline" : ""}`
-                            : undefined
-                      }
-                    >
-                      &ldquo;{t.quote}&rdquo;
-                    </p>
-                    <footer
-                      className={`reading-text mt-2 not-italic ${
-                        t.coral
-                          ? "text-coral"
-                          : t.gold
-                            ? `text-gold${t.goldQuoteOutline ? " gold-quote-outline" : ""}`
-                            : ""
-                      }`}
-                    >
-                      &mdash; {t.author}
-                    </footer>
-                  </blockquote>
+                  />
                 ))}
 
                 <div className="rounded-2xl p-4 md:p-5 border border-coral space-y-5">
                   {alohaQuotes.map((t, i) => (
-                    <blockquote
+                    <TestimonialBlock
                       key={i}
-                      className="reading-text-muted italic"
-                    >
-                      <p>&ldquo;{t.quote}&rdquo;</p>
-                      <footer className="reading-text mt-2 not-italic">
-                        &mdash; {t.author}
-                      </footer>
-                    </blockquote>
+                      {...t}
+                      borderClassName="italic"
+                    />
                   ))}
                 </div>
               </div>

@@ -206,6 +206,11 @@
     @apply leading-[1.05];
   }
 
+  .testimonial-attribution {
+    font-size: calc(var(--text-body) * 0.82);
+    @apply font-bold leading-snug;
+  }
+
   .book-cover-title {
     font-size: var(--text-subheading);
     @apply font-bold leading-snug italic mb-3 text-center sm:text-left;
