@@ -303,8 +303,11 @@ export default function Home() {
                 />
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
                   <div className="min-w-0 flex-1">
-                    <h3 className="site-subheading text-gold gold-book-title-outline mb-3 italic">
-                      Powerstones: Letters to a Goddess
+                    <h3 className="book-cover-title">
+                      <span className="book-cover-title__line">Powerstones:</span>{" "}
+                      <span className="book-cover-title__line">
+                        Letters to a Goddess
+                      </span>
                     </h3>
                     <div className="space-y-4">
                       <p className="reading-text">
@@ -376,8 +379,13 @@ export default function Home() {
                 />
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
                   <div className="min-w-0 flex-1">
-                    <h3 className="site-subheading text-gold gold-book-title-outline mb-3 italic">
-                      Chicken Soup from the Soul of Hawai&#699;i
+                    <h3 className="book-cover-title">
+                      <span className="book-cover-title__line">
+                        Chicken Soup from the
+                      </span>{" "}
+                      <span className="book-cover-title__line">
+                        Soul of Hawai&#699;i
+                      </span>
                     </h3>
                     <p className="reading-text">
                       This project documented the inspirational stories of

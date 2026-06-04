@@ -206,7 +206,13 @@
     @apply leading-[1.05];
   }
 
-  .gold-book-title-outline {
+  .book-cover-title {
+    font-size: var(--text-subheading);
+    @apply font-bold leading-snug italic mb-3 text-center sm:text-left;
+  }
+
+  .book-cover-title__line {
+    @apply block sm:inline text-gold;
     -webkit-text-stroke: 1px rgb(var(--gold-outline));
     paint-order: stroke fill;
     text-shadow:
