@@ -211,6 +211,20 @@
     @apply font-bold leading-snug;
   }
 
+  /* Aloha quotes: thin brown outer line + 3px gold border */
+  .aloha-quote-frame {
+    border-radius: 1rem;
+    padding: 1px;
+    background-color: rgb(var(--gold-outline));
+  }
+
+  .aloha-quote-frame__inner {
+    border-radius: calc(1rem - 1px);
+    border: 3px solid rgb(var(--gold));
+    background-color: #ffffff;
+    @apply px-5 py-5 md:px-6 md:py-6;
+  }
+
   .book-cover-title {
     font-size: var(--text-subheading);
     @apply font-bold leading-snug italic mb-3 text-center sm:text-left;

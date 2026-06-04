@@ -511,13 +511,16 @@ export default function Home() {
                   />
                 ))}
 
-                <div className="rounded-2xl p-4 md:p-5 border border-coral space-y-5">
+                <div className="space-y-5 md:space-y-6">
                   {alohaQuotes.map((t, i) => (
-                    <TestimonialBlock
-                      key={i}
-                      {...t}
-                      borderClassName="italic"
-                    />
+                    <div key={i} className="aloha-quote-frame">
+                      <div className="aloha-quote-frame__inner">
+                        <TestimonialBlock
+                          {...t}
+                          borderClassName="italic border-0 pl-0"
+                        />
+                      </div>
+                    </div>
                   ))}
                 </div>
               </div>
