@@ -1,4 +1,8 @@
 import { useState, type ReactNode } from "react";
+import {
+  ROBIN_HEADSHOT_FALLBACK_SRC,
+  ROBIN_HEADSHOT_SRC,
+} from "../constants/images";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import SectionDivider, { SECTION_COLORS } from "../components/SectionDivider";
 import ThemeTopicCard from "../components/ThemeTopicCard";
@@ -134,7 +138,7 @@ function StatBlock({
 
 export default function Home() {
   const [imgLoaded, setImgLoaded] = useState(false);
-  const [imgSrc, setImgSrc] = useState("/images/headshot.jpg");
+  const [imgSrc, setImgSrc] = useState(ROBIN_HEADSHOT_SRC);
   useScrollAnimation();
 
   return (
@@ -188,23 +192,26 @@ export default function Home() {
         </div>
 
         <div className="relative w-full md:pl-6 lg:pl-10 md:pr-6 lg:pr-10">
-          <div className="grid md:grid-cols-[minmax(0,calc(32rem*0.765))_minmax(0,1fr)] lg:grid-cols-[minmax(0,calc(36rem*0.765))_minmax(0,1.35fr)] gap-12 md:gap-10 items-start fade-in fade-in-delay-3 w-full">
-            <div className="relative w-full max-w-md mx-auto md:mx-0 md:max-w-none">
+          <div className="grid md:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] lg:grid-cols-[minmax(0,24rem)_minmax(0,1.35fr)] gap-10 md:gap-12 items-start fade-in fade-in-delay-3 w-full">
+            <div className="relative w-full max-w-sm mx-auto md:mx-0 md:max-w-none">
               <div className="absolute -inset-3 bg-gradient-to-br from-navy-600/20 via-gold/10 to-navy-800/20 rounded-3xl blur-sm" />
-              <div className="relative rounded-2xl overflow-hidden shadow-xl ring-1 ring-navy-800/10 bg-navy-50 aspect-[3/5] w-full">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl ring-1 ring-navy-800/10 bg-navy-50 w-full">
                 {!imgLoaded && (
-                  <div className="absolute inset-0 flex items-center justify-center z-10">
+                  <div
+                    className="absolute inset-0 flex items-center justify-center z-10 min-h-[16rem]"
+                    aria-hidden
+                  >
                     <div className="w-10 h-10 border-[3px] border-navy-800/10 border-t-navy-800/60 rounded-full animate-spin" />
                   </div>
                 )}
                 <img
                   src={imgSrc}
                   alt="Robin Stephens Rohr"
-                  className={`w-full h-full object-cover object-top transition-opacity duration-500 ${imgLoaded ? "opacity-100" : "opacity-0"}`}
+                  className={`block w-full h-auto transition-opacity duration-500 ${imgLoaded ? "opacity-100" : "opacity-0"}`}
                   onLoad={() => setImgLoaded(true)}
                   onError={() => {
-                    if (imgSrc !== "/images/headshot.svg") {
-                      setImgSrc("/images/headshot.svg");
+                    if (imgSrc !== ROBIN_HEADSHOT_FALLBACK_SRC) {
+                      setImgSrc(ROBIN_HEADSHOT_FALLBACK_SRC);
                       setImgLoaded(false);
                     }
                   }}

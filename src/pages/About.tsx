@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { ROBIN_HEADSHOT_SRC } from "../constants/images";
+
 export default function About() {
   const [imgLoaded, setImgLoaded] = useState(false);
 
@@ -26,9 +28,9 @@ export default function About() {
                   </div>
                 )}
                 <img
-                  src="/images/headshot.svg"
+                  src={ROBIN_HEADSHOT_SRC}
                   alt="Robin Stephens Rohr"
-                  className={`w-full object-cover transition-opacity duration-500 ${imgLoaded ? "opacity-100" : "opacity-0"}`}
+                  className={`block w-full h-auto transition-opacity duration-500 ${imgLoaded ? "opacity-100" : "opacity-0"}`}
                   onLoad={() => setImgLoaded(true)}
                 />
               </div>
