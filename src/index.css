@@ -206,6 +206,14 @@
     @apply leading-[1.05];
   }
 
+  .gold-book-title-outline {
+    -webkit-text-stroke: 1px rgb(var(--gold-outline));
+    paint-order: stroke fill;
+    text-shadow:
+      0.75px 0.75px 0 rgb(var(--gold-outline)),
+      -0.35px -0.35px 0 rgb(var(--gold-light));
+  }
+
   /* Same brown-gold stroke as .hero-tagline (1px). */
   .gold-quote-outline {
     -webkit-text-stroke: 1px rgb(var(--gold-outline));

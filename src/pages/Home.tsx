@@ -303,7 +303,7 @@ export default function Home() {
                 />
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
                   <div className="min-w-0 flex-1">
-                    <h3 className="site-subheading text-navy-800 mb-3 italic">
+                    <h3 className="site-subheading text-gold gold-book-title-outline mb-3 italic">
                       Powerstones: Letters to a Goddess
                     </h3>
                     <div className="space-y-4">
@@ -376,7 +376,7 @@ export default function Home() {
                 />
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
                   <div className="min-w-0 flex-1">
-                    <h3 className="site-subheading text-navy-800 mb-3 italic">
+                    <h3 className="site-subheading text-gold gold-book-title-outline mb-3 italic">
                       Chicken Soup from the Soul of Hawai&#699;i
                     </h3>
                     <p className="reading-text">
@@ -389,7 +389,7 @@ export default function Home() {
                       .
                     </p>
                     <p className="reading-text mt-4">
-                      It was the best seller of the decade in Hawai&#699;i with
+                      It was the best-seller of the decade in Hawai&#699;i with
                       over 100,000 copies sold. Its proceeds funded projects on
                       the Wai&rsquo;anae Coast and in Hawai&#699;i&#39;s public
                       schools.
