@@ -17,8 +17,11 @@ type Testimonial = {
   quote: string;
   author: TestimonialAuthor;
   coral?: boolean;
+  navy?: boolean;
   gold?: boolean;
   goldQuoteOutline?: boolean;
+  /** Mobile: attribution below quote, aligned bottom-right */
+  mobileAttributionRight?: boolean;
 };
 
 const testimonials: Testimonial[] = [
@@ -38,8 +41,7 @@ const testimonials: Testimonial[] = [
       name: "Edgy Lee",
       designation: "author & filmmaker",
     },
-    gold: true,
-    goldQuoteOutline: true,
+    navy: true,
   },
   {
     quote:
@@ -52,6 +54,7 @@ const testimonials: Testimonial[] = [
         </>
       ),
     },
+    coral: true,
   },
 ];
 
@@ -64,6 +67,7 @@ const alohaQuotes: Testimonial[] = [
   {
     quote: "Aloha is my religion. I practice it everyday.",
     author: { name: "Palahi Paki" },
+    mobileAttributionRight: true,
   },
 ];
 
@@ -71,21 +75,35 @@ function TestimonialBlock({
   quote,
   author,
   coral,
+  navy,
   gold,
   goldQuoteOutline,
+  mobileAttributionRight = false,
   borderClassName = "border-l-2 pl-4 italic",
 }: Testimonial & { borderClassName?: string }) {
   const quoteClass = coral
     ? "reading-text text-coral"
-    : gold
-      ? `reading-text text-gold${goldQuoteOutline ? " gold-quote-outline" : ""}`
-      : "reading-text-muted";
-  const attrColor = coral ? "text-coral" : gold ? "text-gold" : "text-navy-800/85";
+    : navy
+      ? "reading-text text-navy-800"
+      : gold
+        ? `reading-text text-gold${goldQuoteOutline ? " gold-quote-outline" : ""}`
+        : "reading-text-muted";
+  const attrColor = coral
+    ? "text-coral"
+    : navy
+      ? "text-navy-800"
+      : gold
+        ? "text-gold"
+        : "text-navy-800/85";
 
   return (
     <blockquote className={borderClassName}>
       <p className={quoteClass}>&ldquo;{quote}&rdquo;</p>
-      <footer className={`testimonial-attribution mt-2 not-italic ${attrColor}`}>
+      <footer
+        className={`testimonial-attribution mt-2 not-italic ${attrColor}${
+          mobileAttributionRight ? " max-sm:text-right" : ""
+        }`}
+      >
         <span className="block">&mdash; {author.name}</span>
         {author.designation ? (
           <span className="block font-semibold opacity-90 mt-0.5">
@@ -484,9 +502,11 @@ export default function Home() {
                     borderClassName={`border-l-2 pl-4 italic ${
                       t.coral
                         ? "border-coral/50"
-                        : t.gold
-                          ? "border-gold/50"
-                          : "border-gold/30"
+                        : t.navy
+                          ? "border-navy-600/50"
+                          : t.gold
+                            ? "border-gold/50"
+                            : "border-gold/30"
                     }`}
                   />
                 ))}
