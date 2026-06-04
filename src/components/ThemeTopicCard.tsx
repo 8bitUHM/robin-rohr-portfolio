@@ -8,6 +8,7 @@ type ThemeTopicCardProps = {
   className?: string;
   italicTitleLine2?: boolean;
   compactBodyTop?: boolean;
+  compactBottom?: boolean;
 };
 
 export default function ThemeTopicCard({
@@ -18,10 +19,17 @@ export default function ThemeTopicCard({
   className = "",
   italicTitleLine2 = true,
   compactBodyTop = false,
+  compactBottom = false,
 }: ThemeTopicCardProps) {
+  const cardPadding = compactBottom
+    ? "pb-5 md:pb-6"
+    : "pb-8 md:pb-10";
+
   return (
     <article className={`fade-in ${className}`.trim()}>
-      <div className="relative bg-white rounded-3xl px-8 pt-5 pb-8 md:px-10 md:pt-7 md:pb-10 shadow-sm border border-navy-800/5 overflow-hidden">
+      <div
+        className={`relative bg-white rounded-3xl px-8 pt-5 md:px-10 md:pt-7 shadow-sm border border-navy-800/5 overflow-hidden ${cardPadding}`}
+      >
         <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-coral via-gold to-coral/50" />
 
         <header className="max-w-[72rem] mx-auto text-center">

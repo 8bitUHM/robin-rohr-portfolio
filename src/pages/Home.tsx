@@ -200,10 +200,10 @@ export default function Home() {
       />
 
       {/* Theme sections */}
-      <section className="bg-navy-50 pt-3 pb-6 md:pt-4 md:pb-8 px-6">
+      <section className="bg-navy-50 pt-3 pb-2 md:pt-4 md:pb-3 px-6">
         <div className="max-w-7xl mx-auto space-y-8 md:space-y-10">
           <ThemeTopicCard
-            label="Elder wisdom"
+            label="Recipes for transformation"
             titleLine1="The Wisdom of Our Elders:"
             titleLine2="The ‘Power of Story’ to Guide and to Heal."
             compactBodyTop
@@ -231,7 +231,7 @@ export default function Home() {
               </div>
               <p className="reading-text">
                 The stories and the values they promote are how they entertain
-                and encourage us all, how they teach our children and how
+                and encourage us, how they teach our children and how
                 we can teach ourselves.
               </p>
             </div>
@@ -239,10 +239,11 @@ export default function Home() {
 
           <ThemeTopicCard
             className="fade-in-delay-1"
-            label="Integrative health"
+            label="The future of medicine"
             titleLine1="Integrative Medicine: Ushering in"
             titleLine2="a New Age of Possibilities"
             italicTitleLine2={false}
+            compactBottom
           >
             <div className="space-y-5">
               <p className="reading-text">
@@ -281,10 +282,10 @@ export default function Home() {
         <div className="relative w-full md:pl-6 lg:pl-10 md:pr-6 lg:pr-10">
         <div className="relative space-y-6 w-full">
           {/* Books — full width */}
-          <div className="fade-in group bg-white rounded-3xl px-8 pt-5 pb-8 md:px-10 md:pt-8 md:pb-10 shadow-sm border border-navy-800/5 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+          <div className="fade-in group bg-white rounded-3xl px-8 pt-5 pb-8 md:px-10 md:pt-7 md:pb-10 -mt-1 md:-mt-2 shadow-sm border border-navy-800/5 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-navy-800 via-navy-600 to-navy-400" />
-            <div className="mb-8">
-              <p className="text-gold gold-label-outline font-bold tracking-[0.2em] uppercase site-section-label leading-snug mb-3">
+            <div className="mb-6">
+              <p className="text-gold gold-label-outline font-bold tracking-[0.2em] uppercase site-section-label leading-snug mb-1.5">
                 Best-Selling Author
               </p>
               <div className="h-1 bg-gradient-to-r from-navy-800 via-navy-600 to-navy-400 rounded-full" />
