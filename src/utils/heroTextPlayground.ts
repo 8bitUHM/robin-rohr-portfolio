@@ -147,14 +147,12 @@ export function storeHeroTextPlayground(
   }
 }
 
-export function formatHeroTextPlaygroundForCopy(
-  settings: HeroTextPlaygroundSettings,
+export function formatHeroTitlePlaygroundForCopy(
+  title: HeroTextBlockSettings,
 ): string {
-  const { title, quote } = settings;
   const lines = [
-    "Hero text playground settings",
+    "Robin Stephens Rohr — hero name settings",
     "",
-    "Robin Stephens Rohr:",
     `  Fill: ${title.fillHex}`,
     `  Outline: ${title.outlineHex} (${title.outlineWidth}px)`,
     `  Weight: ${title.fontWeight}`,
@@ -162,16 +160,8 @@ export function formatHeroTextPlaygroundForCopy(
     `  Font: ${title.fontFamily}`,
     `  Font size: ${formatFontSizeForCopy(title.fontSizePx)}`,
     "",
-    "Hero quote:",
-    `  Fill: ${quote.fillHex}`,
-    `  Outline: ${quote.outlineHex} (${quote.outlineWidth}px)`,
-    `  Weight: ${quote.fontWeight}`,
-    `  Italic: ${quote.italic ? "yes" : "no"}`,
-    `  Font: ${quote.fontFamily}`,
-    `  Font size: ${formatFontSizeForCopy(quote.fontSizePx)}`,
-    "",
     "JSON:",
-    JSON.stringify(settings, null, 2),
+    JSON.stringify({ title }, null, 2),
   ];
   return lines.join("\n");
 }
