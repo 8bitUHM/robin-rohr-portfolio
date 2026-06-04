@@ -521,35 +521,46 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Column + Integrative */}
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="fade-in fade-in-delay-1 group bg-white rounded-3xl p-8 shadow-sm border border-navy-800/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+          {/* Chasing the Light + Integrative */}
+          <div className="grid md:grid-cols-2 gap-8 md:items-start">
+            <div className="fade-in fade-in-delay-1 group bg-white rounded-3xl p-8 md:p-9 shadow-sm border border-navy-800/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light" />
-              <div className="w-14 h-14 rounded-2xl bg-gold/10 flex items-center justify-center mb-6">
-                <svg
-                  className="w-7 h-7 text-gold-dark"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={1.5}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-                  />
-                </svg>
+              <p className="text-gold font-bold tracking-[0.2em] uppercase text-ui sm:text-ui-lg mb-2">
+                Weekly storytelling
+              </p>
+              <h3 className="site-subheading text-navy-800 mb-5">Chasing the Light</h3>
+              <div className="space-y-4">
+                <p className="reading-text">
+                  A weekly storytelling column reaching over 285,000 families
+                  across the Hawaiian Islands. For over seven years, its readership
+                  has been entertained and uplifted by these aspirational stories.
+                </p>
+                <p className="reading-text">
+                  <em className="text-navy-800/90 not-italic font-bold">
+                    Chasing the Light
+                  </em>{" "}
+                  stories shine a beacon on the &lsquo;ah ha&rsquo; moments of our
+                  lives, moments that give insights and new perspectives as we
+                  navigate this human experience.
+                </p>
+                <p className="reading-text">
+                  These teachable moments can help us build courage and resilience
+                  as we navigate life&rsquo;s inevitable storms.
+                </p>
+                <p className="reading-text">
+                  They can also serve as an inspiration to help illuminate and guide
+                  us on the path of change in these uncertain times.
+                </p>
+                <p className="reading-text">
+                  These tales, some catapulting us into awe and wonder, some
+                  shimmering in joy and hilarity, and others encouraging us to face
+                  our resistance to forgiveness and to embrace compassion, have been
+                  created to help us find our True North once again.
+                </p>
               </div>
-              <h3 className="site-subheading text-navy-800 mb-3">Column</h3>
-              <p className="reading-text mb-4">
-                A weekly storytelling column reaching over 285,000 families
-                across the Hawaiian islands. For over seven years, its readership
-                has been delighted and uplifted by these inspirational stories.
-              </p>
-              <p className="reading-text-muted italic mb-6">
-                Quote coming soon.
-              </p>
-              <StatBlock value="285K" label="Families Reached" />
+              <div className="mt-6 pt-5 border-t border-navy-800/5">
+                <StatBlock value="285K" label="Families Reached" showDivider={false} />
+              </div>
             </div>
 
             <div className="fade-in fade-in-delay-2 group bg-white rounded-3xl p-8 shadow-sm border border-navy-800/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
