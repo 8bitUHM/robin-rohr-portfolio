@@ -20,8 +20,6 @@ type Testimonial = {
   navy?: boolean;
   gold?: boolean;
   goldQuoteOutline?: boolean;
-  /** Mobile: attribution below quote, aligned bottom-right */
-  mobileAttributionRight?: boolean;
 };
 
 const testimonials: Testimonial[] = [
@@ -67,7 +65,6 @@ const alohaQuotes: Testimonial[] = [
   {
     quote: "Aloha is my religion. I practice it everyday.",
     author: { name: "Palahi Paki" },
-    mobileAttributionRight: true,
   },
 ];
 
@@ -78,7 +75,6 @@ function TestimonialBlock({
   navy,
   gold,
   goldQuoteOutline,
-  mobileAttributionRight = false,
   borderClassName = "border-l-2 pl-4 italic",
 }: Testimonial & { borderClassName?: string }) {
   const quoteClass = coral
@@ -100,9 +96,7 @@ function TestimonialBlock({
     <blockquote className={borderClassName}>
       <p className={quoteClass}>&ldquo;{quote}&rdquo;</p>
       <footer
-        className={`testimonial-attribution mt-2 not-italic ${attrColor}${
-          mobileAttributionRight ? " max-sm:text-right" : ""
-        }`}
+        className={`testimonial-attribution mt-2 not-italic text-right ${attrColor}`}
       >
         <span className="block">&mdash; {author.name}</span>
         {author.designation ? (
@@ -314,7 +308,7 @@ export default function Home() {
 
           <ThemeTopicCard
             className="fade-in-delay-1"
-            label="The future of medicine"
+            label="The potential future of medicine"
             titleLine1="Integrative Medicine: Ushering in"
             titleLine2="a New Age of Possibilities"
             italicTitleLine2={false}

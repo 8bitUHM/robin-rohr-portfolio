@@ -222,7 +222,11 @@
     border-radius: calc(1rem - 1px);
     border: 3px solid rgb(var(--gold));
     background-color: #ffffff;
-    @apply px-5 py-5 md:px-6 md:py-6;
+    @apply px-3.5 py-3 md:px-4 md:py-3.5;
+  }
+
+  .aloha-quote-frame__inner .testimonial-attribution {
+    @apply mt-1.5;
   }
 
   .book-cover-title {
