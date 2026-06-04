@@ -64,7 +64,14 @@ const alohaQuotes: Testimonial[] = [
   },
   {
     quote: "Aloha is my religion. I practice it everyday.",
-    author: { name: "Palahi Paki" },
+    author: {
+      name: "Palahi Paki",
+      designation: (
+        <>
+          <em className="italic">Living Treasure of Hawai&#699;i</em>
+        </>
+      ),
+    },
   },
 ];
 
