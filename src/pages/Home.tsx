@@ -505,7 +505,7 @@ export default function Home() {
                   />
                 ))}
 
-                <div className="space-y-5 md:space-y-6">
+                <div className="aloha-quotes-stack space-y-3 md:space-y-4">
                   {alohaQuotes.map((t, i) => (
                     <div key={i} className="aloha-quote-frame">
                       <div className="aloha-quote-frame__inner">

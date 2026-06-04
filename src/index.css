@@ -222,11 +222,19 @@
     border-radius: calc(1rem - 1px);
     border: 3px solid rgb(var(--gold));
     background-color: #ffffff;
-    @apply px-3.5 py-3 md:px-4 md:py-3.5;
+    @apply px-2.5 py-2 md:px-3 md:py-2;
   }
 
   .aloha-quote-frame__inner .testimonial-attribution {
-    @apply mt-1.5;
+    @apply !mt-1;
+  }
+
+  .aloha-quotes-stack > .aloha-quote-frame:last-child {
+    @apply -mb-1 md:-mb-1.5;
+  }
+
+  .aloha-quotes-stack > .aloha-quote-frame:last-child .aloha-quote-frame__inner {
+    @apply pb-1.5 md:pb-1.5;
   }
 
   .book-cover-title {
