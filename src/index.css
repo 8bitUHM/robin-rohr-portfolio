@@ -37,7 +37,7 @@
   --text-page-title: 27px;
   --text-hero-quote: 19px;
   --text-hero-title: 31px;
-  --text-hero-tagline: 21px;
+  --text-hero-tagline: 24px;
   --text-ui: 12px;
   --text-ui-lg: 13.5px;
 }
@@ -46,7 +46,7 @@
   :root {
     --text-hero-quote: 22px;
     --text-hero-title: 33px;
-    --text-hero-tagline: 21px;
+    --text-hero-tagline: 24px;
     --text-ui: 13.5px;
   }
 }
@@ -55,7 +55,7 @@
   :root {
     --text-hero-quote: 27px;
     --text-hero-title: 40px;
-    --text-hero-tagline: 24px;
+    --text-hero-tagline: 27px;
     --text-stat-label: 15px;
     --text-media-title: 22.5px;
     --text-media-body: 15px;
@@ -76,7 +76,7 @@
     --text-page-title: 45.33px;
     --text-hero-quote: 36px;
     --text-hero-title: 50px;
-    --text-hero-tagline: 28px;
+    --text-hero-tagline: 32px;
     --text-ui: 15.11px;
     --text-ui-lg: 17px;
   }
@@ -87,14 +87,14 @@
     --text-page-title: 56.67px;
     --text-hero-quote: 44px;
     --text-hero-title: 62px;
-    --text-hero-tagline: 31px;
+    --text-hero-tagline: 35px;
   }
 }
 
 @media (min-width: 1280px) {
   :root {
     --text-hero-title: 75px;
-    --text-hero-tagline: 34px;
+    --text-hero-tagline: 39px;
   }
 }
 
