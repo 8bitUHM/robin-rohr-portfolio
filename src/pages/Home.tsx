@@ -444,6 +444,7 @@ export default function Home() {
                         showDivider={false}
                         align="right"
                         strongLabel
+                        className="stat-block--tight"
                       />
                     </div>
                   </div>
@@ -499,8 +500,8 @@ export default function Home() {
                             label="Copies Sold"
                             showDivider={false}
                             align="right"
-                            mobileSmall
                             strongLabel
+                            className="stat-block--tight"
                           />
                         </div>
                       </div>
@@ -534,6 +535,7 @@ export default function Home() {
                         showDivider={false}
                         align="right"
                         strongLabel
+                        className="stat-block--tight"
                       />
                     </div>
                   </div>
@@ -567,8 +569,8 @@ export default function Home() {
                       label="Copies Sold"
                       showDivider={false}
                       align="right"
-                      mobileSmall
                       strongLabel
+                      className="stat-block--tight"
                     />
                   </div>
 
