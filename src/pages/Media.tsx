@@ -17,6 +17,8 @@ export default function Media() {
         </div>
 
         <div className="fade-in fade-in-delay-1 space-y-10 md:space-y-12">
+          <ChasingTheLightSection />
+
           <div className="space-y-8">
             <h3 className="site-subheading text-ivory text-center">
               The Power to Choose Courtyard
@@ -68,8 +70,6 @@ export default function Media() {
               </div>
             </div>
           </div>
-
-          <ChasingTheLightSection />
         </div>
       </div>
     </section>

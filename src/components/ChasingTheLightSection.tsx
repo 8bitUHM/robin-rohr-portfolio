@@ -168,8 +168,8 @@ export default function ChasingTheLightSection() {
 
         <div className="px-6 py-10 md:px-10 md:py-12 lg:px-12 lg:py-14 xl:px-16 space-y-10 lg:space-y-14">
           <header className="text-center max-w-3xl mx-auto space-y-4">
-            <p className="text-gold font-bold tracking-[0.25em] uppercase text-ui sm:text-ui-lg">
-              Weekly storytelling column
+            <p className="text-coral font-bold tracking-[0.25em] uppercase text-ui sm:text-ui-lg">
+              A Weekly newspaper column
             </p>
             <h3 className="site-heading text-gold leading-tight">Chasing the Light</h3>
             <div className="mx-auto flex items-center justify-center gap-3 pt-1">

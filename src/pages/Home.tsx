@@ -349,7 +349,7 @@ export default function Home() {
               <p className="reading-text">
                 The stories and the values they promote are how they entertain
                 and encourage us, how they teach our children and how
-                we can teach ourselves.
+                we can teach ourselves. Our prayers are that the teachings of these wisdom keepers will 'echo into eternity.'
               </p>
             </div>
           </ThemeTopicCard>
@@ -609,82 +609,35 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Chasing the Light + Integrative */}
-          <div className="grid md:grid-cols-2 gap-8 md:items-start">
-            <div className="fade-in fade-in-delay-1 group bg-white rounded-3xl px-8 pt-8 pb-5 md:px-9 md:pt-9 md:pb-6 shadow-sm border border-navy-800/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light" />
-              <p className="text-gold font-bold tracking-[0.2em] uppercase text-ui sm:text-ui-lg mb-2">
-                Weekly storytelling
-              </p>
-              <h3 className="site-subheading text-navy-800 mb-5">Chasing the Light</h3>
-              <div className="space-y-4">
-                <p className="reading-text">
-                  A weekly storytelling column reaching over 285,000 families
-                  across the Hawaiian Islands. For over seven years, its readership
-                  has been entertained and uplifted by these aspirational stories.
-                </p>
-                <p className="reading-text">
-                  <em className="text-navy-800/90 not-italic font-bold">
-                    Chasing the Light
-                  </em>{" "}
-                  stories shine a beacon on the &lsquo;ah ha&rsquo; moments of our
-                  lives, moments that give insights and new perspectives as we
-                  navigate this human experience.
-                </p>
-                <p className="reading-text">
-                  These teachable moments can help us build courage and resilience
-                  as we navigate life&rsquo;s inevitable storms.
-                </p>
-                <p className="reading-text">
-                  They can also serve as an inspiration to help illuminate and guide
-                  us on the path of change in these uncertain times.
-                </p>
-                <p className="reading-text">
-                  These tales, some catapulting us into awe and wonder, some
-                  shimmering in joy and hilarity, and others encouraging us to face
-                  our resistance to forgiveness and to embrace compassion, have been
-                  created to help us find our True North once again.
-                </p>
-              </div>
-              <div className="mt-2 pt-2 border-t border-navy-800/5">
-                <StatBlock
-                  value="285K"
-                  label="Families Reached"
-                  showDivider={false}
-                  className="stat-block--tight"
+          {/* Integrative Medicine */}
+          <div className="fade-in fade-in-delay-2 group bg-white rounded-3xl p-8 shadow-sm border border-navy-800/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-navy-800 via-navy-600 to-navy-400" />
+            <div className="w-14 h-14 rounded-2xl bg-navy-800/10 flex items-center justify-center mb-6">
+              <svg
+                className="w-7 h-7 text-navy-800"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={1.5}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
                 />
-              </div>
+              </svg>
             </div>
-
-            <div className="fade-in fade-in-delay-2 group bg-white rounded-3xl p-8 shadow-sm border border-navy-800/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-navy-800 via-navy-600 to-navy-400" />
-              <div className="w-14 h-14 rounded-2xl bg-navy-800/10 flex items-center justify-center mb-6">
-                <svg
-                  className="w-7 h-7 text-navy-800"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={1.5}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-                  />
-                </svg>
-              </div>
-              <h3 className="site-subheading text-navy-800 mb-3">
-                Integrative Medicine
-              </h3>
-              <p className="reading-text mb-4">
-                Over two decades of work in Integrative Medicine, including
-                collaborating with MDs and PAs in a hospital setting, utilizing
-                microcurrent technology for the alleviation of chronic pain.
-              </p>
-              <p className="reading-text-muted italic">
-                Content coming soon.
-              </p>
-            </div>
+            <h3 className="site-subheading text-navy-800 mb-3">
+              Integrative Medicine
+            </h3>
+            <p className="reading-text mb-4">
+              Over two decades of work in Integrative Medicine, including
+              collaborating with MDs and PAs in a hospital setting, utilizing
+              microcurrent technology for the alleviation of chronic pain.
+            </p>
+            <p className="reading-text-muted italic">
+              Content coming soon.
+            </p>
           </div>
         </div>
         </div>
