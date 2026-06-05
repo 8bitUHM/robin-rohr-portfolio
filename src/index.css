@@ -163,6 +163,15 @@
     @apply font-bold tracking-wider uppercase text-navy-700/75;
   }
 
+  .stat-block--mobile-small .site-stat-value {
+    font-size: calc(var(--text-stat) * 0.8);
+    @apply leading-none;
+  }
+
+  .stat-block--mobile-small .site-stat-label {
+    font-size: calc(var(--text-stat-label) * 0.8);
+  }
+
   .site-section-label {
     font-size: var(--text-section-label);
     @apply font-bold leading-snug;

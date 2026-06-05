@@ -15,6 +15,8 @@ type TestimonialAuthor = {
 
 type Testimonial = {
   quote: ReactNode;
+  /** Narrow/mobile layout with line breaks and embedded quote marks */
+  mobileQuote?: ReactNode;
   author: TestimonialAuthor;
   coral?: boolean;
   navy?: boolean;
@@ -28,7 +30,7 @@ const testimonials: Testimonial[] = [
       "If anyone who has ever been loved, guided or healed by a kupuna of these Islands, lit one candle in tribute to these wise and gracious Elders at midnight, the Islands would look like they were drenched in the blazingly noonday sun.",
     author: {
       name: "John DeFries",
-      designation: "a beloved Island Son",
+      designation: "a Beloved Island Son",
     },
     coral: true,
   },
@@ -37,7 +39,7 @@ const testimonials: Testimonial[] = [
       "This is a collection of powerful mini Band-Aids for the heart and mind, prescribed for any mood or mishap because if one place on earth inspires the deepest wisdom and spiritual medicines pertinent to our human condition, it is Hawai\u02BBi.",
     author: {
       name: "Edgy Lee",
-      designation: "author & filmmaker",
+      designation: "Author & filmmaker",
     },
     navy: true,
   },
@@ -58,30 +60,26 @@ const testimonials: Testimonial[] = [
 
 const alohaQuotes: Testimonial[] = [
   {
-    quote: (
+    quote:
+      "Aloha is not a greeting. It is a feeling... we feeling that God is present.",
+    mobileQuote: (
       <>
-        <span className="sm:hidden">
-          Aloha is not a greeting. It is a feeling... a feeling that God is
-          present.
-        </span>
-        <span className="hidden sm:inline">
-          Aloha is not a greeting. It is a feeling... we feeling that God is
-          present.
-        </span>
+        &ldquo;Aloha is not a greeting.
+        <br />
+        It is a feeling...
+        <br />
+        we feeling that God is present.&rdquo;
       </>
     ),
     author: { name: "Reverend Abraham Akaka" },
   },
   {
-    quote: (
+    quote: "Aloha is my religion. I practice it everyday.",
+    mobileQuote: (
       <>
-        <span className="sm:hidden">
-          Aloha is my religion.{" "}
-          <span className="block">I practice it everyday.</span>
-        </span>
-        <span className="hidden sm:inline">
-          Aloha is my religion. I practice it everyday.
-        </span>
+        &ldquo;Aloha is my religion.
+        <br />
+        I practice it everyday.&rdquo;
       </>
     ),
     author: {
@@ -97,6 +95,7 @@ const alohaQuotes: Testimonial[] = [
 
 function TestimonialBlock({
   quote,
+  mobileQuote,
   author,
   coral,
   navy,
@@ -122,7 +121,16 @@ function TestimonialBlock({
   return (
     <blockquote className={borderClassName}>
       <p className={quoteClass}>
-        &ldquo;{quote}&rdquo;
+        {mobileQuote ? (
+          <>
+            <span className="hidden max-[430px]:inline">{mobileQuote}</span>
+            <span className="inline max-[430px]:hidden">&ldquo;{quote}&rdquo;</span>
+          </>
+        ) : (
+          <>
+            &ldquo;{quote}&rdquo;
+          </>
+        )}
       </p>
       <footer
         className={`testimonial-attribution mt-1.5 not-italic text-right ${attrColor}`}
@@ -144,29 +152,37 @@ function StatBlock({
   showDivider = true,
   align = "left",
   compactMobile = false,
+  mobileSmall = false,
+  className = "",
 }: {
   value: string;
   label: string;
   showDivider?: boolean;
   align?: "left" | "right";
   compactMobile?: boolean;
+  mobileSmall?: boolean;
+  className?: string;
 }) {
   return (
     <div
       className={`${showDivider ? "pt-5 border-t border-navy-800/5" : ""} ${
         compactMobile ? "max-sm:py-0" : ""
-      } ${align === "right" ? "text-right" : ""}`}
+      } ${align === "right" ? "text-right" : ""} ${
+        mobileSmall ? "stat-block--mobile-small" : ""
+      } ${className}`}
     >
       <span
         className={`site-stat-value block ${
-          compactMobile ? "max-sm:text-[2rem] max-sm:leading-none" : ""
+          compactMobile && !mobileSmall
+            ? "max-sm:text-[2rem] max-sm:leading-none"
+            : ""
         }`}
       >
         {value}
       </span>
       <span
         className={`site-stat-label block ${
-          compactMobile ? "max-sm:mt-0.5" : "mt-1"
+          compactMobile || mobileSmall ? "max-sm:mt-0.5" : "mt-1"
         }`}
       >
         {label}
@@ -417,13 +433,12 @@ export default function Home() {
                         Letters to a Goddess
                       </span>
                     </h3>
-                    <div className="shrink-0">
+                    <div className="hidden sm:block shrink-0">
                       <StatBlock
                         value="15K+"
                         label="Copies Sold"
                         showDivider={false}
                         align="right"
-                        compactMobile
                       />
                     </div>
                   </div>
@@ -473,6 +488,15 @@ export default function Home() {
                           believe—and it illustrates the power of belief in shaping
                           our perceptions, our dreams, and our lives.
                         </p>
+                        <div className="sm:hidden flex justify-end pt-1">
+                          <StatBlock
+                            value="15K+"
+                            label="Copies Sold"
+                            showDivider={false}
+                            align="right"
+                            mobileSmall
+                          />
+                        </div>
                       </div>
                     </div>
                 </div>
@@ -497,13 +521,12 @@ export default function Home() {
                         Soul of Hawai&#699;i
                       </span>
                     </h3>
-                    <div className="shrink-0">
+                    <div className="hidden sm:block shrink-0">
                       <StatBlock
                         value="100K+"
                         label="Copies Sold"
                         showDivider={false}
                         align="right"
-                        compactMobile
                       />
                     </div>
                   </div>
@@ -530,37 +553,47 @@ export default function Home() {
                       wisdom and will be passed on from generation to generation.
                     </p>
                   </div>
-                </div>
-              </div>
 
-              <div className="grid md:grid-cols-1 gap-6 pt-2">
-                {testimonials.map((t, i) => (
-                  <TestimonialBlock
-                    key={i}
-                    {...t}
-                    borderClassName={`border-l-2 pl-4 italic ${
-                      t.coral
-                        ? "border-coral/50"
-                        : t.navy
-                          ? "border-navy-600/50"
-                          : t.gold
-                            ? "border-gold/50"
-                            : "border-gold/30"
-                    }`}
-                  />
-                ))}
+                  <div className="sm:hidden flex justify-end mt-3">
+                    <StatBlock
+                      value="100K+"
+                      label="Copies Sold"
+                      showDivider={false}
+                      align="right"
+                      mobileSmall
+                    />
+                  </div>
 
-                <div className="aloha-quotes-stack space-y-3 md:space-y-4">
-                  {alohaQuotes.map((t, i) => (
-                    <div key={i} className="aloha-quote-frame">
-                      <div className="aloha-quote-frame__inner">
-                        <TestimonialBlock
-                          {...t}
-                          borderClassName="italic border-0 pl-0"
-                        />
-                      </div>
+                  <div className="grid md:grid-cols-1 gap-6 mt-3 md:mt-4">
+                    {testimonials.map((t, i) => (
+                      <TestimonialBlock
+                        key={i}
+                        {...t}
+                        borderClassName={`border-l-2 pl-4 italic ${
+                          t.coral
+                            ? "border-coral/50"
+                            : t.navy
+                              ? "border-navy-600/50"
+                              : t.gold
+                                ? "border-gold/50"
+                                : "border-gold/30"
+                        }`}
+                      />
+                    ))}
+
+                    <div className="aloha-quotes-stack space-y-3 md:space-y-4">
+                      {alohaQuotes.map((t, i) => (
+                        <div key={i} className="aloha-quote-frame">
+                          <div className="aloha-quote-frame__inner">
+                            <TestimonialBlock
+                              {...t}
+                              borderClassName="italic border-0 pl-0"
+                            />
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  </div>
                 </div>
               </div>
             </div>
