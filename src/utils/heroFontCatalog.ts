@@ -1,4 +1,4 @@
-export const DEFAULT_HERO_FONT_FAMILY = "Quicksand";
+export const DEFAULT_HERO_FONT_FAMILY = "Perpetua Titling MT";
 
 export type HeroFontCategory =
   | "sans-serif"
@@ -141,6 +141,7 @@ const HERO_FONT_CATALOG_RAW = [
   { family: "Passion One", category: "display" },
   { family: "Pathway Gothic One", category: "sans-serif" },
   { family: "Patua One", category: "display" },
+  { family: "Perpetua Titling MT", category: "serif" },
   { family: "Petrona", category: "serif" },
   { family: "Philosopher", category: "sans-serif" },
   { family: "Playfair Display", category: "serif" },

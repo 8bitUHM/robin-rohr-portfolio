@@ -14,7 +14,7 @@ type TestimonialAuthor = {
 };
 
 type Testimonial = {
-  quote: string;
+  quote: ReactNode;
   author: TestimonialAuthor;
   coral?: boolean;
   navy?: boolean;
@@ -58,12 +58,32 @@ const testimonials: Testimonial[] = [
 
 const alohaQuotes: Testimonial[] = [
   {
-    quote:
-      "Aloha is not a greeting. It is a feeling... we feeling that God is present.",
+    quote: (
+      <>
+        <span className="sm:hidden">
+          Aloha is not a greeting. It is a feeling... a feeling that God is
+          present.
+        </span>
+        <span className="hidden sm:inline">
+          Aloha is not a greeting. It is a feeling... we feeling that God is
+          present.
+        </span>
+      </>
+    ),
     author: { name: "Reverend Abraham Akaka" },
   },
   {
-    quote: "Aloha is my religion. I practice it everyday.",
+    quote: (
+      <>
+        <span className="sm:hidden">
+          Aloha is my religion.{" "}
+          <span className="block">I practice it everyday.</span>
+        </span>
+        <span className="hidden sm:inline">
+          Aloha is my religion. I practice it everyday.
+        </span>
+      </>
+    ),
     author: {
       name: "Palahi Paki",
       designation: (
@@ -101,16 +121,18 @@ function TestimonialBlock({
 
   return (
     <blockquote className={borderClassName}>
-      <p className={quoteClass}>&ldquo;{quote}&rdquo;</p>
+      <p className={quoteClass}>
+        &ldquo;{quote}&rdquo;
+      </p>
       <footer
-        className={`testimonial-attribution mt-2 not-italic text-right ${attrColor}`}
+        className={`testimonial-attribution mt-1.5 not-italic text-right ${attrColor}`}
       >
-        <span className="block">&mdash; {author.name}</span>
-        {author.designation ? (
-          <span className="block font-semibold opacity-90 mt-0.5">
-            {author.designation}
-          </span>
-        ) : null}
+        <span className="flex flex-col items-end gap-0 leading-tight">
+          <span>&mdash; {author.name}</span>
+          {author.designation ? (
+            <span className="font-semibold opacity-90">{author.designation}</span>
+          ) : null}
+        </span>
       </footer>
     </blockquote>
   );
@@ -133,7 +155,7 @@ function StatBlock({
     <div
       className={`${showDivider ? "pt-5 border-t border-navy-800/5" : ""} ${
         compactMobile ? "max-sm:py-0" : ""
-      } ${align === "right" ? "sm:text-right" : ""}`}
+      } ${align === "right" ? "text-right" : ""}`}
     >
       <span
         className={`site-stat-value block ${
@@ -277,12 +299,13 @@ export default function Home() {
 
       {/* Theme sections */}
       <section className="bg-navy-50 pt-3 pb-2 md:pt-4 md:pb-3 px-6">
-        <div className="max-w-7xl mx-auto space-y-8 md:space-y-10">
+        <div className="max-w-7xl mx-auto space-y-6 md:space-y-10">
           <ThemeTopicCard
             label="Recipes for transformation"
             titleLine1="The Wisdom of Our Elders:"
             titleLine2="The ‘Power of Story’ to Guide and to Heal."
             compactBodyTop
+            compactBottom
           >
             <div className="space-y-5">
               <p className="reading-text">
@@ -344,6 +367,15 @@ export default function Home() {
                 medicine. They are working with researchers and MDs to be helpful
                 to Hawai&#699;i&#39;s diabetes community.
               </p>
+              <div className="flex justify-end pt-1">
+                <StatBlock
+                  value="20+"
+                  label="Years of Service"
+                  showDivider={false}
+                  align="right"
+                  compactMobile
+                />
+              </div>
             </div>
           </ThemeTopicCard>
         </div>
@@ -377,15 +409,25 @@ export default function Home() {
                   loading="lazy"
                   className="block w-full h-auto rounded-xl shadow-md border border-navy-800/10 md:max-w-md lg:max-w-xl"
                 />
-                <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
-                  <div className="min-w-0 flex-1">
-                    <h3 className="book-cover-title">
+                <div className="flex flex-col gap-2">
+                  <div className="flex items-start justify-between gap-2">
+                    <h3 className="book-cover-title mb-0 min-w-0 flex-1 text-left">
                       <span className="book-cover-title__line">Powerstones:</span>{" "}
                       <span className="book-cover-title__line">
                         Letters to a Goddess
                       </span>
                     </h3>
-                    <div className="space-y-4">
+                    <div className="shrink-0">
+                      <StatBlock
+                        value="15K+"
+                        label="Copies Sold"
+                        showDivider={false}
+                        align="right"
+                        compactMobile
+                      />
+                    </div>
+                  </div>
+                  <div className="space-y-4">
                       <p className="reading-text">
                         Fascinated by Hawaiian culture, Robin co-authored the
                         best-seller{" "}
@@ -433,14 +475,6 @@ export default function Home() {
                         </p>
                       </div>
                     </div>
-                  </div>
-                  <StatBlock
-                    value="15K+"
-                    label="Copies Sold"
-                    showDivider={false}
-                    align="right"
-                    compactMobile
-                  />
                 </div>
               </div>
 
@@ -453,9 +487,9 @@ export default function Home() {
                   loading="lazy"
                   className="block w-full h-auto rounded-xl shadow-md border border-navy-800/10 md:max-w-md lg:max-w-xl"
                 />
-                <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
-                  <div className="min-w-0 flex-1">
-                    <h3 className="book-cover-title">
+                <div className="flex flex-col gap-2">
+                  <div className="flex items-start justify-between gap-2">
+                    <h3 className="book-cover-title mb-0 min-w-0 flex-1 text-left">
                       <span className="book-cover-title__line">
                         Chicken Soup from the
                       </span>{" "}
@@ -463,6 +497,17 @@ export default function Home() {
                         Soul of Hawai&#699;i
                       </span>
                     </h3>
+                    <div className="shrink-0">
+                      <StatBlock
+                        value="100K+"
+                        label="Copies Sold"
+                        showDivider={false}
+                        align="right"
+                        compactMobile
+                      />
+                    </div>
+                  </div>
+                  <div>
                     <p className="reading-text">
                       This project documented the inspirational stories of
                       beloved Island elders, resulting in{" "}
@@ -485,13 +530,6 @@ export default function Home() {
                       wisdom and will be passed on from generation to generation.
                     </p>
                   </div>
-                  <StatBlock
-                    value="100K+"
-                    label="Copies Sold"
-                    showDivider={false}
-                    align="right"
-                    compactMobile
-                  />
                 </div>
               </div>
 
@@ -595,10 +633,9 @@ export default function Home() {
                 collaborating with MDs and PAs in a hospital setting, utilizing
                 microcurrent technology for the alleviation of chronic pain.
               </p>
-              <p className="reading-text-muted italic mb-6">
+              <p className="reading-text-muted italic">
                 Content coming soon.
               </p>
-              <StatBlock value="20+" label="Years of Service" />
             </div>
           </div>
         </div>

@@ -195,7 +195,13 @@
   }
 
   .hero-title {
-    font-family: var(--hero-title-font-family, "Quicksand", sans-serif);
+    font-family: var(
+      --hero-title-font-family,
+      "Perpetua Titling MT",
+      "Perpetua Titling",
+      Perpetua,
+      serif
+    );
     font-size: var(--hero-title-size, var(--text-hero-title));
     font-weight: var(--hero-title-weight, 700);
     font-style: var(--hero-title-style, normal);
@@ -203,6 +209,7 @@
     -webkit-text-stroke: var(--hero-title-stroke-width, 0px)
       rgb(var(--hero-title-stroke-color, 28 61 110));
     paint-order: stroke fill;
+    text-transform: uppercase;
     @apply leading-[1.05];
   }
 

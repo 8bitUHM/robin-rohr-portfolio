@@ -179,45 +179,35 @@ export default function ChasingTheLightSection() {
             </div>
           </header>
 
-          <p className="reading-text-on-dark text-center max-w-4xl mx-auto">
-            A weekly storytelling column reaching over 285,000 families across the
-            Hawaiian Islands. For over seven years, its readership has been
-            entertained and uplifted by these aspirational stories.
-          </p>
-
           <div className="lg:grid lg:grid-cols-[minmax(0,1.15fr)_minmax(300px,0.85fr)] lg:gap-12 xl:gap-16 lg:items-start">
-            <div className="space-y-6 lg:space-y-8">
-              <blockquote className="rounded-2xl border border-gold/25 bg-gold/10 px-5 py-5 md:px-7 md:py-7 lg:px-8 lg:py-8">
-                <p className="reading-text-on-dark text-ivory italic text-center lg:text-left">
-                  <span className="text-gold font-bold not-italic">
-                    Chasing the Light
-                  </span>{" "}
-                  stories shine a beacon on the &lsquo;ah ha&rsquo; moments of our
-                  lives—moments that give insights and new perspectives as we
-                  navigate this human experience.
-                </p>
-              </blockquote>
-
-              <ul className="grid gap-4 sm:gap-5 lg:grid-cols-1">
-                {[
-                  "Teachable moments that build courage and resilience as we navigate life\u2019s inevitable storms.",
-                  "Inspiration to illuminate and guide us on the path of change in these uncertain times.",
-                  "Tales of awe, joy, forgiveness, and compassion—created to help us find our True North once again.",
-                ].map((text) => (
-                  <li
-                    key={text}
-                    className="reading-text-on-dark flex gap-3 items-start text-center lg:text-left"
-                  >
-                    <span
-                      className="text-gold shrink-0 mt-1 hidden lg:inline"
-                      aria-hidden
-                    >
-                      &#9670;
-                    </span>
-                    <span className="flex-1">{text}</span>
-                  </li>
-                ))}
-              </ul>
+            <div className="space-y-4 text-center lg:text-left max-w-4xl mx-auto lg:mx-0">
+              <p className="reading-text-on-dark">
+                A weekly storytelling column reaching over 285,000 families across
+                the Hawaiian Islands. For over seven years, its readership has
+                been entertained and uplifted by these aspirational stories.
+              </p>
+              <p className="reading-text-on-dark">
+                <span className="text-gold font-bold">
+                  Chasing the Light
+                </span>{" "}
+                stories shine a beacon on the &lsquo;ah ha&rsquo; moments of our
+                lives, moments that give insights and new perspectives as we
+                navigate this human experience.
+              </p>
+              <p className="reading-text-on-dark">
+                These teachable moments can help us build courage and resilience
+                as we navigate life&rsquo;s inevitable storms.
+              </p>
+              <p className="reading-text-on-dark">
+                They can also serve as an inspiration to help illuminate and
+                guide us on the path of change in these uncertain times.
+              </p>
+              <p className="reading-text-on-dark">
+                These tales, some catapulting us into awe and wonder, some
+                shimmering in joy and hilarity, and others encouraging us to face
+                our resistance to forgiveness and to embrace compassion, have been
+                created to help us find our True North once again.
+              </p>
             </div>
 
             <aside className="mt-8 lg:mt-0 lg:sticky lg:top-8 space-y-4">
