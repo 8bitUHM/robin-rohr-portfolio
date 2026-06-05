@@ -18,6 +18,7 @@
   --hero-title-stroke-width: 0px;
   --hero-title-weight: 700;
   --hero-title-style: normal;
+  --hero-title-font-family: "Perpetua Titling MT", "Perpetua Titling", Perpetua, serif;
   --hero-quote-color: 245 124 53;
   --hero-quote-stroke-color: 28 61 110;
   --hero-quote-stroke-width: 0px;
@@ -35,7 +36,7 @@
   --text-media-body: 13.5px;
   --text-page-title: 27px;
   --text-hero-quote: 19px;
-  --text-hero-title: 33px;
+  --text-hero-title: 31px;
   --text-hero-tagline: 21px;
   --text-ui: 12px;
   --text-ui-lg: 13.5px;
