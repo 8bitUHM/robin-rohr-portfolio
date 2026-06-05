@@ -164,12 +164,12 @@
   }
 
   .stat-block--mobile-small .site-stat-value {
-    font-size: calc(var(--text-stat) * 0.8);
+    font-size: calc(var(--text-stat) * 0.64);
     @apply leading-none;
   }
 
   .stat-block--mobile-small .site-stat-label {
-    font-size: calc(var(--text-stat-label) * 0.8);
+    font-size: calc(var(--text-stat-label) * 0.64);
   }
 
   .site-section-label {

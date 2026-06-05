@@ -30,7 +30,7 @@ const testimonials: Testimonial[] = [
       "If anyone who has ever been loved, guided or healed by a kupuna of these Islands, lit one candle in tribute to these wise and gracious Elders at midnight, the Islands would look like they were drenched in the blazingly noonday sun.",
     author: {
       name: "John DeFries",
-      designation: "a Beloved Island Son",
+      designation: "Beloved Island Son",
     },
     coral: true,
   },
