@@ -611,7 +611,7 @@ export default function Home() {
 
           {/* Chasing the Light + Integrative */}
           <div className="grid md:grid-cols-2 gap-8 md:items-start">
-            <div className="fade-in fade-in-delay-1 group bg-white rounded-3xl p-8 md:p-9 shadow-sm border border-navy-800/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+            <div className="fade-in fade-in-delay-1 group bg-white rounded-3xl px-8 pt-8 pb-5 md:px-9 md:pt-9 md:pb-6 shadow-sm border border-navy-800/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold-dark via-gold to-gold-light" />
               <p className="text-gold font-bold tracking-[0.2em] uppercase text-ui sm:text-ui-lg mb-2">
                 Weekly storytelling
@@ -646,8 +646,13 @@ export default function Home() {
                   created to help us find our True North once again.
                 </p>
               </div>
-              <div className="mt-6 pt-5 border-t border-navy-800/5">
-                <StatBlock value="285K" label="Families Reached" showDivider={false} />
+              <div className="mt-2 pt-2 border-t border-navy-800/5">
+                <StatBlock
+                  value="285K"
+                  label="Families Reached"
+                  showDivider={false}
+                  className="stat-block--tight"
+                />
               </div>
             </div>
 
