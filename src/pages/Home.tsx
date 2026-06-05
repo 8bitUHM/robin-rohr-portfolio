@@ -444,7 +444,7 @@ export default function Home() {
                         showDivider={false}
                         align="right"
                         strongLabel
-                        className="stat-block--tight"
+                        className="stat-block--tight stat-block--copies-sold"
                       />
                     </div>
                   </div>
@@ -501,7 +501,7 @@ export default function Home() {
                             showDivider={false}
                             align="right"
                             strongLabel
-                            className="stat-block--tight"
+                            className="stat-block--tight stat-block--copies-sold"
                           />
                         </div>
                       </div>
@@ -535,7 +535,7 @@ export default function Home() {
                         showDivider={false}
                         align="right"
                         strongLabel
-                        className="stat-block--tight"
+                        className="stat-block--tight stat-block--copies-sold"
                       />
                     </div>
                   </div>
@@ -570,7 +570,7 @@ export default function Home() {
                       showDivider={false}
                       align="right"
                       strongLabel
-                      className="stat-block--tight"
+                      className="stat-block--tight stat-block--copies-sold"
                     />
                   </div>
 
@@ -607,37 +607,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Integrative Medicine */}
-          <div className="fade-in fade-in-delay-2 group bg-white rounded-3xl p-8 shadow-sm border border-navy-800/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-navy-800 via-navy-600 to-navy-400" />
-            <div className="w-14 h-14 rounded-2xl bg-navy-800/10 flex items-center justify-center mb-6">
-              <svg
-                className="w-7 h-7 text-navy-800"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={1.5}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-                />
-              </svg>
-            </div>
-            <h3 className="site-subheading text-navy-800 mb-3">
-              Integrative Medicine
-            </h3>
-            <p className="reading-text mb-4">
-              Over two decades of work in Integrative Medicine, including
-              collaborating with MDs and PAs in a hospital setting, utilizing
-              microcurrent technology for the alleviation of chronic pain.
-            </p>
-            <p className="reading-text-muted italic">
-              Content coming soon.
-            </p>
           </div>
         </div>
         </div>

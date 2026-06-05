@@ -192,6 +192,11 @@
     @apply mt-0 leading-none;
   }
 
+  .stat-block--copies-sold .site-stat-value {
+    font-size: calc(var(--text-stat) * 0.85);
+    @apply leading-none;
+  }
+
   .site-section-label {
     font-size: var(--text-section-label);
     @apply font-bold leading-snug;
