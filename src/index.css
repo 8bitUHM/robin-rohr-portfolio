@@ -37,7 +37,7 @@
   --text-page-title: 27px;
   --text-hero-quote: 19px;
   --text-hero-title: 31px;
-  --text-hero-tagline: 24px;
+  --text-hero-tagline: 22px;
   --text-ui: 12px;
   --text-ui-lg: 13.5px;
 }
@@ -46,7 +46,7 @@
   :root {
     --text-hero-quote: 22px;
     --text-hero-title: 33px;
-    --text-hero-tagline: 24px;
+    --text-hero-tagline: 22px;
     --text-ui: 13.5px;
   }
 }
@@ -55,7 +55,7 @@
   :root {
     --text-hero-quote: 27px;
     --text-hero-title: 40px;
-    --text-hero-tagline: 27px;
+    --text-hero-tagline: 25px;
     --text-stat-label: 15px;
     --text-media-title: 22.5px;
     --text-media-body: 15px;
@@ -76,7 +76,7 @@
     --text-page-title: 45.33px;
     --text-hero-quote: 36px;
     --text-hero-title: 50px;
-    --text-hero-tagline: 32px;
+    --text-hero-tagline: 29px;
     --text-ui: 15.11px;
     --text-ui-lg: 17px;
   }
@@ -87,14 +87,14 @@
     --text-page-title: 56.67px;
     --text-hero-quote: 44px;
     --text-hero-title: 62px;
-    --text-hero-tagline: 35px;
+    --text-hero-tagline: 32px;
   }
 }
 
 @media (min-width: 1280px) {
   :root {
     --text-hero-title: 75px;
-    --text-hero-tagline: 39px;
+    --text-hero-tagline: 36px;
   }
 }
 
@@ -280,11 +280,18 @@
     font-size: var(--text-hero-tagline);
     font-weight: 700;
     letter-spacing: 0.2em;
+    line-height: 1.18;
     -webkit-text-stroke: 1px rgb(var(--gold-outline));
     paint-order: stroke fill;
     text-shadow:
       0.75px 0.75px 0 rgb(var(--gold-outline)),
       -0.35px -0.35px 0 rgb(var(--gold-light));
+  }
+
+  @media (min-width: 640px) {
+    .hero-tagline {
+      line-height: 1.35;
+    }
   }
 
   html.hero-tagline-shimmer-on .hero-tagline {
