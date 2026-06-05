@@ -172,6 +172,16 @@
     font-size: calc(var(--text-stat-label) * 0.64);
   }
 
+  .stat-block--tight .site-stat-value {
+    font-size: calc(var(--text-stat) * 1.05);
+    @apply leading-none;
+  }
+
+  .stat-block--tight .site-stat-label {
+    font-size: calc(var(--text-stat-label) * 1.05);
+    @apply mt-0 leading-none;
+  }
+
   .site-section-label {
     font-size: var(--text-section-label);
     @apply font-bold leading-snug;

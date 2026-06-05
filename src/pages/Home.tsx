@@ -359,6 +359,7 @@ export default function Home() {
             titleLine2="a New Age of Possibilities"
             italicTitleLine2={false}
             compactBottom
+            tightBottom
           >
             <div className="space-y-5">
               <p className="reading-text">
@@ -383,15 +384,15 @@ export default function Home() {
                 medicine. They are working with researchers and MDs to be helpful
                 to Hawai&#699;i&#39;s diabetes community.
               </p>
-              <div className="flex justify-end pt-1">
-                <StatBlock
-                  value="20+"
-                  label="Years of Service"
-                  showDivider={false}
-                  align="right"
-                  compactMobile
-                />
-              </div>
+            </div>
+            <div className="flex justify-end mt-1">
+              <StatBlock
+                value="20+"
+                label="Years of Service"
+                showDivider={false}
+                align="right"
+                className="stat-block--tight"
+              />
             </div>
           </ThemeTopicCard>
         </div>

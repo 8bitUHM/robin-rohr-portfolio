@@ -9,6 +9,7 @@ type ThemeTopicCardProps = {
   italicTitleLine2?: boolean;
   compactBodyTop?: boolean;
   compactBottom?: boolean;
+  tightBottom?: boolean;
 };
 
 export default function ThemeTopicCard({
@@ -20,9 +21,12 @@ export default function ThemeTopicCard({
   italicTitleLine2 = true,
   compactBodyTop = false,
   compactBottom = false,
+  tightBottom = false,
 }: ThemeTopicCardProps) {
   const cardPadding = compactBottom
-    ? "pb-5 md:pb-6"
+    ? tightBottom
+      ? "pb-2 md:pb-3"
+      : "pb-5 md:pb-6"
     : "pb-8 md:pb-10";
 
   return (
