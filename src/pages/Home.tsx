@@ -153,6 +153,7 @@ function StatBlock({
   align = "left",
   compactMobile = false,
   mobileSmall = false,
+  strongLabel = false,
   className = "",
 }: {
   value: string;
@@ -161,6 +162,7 @@ function StatBlock({
   align?: "left" | "right";
   compactMobile?: boolean;
   mobileSmall?: boolean;
+  strongLabel?: boolean;
   className?: string;
 }) {
   return (
@@ -169,7 +171,7 @@ function StatBlock({
         compactMobile ? "max-sm:py-0" : ""
       } ${align === "right" ? "text-right" : ""} ${
         mobileSmall ? "stat-block--mobile-small" : ""
-      } ${className}`}
+      } ${strongLabel ? "stat-block--label-strong" : ""} ${className}`}
     >
       <span
         className={`site-stat-value block ${
@@ -391,6 +393,7 @@ export default function Home() {
                 label="Years of Service"
                 showDivider={false}
                 align="right"
+                strongLabel
                 className="stat-block--tight"
               />
             </div>
@@ -440,6 +443,7 @@ export default function Home() {
                         label="Copies Sold"
                         showDivider={false}
                         align="right"
+                        strongLabel
                       />
                     </div>
                   </div>
@@ -496,6 +500,7 @@ export default function Home() {
                             showDivider={false}
                             align="right"
                             mobileSmall
+                            strongLabel
                           />
                         </div>
                       </div>
@@ -528,6 +533,7 @@ export default function Home() {
                         label="Copies Sold"
                         showDivider={false}
                         align="right"
+                        strongLabel
                       />
                     </div>
                   </div>
@@ -562,6 +568,7 @@ export default function Home() {
                       showDivider={false}
                       align="right"
                       mobileSmall
+                      strongLabel
                     />
                   </div>
 

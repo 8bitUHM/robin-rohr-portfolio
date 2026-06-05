@@ -160,7 +160,8 @@
 
   .site-stat-label {
     font-size: var(--text-stat-label);
-    @apply font-bold tracking-wider uppercase text-navy-700/75;
+    font-weight: 600;
+    @apply tracking-wider uppercase text-navy-800;
   }
 
   .stat-block--mobile-small .site-stat-value {
@@ -170,6 +171,15 @@
 
   .stat-block--mobile-small .site-stat-label {
     font-size: calc(var(--text-stat-label) * 0.64);
+  }
+
+  .stat-block--label-strong .site-stat-label {
+    font-weight: 700;
+    @apply text-navy-900 tracking-[0.12em];
+  }
+
+  .stat-block--mobile-small.stat-block--label-strong .site-stat-label {
+    font-size: calc(var(--text-stat-label) * 0.72);
   }
 
   .stat-block--tight .site-stat-value {
