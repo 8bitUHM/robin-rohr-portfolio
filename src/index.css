@@ -250,11 +250,11 @@
   }
 
   .hero-title__word--robin {
-    -webkit-text-stroke: 1.5px #000;
+    -webkit-text-stroke: 1px #000;
   }
 
   .hero-title__word--stephens {
-    -webkit-text-stroke: 1.5px rgb(var(--hero-title-color, 28 61 110));
+    -webkit-text-stroke: 0.5px rgb(var(--hero-title-color, 28 61 110));
   }
 
   .hero-title__word--rohr {
