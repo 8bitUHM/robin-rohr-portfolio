@@ -16,10 +16,9 @@ const pressFeatures: Article[] = [
     layout: "portrait",
   },
   {
-    title: "Powerstones — Star-Bulletin",
-    file: "/images/SKM_550i26040917160.pdf",
-    type: "pdf",
-    previewImage: "/images/SKM_550i26040917160-preview.jpg",
+    title: "Time for Pele\u2019s curse to take a rest — Star-Bulletin",
+    file: "/images/Time for peles curse to take arest.jpeg",
+    type: "image",
     layout: "portrait",
   },
   {
@@ -75,15 +74,8 @@ function MediaPreview({
           onLoad={() => setLoaded(true)}
           aria-label={article.title}
         >
-          <div className="flex h-full min-h-[12rem] items-center justify-center p-6 text-center">
-            <a
-              href={article.file}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-bold text-navy-800 hover:text-coral"
-            >
-              View PDF
-            </a>
+          <div className="flex h-full min-h-[12rem] items-center justify-center p-6 text-center text-sm font-bold text-navy-800">
+            PDF preview unavailable
           </div>
         </object>
       )}
@@ -98,39 +90,27 @@ function PressFeatureCard({
   article: Article;
   index: number;
 }) {
-  const cardClass = `fade-in fade-in-delay-${index + 1} group block overflow-hidden rounded-2xl bg-white/[0.06] border border-ivory/10 p-2 md:p-3 hover:border-gold/30 transition-all duration-300`;
+  const cardClass = `fade-in fade-in-delay-${index + 1} overflow-hidden rounded-2xl bg-white/[0.06] border border-ivory/10 p-2 md:p-3`;
 
   if (article.layout === "landscape") {
     return (
-      <a
-        href={article.file}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={article.title}
-        className={cardClass}
-      >
+      <figure className={cardClass}>
         <img
           src={article.file}
           alt={article.title}
           className="block w-full h-auto rounded-lg"
           loading="lazy"
         />
-      </a>
+      </figure>
     );
   }
 
   return (
-    <a
-      href={article.file}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={article.title}
-      className={cardClass}
-    >
+    <figure className={cardClass}>
       <div className="relative aspect-[3/4] w-full rounded-lg overflow-hidden">
         <MediaPreview article={article} className="absolute inset-0 h-full ring-0" />
       </div>
-    </a>
+    </figure>
   );
 }
 
@@ -140,7 +120,7 @@ export default function AlsoInThePressSection() {
       id="also-in-the-press"
       className="space-y-4 lg:space-y-5 pt-5 md:pt-6 border-t border-ivory/10"
     >
-      <div className="border-b border-ivory/10 pb-3">
+      <div className="border-b border-ivory/10 pb-3 text-center">
         <h4 className="site-subheading text-ivory">In the Media</h4>
       </div>
 
