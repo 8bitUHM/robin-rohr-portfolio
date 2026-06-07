@@ -1,3 +1,4 @@
+import AlsoInThePressSection from "../components/AlsoInThePressSection";
 import ChasingTheLightSection from "../components/ChasingTheLightSection";
 
 export default function Media() {
@@ -82,6 +83,8 @@ export default function Media() {
               reverberate throughout society and &lsquo;echo into eternity.&rsquo;
             </p>
           </div>
+
+          <AlsoInThePressSection />
         </div>
       </div>
     </section>

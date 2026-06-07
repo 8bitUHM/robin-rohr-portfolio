@@ -61,7 +61,7 @@ const testimonials: Testimonial[] = [
 const alohaQuotes: Testimonial[] = [
   {
     quote:
-      "Aloha is not a greeting. It is a feeling... we feeling that God is present.",
+      "Aloha is not a greeting. It is a feeling... a feeling that God is present.",
     mobileQuote: (
       <>
         &ldquo;Aloha is not a greeting.
