@@ -193,6 +193,11 @@
     @apply leading-none;
   }
 
+  .stat-block--years-of-service .site-stat-value {
+    font-size: 30.6px;
+    @apply leading-none;
+  }
+
   .site-section-label {
     font-size: var(--text-section-label);
     @apply font-bold leading-snug;

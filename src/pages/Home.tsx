@@ -400,7 +400,7 @@ export default function Home() {
                 showDivider={false}
                 align="right"
                 strongLabel
-                className="stat-block--tight"
+                className="stat-block--tight stat-block--years-of-service"
               />
             </div>
           </ThemeTopicCard>
