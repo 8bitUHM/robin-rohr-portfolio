@@ -211,12 +211,12 @@ export default function Home() {
 
         <div className="max-w-6xl mx-auto relative">
           <div className="text-center mb-10 md:mb-12">
-            <p className="hero-tagline text-gold uppercase mb-8 fade-in ornament-line text-center sm:whitespace-nowrap">
+            <p className="hero-tagline text-gold uppercase mb-6 fade-in ornament-line text-center sm:whitespace-nowrap">
               <span className="block sm:inline">Author &middot; Journalist</span>
               <span className="hidden sm:inline"> &middot; </span>
               <span className="block sm:inline">Advocate</span>
             </p>
-            <h1 className="hero-title mb-4 fade-in fade-in-delay-1 whitespace-nowrap">
+            <h1 className="hero-title mb-3 fade-in fade-in-delay-1 whitespace-nowrap">
               <span className="hero-title__word hero-title__word--robin">Robin</span>{" "}
               <span className="hero-title__word hero-title__word--stephens">Stephens</span>{" "}
               <span className="hero-title__word hero-title__word--rohr">Rohr</span>
