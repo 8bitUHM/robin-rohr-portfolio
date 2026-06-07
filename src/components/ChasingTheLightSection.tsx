@@ -7,7 +7,7 @@ export default function ChasingTheLightSection() {
       <div className="relative rounded-3xl bg-gradient-to-b from-white/[0.08] to-white/[0.03] border border-ivory/10 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.45)] overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold-dark via-gold to-coral/80" />
 
-        <div className="px-6 py-5 md:px-10 md:py-6 lg:px-12 lg:py-8 xl:px-16">
+        <div className="px-6 py-4 md:px-10 md:py-5 lg:px-12 lg:py-6 xl:px-16">
           <header className="text-center max-w-3xl mx-auto">
             <p className="text-coral font-bold tracking-[0.25em] uppercase text-ui sm:text-ui-lg">
               A Weekly newspaper column

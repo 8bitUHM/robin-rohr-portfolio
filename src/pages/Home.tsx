@@ -408,7 +408,7 @@ export default function Home() {
       </section>
 
       {/* Work layout */}
-      <section className="bg-navy-50 pb-6 md:pb-8 px-6 relative">
+      <section className="bg-navy-50 pb-0 md:pb-1 px-6 relative">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-64 h-64 bg-gold/5 rounded-full blur-3xl" />
         </div>
@@ -416,7 +416,7 @@ export default function Home() {
         <div className="relative w-full md:pl-6 lg:pl-10 md:pr-6 lg:pr-10">
         <div className="relative space-y-6 w-full">
           {/* Books — full width */}
-          <div className="fade-in group bg-white rounded-3xl px-8 pt-5 pb-8 md:px-10 md:pt-7 md:pb-10 -mt-1 md:-mt-2 shadow-sm border border-navy-800/5 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+          <div className="fade-in group bg-white rounded-3xl px-8 pt-5 pb-4 md:px-10 md:pt-7 md:pb-5 -mt-1 md:-mt-2 shadow-sm border border-navy-800/5 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-navy-800 via-navy-600 to-navy-400" />
             <div className="mb-6">
               <p className="text-gold gold-label-outline font-bold tracking-[0.2em] uppercase site-section-label leading-snug mb-1.5">

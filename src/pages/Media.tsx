@@ -5,7 +5,7 @@ export default function Media() {
   return (
     <section
       id="press"
-      className="relative pt-2 pb-5 md:pt-3 md:pb-6 px-6 bg-navy-900 overflow-hidden"
+      className="relative pt-0 pb-4 md:pb-5 px-6 bg-navy-900 overflow-hidden"
     >
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-20 -right-20 w-80 h-80 bg-gold/5 rounded-full blur-3xl" />
