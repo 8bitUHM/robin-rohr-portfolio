@@ -189,7 +189,11 @@
   }
 
   .stat-block--copies-sold .site-stat-value {
-    font-size: calc(var(--text-stat) * 0.85);
+    font-size: calc(24px * var(--text-stat) / 36px);
+    @apply leading-none mb-2;
+  }
+
+  .stat-block--copies-sold .site-stat-label {
     @apply leading-none;
   }
 
