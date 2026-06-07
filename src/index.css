@@ -35,7 +35,7 @@
   --text-media-title: 18px;
   --text-media-body: 13.5px;
   --text-page-title: 27px;
-  --text-hero-quote: 24px;
+  --text-hero-quote: calc(24px * var(--text-stat) / 36px);
   --text-hero-title: 31px;
   --text-hero-tagline: 22px;
   --text-ui: 12px;
