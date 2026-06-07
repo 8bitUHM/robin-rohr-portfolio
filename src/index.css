@@ -194,7 +194,7 @@
   }
 
   .stat-block--years-of-service .site-stat-value {
-    font-size: 30.6px;
+    font-size: calc(24px * var(--text-stat) / 36px);
     @apply leading-none;
   }
 
