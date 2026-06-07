@@ -3,9 +3,9 @@ import { useState } from "react";
 type Article = {
   title: string;
   file: string;
-  desc: string;
   type: "pdf" | "image";
   previewImage?: string;
+  layout?: "portrait" | "landscape";
 };
 
 const pressFeatures: Article[] = [
@@ -13,25 +13,43 @@ const pressFeatures: Article[] = [
     title: "Press Feature — Island Life",
     file: "/images/IMG_7686.jpeg",
     type: "image",
-    desc: "Coverage of Robin\u2019s work in Hawaiian storytelling and publishing.",
+    layout: "portrait",
   },
   {
     title: "Powerstones — Star-Bulletin",
     file: "/images/SKM_550i26040917160.pdf",
     type: "pdf",
     previewImage: "/images/SKM_550i26040917160-preview.jpg",
-    desc: "Charles Memminger on Powerstones and the myth behind Pele\u2019s curse, November 5, 1994.",
+    layout: "portrait",
+  },
+  {
+    title: "Powerstones — Island Life, November 1994",
+    file: "/images/IMG_7210.jpg",
+    type: "image",
+    layout: "landscape",
+  },
+  {
+    title: "Chicken Soup from the Soul of Hawai\u2018i — Star-Bulletin",
+    file: "/images/cid_894AAA7A-8D08-4C13-B5BB-8100B15E57F6 (1).jpeg",
+    type: "image",
+    layout: "landscape",
   },
 ];
+
+const portraitFeatures = pressFeatures.filter((a) => a.layout !== "landscape");
+const landscapeFeatures = pressFeatures.filter((a) => a.layout === "landscape");
 
 function MediaPreview({
   article,
   className = "",
+  fit = "cover",
 }: {
   article: Article;
   className?: string;
+  fit?: "cover" | "contain";
 }) {
   const [loaded, setLoaded] = useState(false);
+  const objectFit = fit === "contain" ? "object-contain" : "object-cover";
 
   return (
     <div
@@ -46,7 +64,7 @@ function MediaPreview({
         <img
           src={article.type === "image" ? article.file : article.previewImage!}
           alt={article.title}
-          className={`w-full h-full object-cover object-top transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
+          className={`w-full h-full ${objectFit} object-top transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
           onLoad={() => setLoaded(true)}
         />
       ) : (
@@ -73,14 +91,41 @@ function MediaPreview({
   );
 }
 
-function PressFeatureCard({ article, index }: { article: Article; index: number }) {
+function PressFeatureCard({
+  article,
+  index,
+}: {
+  article: Article;
+  index: number;
+}) {
+  const cardClass = `fade-in fade-in-delay-${index + 1} group block overflow-hidden rounded-2xl bg-white/[0.06] border border-ivory/10 p-2 md:p-3 hover:border-gold/30 transition-all duration-300`;
+
+  if (article.layout === "landscape") {
+    return (
+      <a
+        href={article.file}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={article.title}
+        className={cardClass}
+      >
+        <img
+          src={article.file}
+          alt={article.title}
+          className="block w-full h-auto rounded-lg"
+          loading="lazy"
+        />
+      </a>
+    );
+  }
+
   return (
     <a
       href={article.file}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={article.title}
-      className={`fade-in fade-in-delay-${index + 1} group block overflow-hidden rounded-2xl bg-white/[0.06] border border-ivory/10 p-2 md:p-3 hover:border-gold/30 transition-all duration-300`}
+      className={cardClass}
     >
       <div className="relative aspect-[3/4] w-full rounded-lg overflow-hidden">
         <MediaPreview article={article} className="absolute inset-0 h-full ring-0" />
@@ -95,17 +140,23 @@ export default function AlsoInThePressSection() {
       id="also-in-the-press"
       className="space-y-4 lg:space-y-5 pt-5 md:pt-6 border-t border-ivory/10"
     >
-      <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 border-b border-ivory/10 pb-3">
-        <div>
-          <h4 className="site-subheading text-ivory">Also in the press</h4>
-          <p className="text-ivory/65 text-ui font-bold uppercase tracking-wider mt-1">
-            Island Life &amp; Honolulu Advertiser
-          </p>
-        </div>
+      <div className="border-b border-ivory/10 pb-3">
+        <h4 className="site-subheading text-ivory">In the Media</h4>
       </div>
+
       <div className="grid md:grid-cols-2 gap-4 lg:gap-6">
-        {pressFeatures.map((article, i) => (
+        {portraitFeatures.map((article, i) => (
           <PressFeatureCard key={article.file} article={article} index={i} />
+        ))}
+      </div>
+
+      <div className="space-y-4 lg:space-y-5">
+        {landscapeFeatures.map((article, i) => (
+          <PressFeatureCard
+            key={article.file}
+            article={article}
+            index={portraitFeatures.length + i}
+          />
         ))}
       </div>
     </div>

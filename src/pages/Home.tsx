@@ -619,55 +619,6 @@ export default function Home() {
       </section>
 
       <Media />
-
-      <SectionDivider
-        from={SECTION_COLORS.navy900}
-        to={SECTION_COLORS.ivory}
-        wave="gentle"
-        className="h-10 md:h-14"
-      />
-
-      {/* Additional info */}
-      <section
-        id="closing"
-        className="relative site-section-y px-6 bg-ivory overflow-hidden"
-      >
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-navy-100/30 rounded-full blur-3xl" />
-        </div>
-        <div className="max-w-5xl mx-auto relative fade-in">
-          <div className="bg-white rounded-3xl border border-navy-800/5 shadow-sm overflow-hidden">
-            <div className="h-1.5 bg-gradient-to-r from-coral via-gold to-navy-800" />
-            <div className="relative px-6 py-8 md:px-10 md:py-10 lg:px-12 lg:py-12">
-              <p className="reading-text text-center max-w-4xl mx-auto">
-                The wisdom of our elders, and the possibilities that Integrative
-                medicine is bringing into our lives for the betterment of humanity,
-                will &ldquo;echo throughout eternity.&rdquo; My journey of seeking
-                the wisdom of the elders and my fascination with the possibilities
-                of Integrative Medicine have a common theme: to uplift, elevate, and
-                possibly transform the human experience. Data driven statistically
-                based technologies are emerging from research labs around the world,
-                showing that our possibilities for our quality of life and our human
-                longevity is far vaster than ever imagined. In the next few years,
-                the velocity of this profound research will be dazzling in its depth
-                and breadth. Fasten your seatbelts, it&rsquo;s a thrilling time to be
-                alive! The velocity of this emerging data will give greater
-                possibilities to the human experience than ever imagined.
-              </p>
-              <div
-                className="flex items-center justify-center gap-3 mt-8 md:mt-10"
-                aria-hidden
-              >
-                <span className="h-px w-12 sm:w-16 bg-gradient-to-r from-transparent to-gold/50" />
-                <span className="w-2 h-2 rounded-full bg-coral/70" />
-                <span className="w-1.5 h-1.5 rounded-full bg-gold" />
-                <span className="w-2 h-2 rounded-full bg-coral/70" />
-                <span className="h-px w-12 sm:w-16 bg-gradient-to-l from-transparent to-gold/50" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
