@@ -211,7 +211,7 @@ export default function Home() {
 
         <div className="max-w-6xl mx-auto relative">
           <div className="text-center mb-10 md:mb-12">
-            <p className="hero-tagline text-gold uppercase mb-6 fade-in ornament-line text-center sm:whitespace-nowrap">
+            <p className="hero-tagline text-gold uppercase mb-8 fade-in ornament-line text-center sm:whitespace-nowrap">
               <span className="block sm:inline">Author &middot; Journalist</span>
               <span className="hidden sm:inline"> &middot; </span>
               <span className="block sm:inline">Advocate</span>
@@ -249,7 +249,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative w-full md:pl-6 lg:pl-10 md:pr-6 lg:pr-10 -mt-2 md:-mt-3">
+        <div className="relative w-full md:pl-6 lg:pl-10 md:pr-6 lg:pr-10 -mt-4 md:-mt-5">
           <div className="grid md:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] lg:grid-cols-[minmax(0,24rem)_minmax(0,1.35fr)] gap-10 md:gap-12 items-start fade-in fade-in-delay-3 w-full">
             <div className="relative w-full max-w-sm mx-auto md:mx-0 md:max-w-none">
               <div className="absolute -inset-3 bg-gradient-to-br from-navy-600/20 via-gold/10 to-navy-800/20 rounded-3xl blur-sm" />
