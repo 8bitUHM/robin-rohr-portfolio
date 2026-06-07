@@ -425,7 +425,7 @@ export default function Home() {
               <div className="h-1 bg-gradient-to-r from-navy-800 via-navy-600 to-navy-400 rounded-full" />
             </div>
 
-            <div className="space-y-10 lg:space-y-12">
+            <div className="space-y-5 md:space-y-6">
               <div className="flex flex-col gap-5 md:gap-6">
                 <img
                   src="/images/SKM_550i26040917172-Edit-Edit-Edit.jpg"
