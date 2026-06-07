@@ -37,7 +37,7 @@ export const courtyardGalleryItems: CourtyardGalleryItem[] = [
   {
     kind: "text",
     content:
-      "Utilizing large metallic signage boards, the 80 aspirational quotes in the Courtyard, have influenced and transformed many lives.",
+      "Utilizing large metallic signage boards, the 80 aspirational quotes in the Courtyard have influenced and transformed many lives.",
   },
   {
     kind: "image",

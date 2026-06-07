@@ -12,10 +12,9 @@
   --gold-shimmer-bright: 255 236 176; /* highlight peak for tagline shimmer */
   --gold-outline: 80 47 11; /* brown-gold outline from #C8A84E */
 
-  /* Hero text playground (title + quote); applied via JS, fallbacks below */
+  /* Hero — Robin Stephens Rohr (Perpetua Titling) + quote */
   --hero-title-color: 28 61 110;
   --hero-title-stroke-color: 28 61 110;
-  --hero-title-stroke-width: 0.75px;
   --hero-title-weight: 900;
   --hero-title-style: normal;
   --hero-title-font-family: "Perpetua Titling MT", "Perpetua Titling", Perpetua, serif;
@@ -24,6 +23,7 @@
   --hero-quote-stroke-width: 0px;
   --hero-quote-weight: 700;
   --hero-quote-style: italic;
+  --hero-quote-font-family: "Quicksand", sans-serif;
 
   /* Typography — body 22.5px mobile / 34px desktop; other roles scaled from prior Tailwind ratios */
   --text-body: 22.5px;
@@ -237,29 +237,23 @@
   }
 
   .hero-quote {
-    font-family: var(--hero-quote-font-family, "Quicksand", sans-serif);
-    font-size: var(--hero-quote-size, var(--text-hero-quote));
-    font-weight: var(--hero-quote-weight, 700);
-    font-style: var(--hero-quote-style, italic);
-    color: rgb(var(--hero-quote-color, var(--coral)));
-    -webkit-text-stroke: var(--hero-quote-stroke-width, 0px)
-      rgb(var(--hero-quote-stroke-color, 28 61 110));
+    font-family: var(--hero-quote-font-family);
+    font-size: var(--text-hero-quote);
+    font-weight: var(--hero-quote-weight);
+    font-style: var(--hero-quote-style);
+    color: rgb(var(--hero-quote-color));
+    -webkit-text-stroke: var(--hero-quote-stroke-width)
+      rgb(var(--hero-quote-stroke-color));
     paint-order: stroke fill;
     @apply leading-snug;
   }
 
   .hero-title {
-    font-family: var(
-      --hero-title-font-family,
-      "Perpetua Titling MT",
-      "Perpetua Titling",
-      Perpetua,
-      serif
-    );
-    font-size: var(--hero-title-size, var(--text-hero-title));
-    font-weight: var(--hero-title-weight, 900);
-    font-style: var(--hero-title-style, normal);
-    color: rgb(var(--hero-title-color, 28 61 110));
+    font-family: var(--hero-title-font-family);
+    font-size: var(--text-hero-title);
+    font-weight: var(--hero-title-weight);
+    font-style: var(--hero-title-style);
+    color: rgb(var(--hero-title-color));
     text-transform: uppercase;
     @apply leading-[1.05];
   }
