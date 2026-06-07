@@ -74,26 +74,14 @@ function MediaPreview({
 }
 
 function PressFeatureCard({ article, index }: { article: Article; index: number }) {
-  const badge = article.type === "pdf" ? "PDF" : "Photo";
-
   return (
     <a
       href={article.file}
       target="_blank"
       rel="noopener noreferrer"
-      className={`fade-in fade-in-delay-${index + 1} group flex h-full flex-col gap-4 overflow-hidden rounded-2xl bg-white/[0.06] border border-ivory/10 p-4 md:p-5 lg:p-6 hover:border-gold/30 transition-all duration-300`}
+      aria-label={article.title}
+      className={`fade-in fade-in-delay-${index + 1} group block overflow-hidden rounded-2xl bg-white/[0.06] border border-ivory/10 p-2 md:p-3 hover:border-gold/30 transition-all duration-300`}
     >
-      <div className="min-w-0 flex flex-col py-1">
-        <span className="text-[10px] font-bold uppercase tracking-wider text-gold mb-2">
-          {badge}
-        </span>
-        <h4 className="text-ivory font-bold text-base lg:text-lg leading-snug mb-2 group-hover:text-gold transition-colors">
-          {article.title}
-        </h4>
-        <p className="text-ivory/70 text-sm lg:text-base font-bold leading-snug">
-          {article.desc}
-        </p>
-      </div>
       <div className="relative aspect-[3/4] w-full rounded-lg overflow-hidden">
         <MediaPreview article={article} className="absolute inset-0 h-full ring-0" />
       </div>
