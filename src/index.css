@@ -199,7 +199,7 @@
   }
 
   .stat-block--years-of-service .site-stat-label {
-    @apply mt-1.5 leading-none;
+    @apply mt-2 leading-none;
   }
 
   .site-section-label {
