@@ -111,9 +111,9 @@ export default function AlsoInThePressSection() {
   return (
     <div
       id="also-in-the-press"
-      className="space-y-6 lg:space-y-8 pt-10 md:pt-12 border-t border-ivory/10"
+      className="space-y-4 lg:space-y-5 pt-5 md:pt-6 border-t border-ivory/10"
     >
-      <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 border-b border-ivory/10 pb-4">
+      <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 border-b border-ivory/10 pb-3">
         <div>
           <h4 className="site-subheading text-ivory">Also in the press</h4>
           <p className="text-ivory/65 text-ui font-bold uppercase tracking-wider mt-1">
@@ -121,7 +121,7 @@ export default function AlsoInThePressSection() {
           </p>
         </div>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
         {pressFeatures.map((article, i) => (
           <PressFeatureCard key={article.file} article={article} index={i} />
         ))}

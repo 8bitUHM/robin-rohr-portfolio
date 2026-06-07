@@ -5,23 +5,19 @@ export default function Media() {
   return (
     <section
       id="press"
-      className="relative site-section-y px-6 bg-navy-900 overflow-hidden"
+      className="relative pt-2 pb-5 md:pt-3 md:pb-6 px-6 bg-navy-900 overflow-hidden"
     >
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-20 -right-20 w-80 h-80 bg-gold/5 rounded-full blur-3xl" />
         <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-navy-400/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-4xl md:max-w-5xl lg:max-w-6xl mx-auto relative site-section-stack">
-        <div className="fade-in text-center">
-          <h2 className="site-heading text-ivory">In the Media</h2>
-        </div>
-
-        <div className="fade-in fade-in-delay-1 space-y-10 md:space-y-12">
+      <div className="max-w-4xl md:max-w-5xl lg:max-w-6xl mx-auto relative space-y-5 md:space-y-6">
+        <div className="fade-in fade-in-delay-1 space-y-5 md:space-y-6">
           <ChasingTheLightSection />
 
-          <div className="space-y-8">
-            <header className="text-center space-y-4 max-w-3xl mx-auto">
+          <div className="space-y-5">
+            <header className="text-center space-y-2 max-w-3xl mx-auto">
               <h3 className="site-subheading text-gold leading-tight">
                 The Power to Choose Courtyard
               </h3>
@@ -32,7 +28,7 @@ export default function Media() {
               </p>
             </header>
 
-            <div className="max-w-3xl md:max-w-4xl lg:max-w-5xl mx-auto space-y-5">
+            <div className="max-w-3xl md:max-w-4xl lg:max-w-5xl mx-auto space-y-4">
               <p className="reading-text-on-dark">
                 Dynamic community leader Lynn Watanabe and Robin found funding for
                 and created The Power to Choose Courtyard, a garden of ideas and
@@ -41,12 +37,12 @@ export default function Media() {
               <p className="reading-text-on-dark">
                 In this originally barren open space, trees and flowers were
                 planted, tables and chairs were installed, and it became a gathering
-                place for students to collaborate, to work hard and to dream big.
+                place for students to collaborate, to work together and to dream big.
               </p>
               <p className="reading-text-on-dark">
                 The students were surrounded by 80 inspirational quotes and a
                 15&prime; long digital message board that applauded their scholastic
-                and athletic accomplishments.
+                and athletic achievements.
               </p>
               <p className="reading-text-on-dark">
                 This innovative and uplifting environment was part of the reason

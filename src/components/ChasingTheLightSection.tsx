@@ -2,19 +2,17 @@ export default function ChasingTheLightSection() {
   return (
     <div
       id="chasing-the-light"
-      className="fade-in fade-in-delay-2 relative pt-10 md:pt-12 border-t border-ivory/10"
+      className="fade-in fade-in-delay-2 relative"
     >
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
-
       <div className="relative rounded-3xl bg-gradient-to-b from-white/[0.08] to-white/[0.03] border border-ivory/10 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.45)] overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold-dark via-gold to-coral/80" />
 
-        <div className="px-6 py-10 md:px-10 md:py-12 lg:px-12 lg:py-14 xl:px-16">
+        <div className="px-6 py-5 md:px-10 md:py-6 lg:px-12 lg:py-8 xl:px-16">
           <header className="text-center max-w-3xl mx-auto">
             <p className="text-coral font-bold tracking-[0.25em] uppercase text-ui sm:text-ui-lg">
               A Weekly newspaper column
             </p>
-            <h3 className="site-heading text-gold leading-tight mt-4">Chasing the Light</h3>
+            <h3 className="site-heading text-gold leading-tight mt-3">Chasing the Light</h3>
             <div className="mx-auto flex items-center justify-center gap-3 pt-1">
               <span className="h-px w-12 sm:w-20 bg-gradient-to-r from-transparent to-gold/60" />
               <span className="w-1.5 h-1.5 rounded-full bg-gold" />
@@ -22,13 +20,13 @@ export default function ChasingTheLightSection() {
             </div>
           </header>
 
-          <div className="space-y-3 max-w-4xl mx-auto">
-            <p className="reading-text-on-dark mt-6 text-center max-w-3xl mx-auto">
+          <div className="space-y-2 max-w-4xl mx-auto">
+            <p className="reading-text-on-dark mt-3 text-center max-w-3xl mx-auto">
               A weekly storytelling column reaching over 285,000 families across
               the Hawaiian Islands. For over seven years, its readership has
               been entertained and uplifted by these aspirational stories.
             </p>
-            <div className="reading-text-on-dark text-left space-y-3">
+            <div className="reading-text-on-dark text-left space-y-2">
               <p className="text-center">
                 <span className="text-gold font-bold">Chasing the Light</span>
               </p>
