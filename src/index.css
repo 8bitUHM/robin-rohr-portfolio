@@ -129,6 +129,11 @@
     @apply font-bold leading-snug text-ivory/90;
   }
 
+  .reading-text-on-dark-sm {
+    font-size: calc(20px * var(--text-body) / 22.5px);
+    @apply font-bold leading-snug text-ivory/90;
+  }
+
   .reading-text-narrative {
     font-size: var(--text-body);
     @apply font-bold leading-snug text-navy-800/90;

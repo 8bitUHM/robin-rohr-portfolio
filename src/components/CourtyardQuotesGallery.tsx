@@ -6,12 +6,12 @@ export default function CourtyardQuotesGallery() {
       {courtyardGalleryItems.map((item, index) => {
         if (item.kind === "text") {
           return (
-            <p
+            <div
               key={`text-${index}`}
-              className="reading-text-on-dark text-center max-w-3xl md:max-w-4xl mx-auto px-2"
+              className="max-w-3xl md:max-w-4xl mx-auto rounded-2xl bg-white/[0.06] border border-ivory/10 p-4 md:p-5 text-center"
             >
-              {item.content}
-            </p>
+              <p className="reading-text-on-dark-sm">{item.content}</p>
+            </div>
           );
         }
 
