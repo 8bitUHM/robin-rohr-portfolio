@@ -68,7 +68,7 @@ const alohaQuotes: Testimonial[] = [
         <br />
         It is a feeling...
         <br />
-        we feeling that God is present.&rdquo;
+        a feeling that God is present.&rdquo;
       </>
     ),
     author: { name: "Reverend Abraham Akaka" },

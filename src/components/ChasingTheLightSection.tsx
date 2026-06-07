@@ -22,32 +22,36 @@ export default function ChasingTheLightSection() {
             </div>
           </header>
 
-          <div className="space-y-3 text-center lg:text-left max-w-4xl mx-auto">
+          <div className="space-y-3 max-w-4xl mx-auto">
             <p className="reading-text-on-dark mt-6 text-center max-w-3xl mx-auto">
               A weekly storytelling column reaching over 285,000 families across
               the Hawaiian Islands. For over seven years, its readership has
               been entertained and uplifted by these aspirational stories.
             </p>
-            <p className="reading-text-on-dark">
-              <span className="text-gold font-bold">Chasing the Light</span>{" "}
-              stories shine a beacon on the &lsquo;ah ha&rsquo; moments of our
-              lives, moments that give insights and new perspectives as we
-              navigate this human experience.
-            </p>
-            <p className="reading-text-on-dark">
-              These teachable moments can help us build courage and resilience
-              as we navigate life&rsquo;s inevitable storms.
-            </p>
-            <p className="reading-text-on-dark">
-              They can also serve as an inspiration to help illuminate and
-              guide us on the path of change in these uncertain times.
-            </p>
-            <p className="reading-text-on-dark">
-              These tales, some catapulting us into awe and wonder, some
-              shimmering in joy and hilarity, and others encouraging us to face
-              our resistance to forgiveness and to embrace compassion, have been
-              created to help us find our True North once again.
-            </p>
+            <div className="reading-text-on-dark text-left space-y-3">
+              <p className="text-center">
+                <span className="text-gold font-bold">Chasing the Light</span>
+              </p>
+              <p>
+                stories shine a beacon on the &lsquo;ah ha&rsquo; moments of our
+                lives, moments that give insights and new perspectives as we
+                navigate this human experience.
+              </p>
+              <p>
+                These teachable moments can help us build courage and resilience
+                as we navigate life&rsquo;s inevitable storms.
+              </p>
+              <p>
+                They can also serve as an inspiration to help illuminate and
+                guide us on the path of change in these uncertain times.
+              </p>
+              <p>
+                These tales, some catapulting us into awe and wonder, some
+                shimmering in joy and hilarity, and others encouraging us to face
+                our resistance to forgiveness and to embrace compassion, have been
+                created to help us find our True North once again.
+              </p>
+            </div>
           </div>
         </div>
       </div>
