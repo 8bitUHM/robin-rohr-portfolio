@@ -10,6 +10,7 @@ import numpy as np
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
+SOURCES = ROOT / "scripts" / "sources"
 IMAGES = ROOT / "public" / "images" / "courtyard-quotes"
 IMAGES.mkdir(parents=True, exist_ok=True)
 
@@ -219,7 +220,7 @@ def save_crop(img: Image.Image, name: str, *, rotate: bool = True, gentle: bool 
 def main() -> None:
     manifest: list[dict[str, str]] = []
 
-    skm = ROOT / "public" / "images" / "SKM_550i26060616190.pdf"
+    skm = SOURCES / "SKM_550i26060616190.pdf"
     welcome = render_page(skm, 3)
     manifest.append(
         {
@@ -229,7 +230,7 @@ def main() -> None:
         }
     )
 
-    intro_pdf = ROOT / "public" / "images" / "cid_D31E1574-2768-4EDC-8130-95C6B3DA4F04.pdf"
+    intro_pdf = SOURCES / "cid_D31E1574-2768-4EDC-8130-95C6B3DA4F04.pdf"
     intro = render_page(intro_pdf, 0)
     w, h = intro.size
     gap_start, gap_end = panel_split_bounds(intro)
@@ -244,23 +245,23 @@ def main() -> None:
     )
     manifest.append(
         {
-            "id": "03-imagine-choices",
+            "id": "04-imagine-choices",
             "alt": "Imagine how your choices, education, hard work and aloha could make a difference",
-            "src": save_crop(imagine, "03-imagine-choices.jpg", rotate=False, gentle=True),
+            "src": save_crop(imagine, "04-imagine-choices.jpg", rotate=False, gentle=True),
         }
     )
 
     quote_names = [
-        ("04-steve-jobs", "Go to bed at night knowing that you have done something wonderful — Steve Jobs"),
-        ("05-walt-disney", "You're braver than you believe — Walt Disney"),
-        ("06-colin-powell", "Always show more kindness than seems necessary — Colin Powell"),
-        ("07-michael-jordan-shots", "I missed more than 9,000 shots in my career — Michael Jordan"),
-        ("08-muhammad-ali", "Don't quit. Suffer now and live the rest of your life as a champion — Muhammad Ali"),
-        ("09-ll-cool-j", "When you move past your fear and go after your dreams — LL Cool J"),
-        ("10-hero", "Hero — a person of courage, perseverance, and integrity"),
-        ("11-martin-luther-king", "Everyone can be great, because everyone can serve — Martin Luther King Jr."),
-        ("12-family", "Family means no one gets left behind or forgotten"),
-        ("13-be-the-change-students", "If you could change one thing about the world, what would it be? BE THE CHANGE!"),
+        ("05-steve-jobs", "Go to bed at night knowing that you have done something wonderful — Steve Jobs"),
+        ("06-walt-disney", "You're braver than you believe — Walt Disney"),
+        ("07-colin-powell", "Always show more kindness than seems necessary — Colin Powell"),
+        ("08-michael-jordan-shots", "I missed more than 9,000 shots in my career — Michael Jordan"),
+        ("09-muhammad-ali", "Don't quit. Suffer now and live the rest of your life as a champion — Muhammad Ali"),
+        ("10-ll-cool-j", "When you move past your fear and go after your dreams — LL Cool J"),
+        ("11-hero", "Hero — a person of courage, perseverance, and integrity"),
+        ("12-martin-luther-king", "Everyone can be great, because everyone can serve — Martin Luther King Jr."),
+        ("13-family", "Family means no one gets left behind or forgotten"),
+        ("14-be-the-change-students", "If you could change one thing about the world, what would it be? BE THE CHANGE!"),
     ]
 
     page_strips = [(0, 4), (1, 3), (2, 3)]

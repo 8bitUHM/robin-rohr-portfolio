@@ -19,12 +19,8 @@ export default function Layout() {
         <div className="max-w-6xl mx-auto px-6 pt-8 pb-8">
           <div className="grid sm:grid-cols-2 gap-8 sm:gap-6 mb-8">
             <div>
-              <p className="text-coral font-bold site-heading tracking-tight mb-4">
+              <p className="text-coral font-bold site-heading tracking-tight">
                 Robin Stephens Rohr
-              </p>
-              <p className="reading-text-on-dark">
-                Author, journalist, and integrative health advocate based in
-                Hawai&#699;i.
               </p>
             </div>
 
@@ -56,7 +52,7 @@ export default function Layout() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-ivory/60 text-sm sm:text-base">
               &copy; {new Date().getFullYear()}{" "}
-              <span className="text-coral">Robin Stephens Rohr</span>. All
+              <span className="text-gold">Robin Stephens Rohr</span>. All
               rights reserved.
             </p>
             <p className="text-ivory/60 text-sm sm:text-base">

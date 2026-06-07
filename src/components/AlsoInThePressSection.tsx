@@ -11,25 +11,25 @@ type Article = {
 const pressFeatures: Article[] = [
   {
     title: "Press Feature — Island Life",
-    file: "/images/IMG_7686.jpeg",
+    file: "/images/press/island-life-feature.jpeg",
     type: "image",
     layout: "portrait",
   },
   {
     title: "Time for Pele\u2019s curse to take a rest — Star-Bulletin",
-    file: "/images/Time for peles curse to take arest.jpeg",
+    file: "/images/press/powerstones-peles-curse-star-bulletin.jpeg",
     type: "image",
     layout: "portrait",
   },
   {
     title: "Powerstones — Island Life, November 1994",
-    file: "/images/IMG_7210.jpg",
+    file: "/images/press/powerstones-island-life-1994.jpg",
     type: "image",
     layout: "landscape",
   },
   {
     title: "Chicken Soup from the Soul of Hawai\u2018i — Star-Bulletin",
-    file: "/images/cid_894AAA7A-8D08-4C13-B5BB-8100B15E57F6 (1).jpeg",
+    file: "/images/press/chicken-soup-star-bulletin.jpeg",
     type: "image",
     layout: "landscape",
   },

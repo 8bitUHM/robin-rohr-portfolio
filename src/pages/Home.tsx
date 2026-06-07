@@ -428,7 +428,7 @@ export default function Home() {
             <div className="space-y-5 md:space-y-6">
               <div className="flex flex-col gap-5 md:gap-6">
                 <img
-                  src="/images/SKM_550i26040917172-Edit-Edit-Edit.jpg"
+                  src="/images/books/powerstones.jpg"
                   alt="Book cover: Powerstones — Letters to a Goddess by Linda Ching and Robin Stephens Rohr"
                   width={480}
                   height={720}
@@ -517,7 +517,7 @@ export default function Home() {
 
               <div className="flex flex-col gap-5 md:gap-6">
                 <img
-                  src="/images/SKM_550i26040917171-Edit-Edit.jpg"
+                  src="/images/books/chicken-soup-hawaii.jpg"
                   alt="Book cover: Chicken Soup from the Soul of Hawaiʻi"
                   width={480}
                   height={720}
