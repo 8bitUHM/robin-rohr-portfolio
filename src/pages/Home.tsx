@@ -393,7 +393,7 @@ export default function Home() {
                 to Hawai&#699;i&#39;s diabetes community.
               </p>
             </div>
-            <div className="flex justify-end -mt-2">
+            <div className="flex justify-end mt-2">
               <StatBlock
                 value="20+"
                 label="Years of Service"
