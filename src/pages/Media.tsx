@@ -73,11 +73,6 @@ export default function Media() {
                 />
               </div>
             </div>
-
-            <p className="reading-text-on-dark text-center max-w-3xl mx-auto">
-              Our prayers are that the teachings of these wisdom keepers will
-              reverberate throughout society and &lsquo;echo into eternity.&rsquo;
-            </p>
           </div>
 
           <AlsoInThePressSection />

@@ -22,7 +22,7 @@ export default function ChasingTheLightSection() {
 
           <div className="space-y-2 max-w-4xl mx-auto">
             <p className="reading-text-on-dark mt-3 text-center max-w-3xl mx-auto">
-              A weekly storytelling column reaching over 285,000 families across
+              Robin co-created this weekly storytelling column that reaches over 285,000 families across
               the Hawaiian Islands. For over seven years, its readership has
               been entertained and uplifted by these aspirational stories.
             </p>

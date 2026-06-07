@@ -10,12 +10,6 @@ type Article = {
 
 const pressFeatures: Article[] = [
   {
-    title: "Powerstones — Honolulu Advertiser",
-    file: "/images/IMG_7210.jpg",
-    type: "image",
-    desc: "Island Life feature by Bob Krauss on the myth behind \u2018Pele\u2019s Curse,\u201d November 1994.",
-  },
-  {
     title: "Press Feature — Island Life",
     file: "/images/IMG_7686.jpeg",
     type: "image",
@@ -121,7 +115,7 @@ export default function AlsoInThePressSection() {
           </p>
         </div>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+      <div className="grid md:grid-cols-2 gap-4 lg:gap-6">
         {pressFeatures.map((article, i) => (
           <PressFeatureCard key={article.file} article={article} index={i} />
         ))}
