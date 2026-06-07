@@ -16,23 +16,23 @@ export default function Layout() {
       <footer className="bg-navy-900 text-ivory">
         <div className="h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
 
-        <div className="max-w-6xl mx-auto px-6 pt-8 pb-8">
-          <div className="grid sm:grid-cols-2 gap-8 sm:gap-6 mb-8">
+        <div className="max-w-6xl mx-auto px-6 pt-5 pb-5 sm:pt-8 sm:pb-8">
+          <div className="grid sm:grid-cols-2 gap-2 sm:gap-6 mb-5 sm:mb-8 text-center sm:text-left">
             <div>
-              <p className="text-coral font-bold site-heading tracking-tight">
+              <p className="text-gold font-bold site-heading tracking-tight">
                 Robin Stephens Rohr
               </p>
             </div>
 
-            <div>
-              <h4 className="text-ivory/90 font-semibold text-sm tracking-[0.2em] uppercase mb-5">
+            <div className="flex flex-col items-center sm:items-start">
+              <h4 className="text-ivory/90 font-semibold text-sm tracking-[0.2em] uppercase mb-3 sm:mb-5">
                 Contact Information
               </h4>
               <a
                 href={LINKEDIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-ivory/90 hover:text-coral transition-colors text-base sm:text-lg font-bold"
+                className="inline-flex items-center justify-center gap-2 text-ivory/90 hover:text-coral transition-colors text-base sm:text-lg font-bold"
               >
                 <svg
                   className="w-6 h-6 shrink-0"
@@ -47,9 +47,9 @@ export default function Layout() {
             </div>
           </div>
 
-          <div className="h-px bg-ivory/10 mb-8" />
+          <div className="h-px bg-ivory/10 mb-5 sm:mb-8" />
 
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2 sm:gap-4 text-center">
             <p className="text-ivory/60 text-sm sm:text-base">
               &copy; {new Date().getFullYear()}{" "}
               <span className="text-gold">Robin Stephens Rohr</span>. All
