@@ -618,13 +618,6 @@ export default function Home() {
         </div>
       </section>
 
-      <SectionDivider
-        from={SECTION_COLORS.navy50}
-        to={SECTION_COLORS.navy900}
-        wave="deep"
-        className="h-10 md:h-14"
-      />
-
       <Media />
 
       <SectionDivider

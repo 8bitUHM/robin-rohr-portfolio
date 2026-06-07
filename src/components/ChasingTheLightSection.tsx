@@ -2,7 +2,7 @@ export default function ChasingTheLightSection() {
   return (
     <div
       id="chasing-the-light"
-      className="fade-in fade-in-delay-2 relative"
+      className="fade-in fade-in-delay-2 relative mt-2 md:mt-3"
     >
       <div className="relative rounded-3xl bg-gradient-to-b from-white/[0.08] to-white/[0.03] border border-ivory/10 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.45)] overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold-dark via-gold to-coral/80" />
