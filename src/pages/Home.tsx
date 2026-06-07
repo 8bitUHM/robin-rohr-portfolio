@@ -216,7 +216,7 @@ export default function Home() {
               <span className="hidden sm:inline"> &middot; </span>
               <span className="block sm:inline">Advocate</span>
             </p>
-            <h1 className="hero-title mb-5 fade-in fade-in-delay-1 whitespace-nowrap">
+            <h1 className="hero-title mb-7 fade-in fade-in-delay-1 whitespace-nowrap">
               <span className="hero-title__word hero-title__word--robin">Robin</span>{" "}
               <span className="hero-title__word hero-title__word--stephens">Stephens</span>{" "}
               <span className="hero-title__word hero-title__word--rohr">Rohr</span>
