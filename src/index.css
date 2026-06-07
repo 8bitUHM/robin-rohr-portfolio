@@ -144,6 +144,11 @@
     @apply font-bold leading-snug;
   }
 
+  .footer-name {
+    font-size: calc(20px * var(--text-heading) / 27px);
+    @apply font-bold leading-snug;
+  }
+
   .site-subheading {
     font-size: var(--text-subheading);
     @apply font-bold leading-snug;

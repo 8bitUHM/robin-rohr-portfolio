@@ -19,7 +19,7 @@ export default function Layout() {
         <div className="max-w-6xl mx-auto px-6 pt-5 pb-5 sm:pt-8 sm:pb-8">
           <div className="grid sm:grid-cols-2 gap-2 sm:gap-6 mb-5 sm:mb-8 text-center sm:text-left">
             <div>
-              <p className="text-gold font-bold site-heading tracking-tight">
+              <p className="text-gold font-bold footer-name tracking-tight">
                 Robin Stephens Rohr
               </p>
             </div>
@@ -32,7 +32,7 @@ export default function Layout() {
                 href={LINKEDIN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 text-ivory/90 hover:text-coral transition-colors text-base sm:text-lg font-bold"
+                className="inline-flex items-center justify-center gap-2 text-ivory/90 hover:text-gold transition-colors text-base sm:text-lg font-bold"
               >
                 <svg
                   className="w-6 h-6 shrink-0"
