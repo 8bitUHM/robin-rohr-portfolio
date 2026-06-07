@@ -1,5 +1,6 @@
 import AlsoInThePressSection from "../components/AlsoInThePressSection";
 import ChasingTheLightSection from "../components/ChasingTheLightSection";
+import CourtyardQuotesGallery from "../components/CourtyardQuotesGallery";
 
 export default function Media() {
   return (
@@ -73,6 +74,8 @@ export default function Media() {
                 />
               </div>
             </div>
+
+            <CourtyardQuotesGallery />
           </div>
 
           <AlsoInThePressSection />
