@@ -17,6 +17,11 @@ export const courtyardQuotes: CourtyardQuote[] = [
     layout: "landscape",
   },
   {
+    src: "/images/courtyard-quotes/03-power-to-choose-courtyard.jpg",
+    alt: "The Power to Choose Courtyard — a garden of ideas to work hard and dream big",
+    layout: "landscape",
+  },
+  {
     src: "/images/courtyard-quotes/03-imagine-choices.jpg",
     alt: "Imagine how your choices, education, hard work and aloha could make a difference",
     layout: "landscape",
