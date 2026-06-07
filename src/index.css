@@ -241,11 +241,25 @@
     font-weight: var(--hero-title-weight, 900);
     font-style: var(--hero-title-style, normal);
     color: rgb(var(--hero-title-color, 28 61 110));
-    -webkit-text-stroke: var(--hero-title-stroke-width, 0px)
-      rgb(var(--hero-title-stroke-color, 28 61 110));
-    paint-order: stroke fill;
     text-transform: uppercase;
     @apply leading-[1.05];
+  }
+
+  .hero-title__word {
+    paint-order: stroke fill;
+  }
+
+  .hero-title__word--robin {
+    -webkit-text-stroke: 1.5px #000;
+  }
+
+  .hero-title__word--stephens {
+    -webkit-text-stroke: 1.5px rgb(var(--hero-title-color, 28 61 110));
+  }
+
+  .hero-title__word--rohr {
+    -webkit-text-stroke: var(--hero-title-stroke-width, 0.75px)
+      rgb(var(--hero-title-stroke-color, 28 61 110));
   }
 
   .testimonial-attribution {

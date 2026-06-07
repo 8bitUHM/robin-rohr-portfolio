@@ -210,15 +210,16 @@ export default function Home() {
         </div>
 
         <div className="max-w-6xl mx-auto relative">
-          <div className="text-center mb-16 md:mb-20">
+          <div className="text-center mb-10 md:mb-12">
             <p className="hero-tagline text-gold uppercase mb-8 fade-in ornament-line text-center sm:whitespace-nowrap">
               <span className="block sm:inline">Author &middot; Journalist</span>
               <span className="hidden sm:inline"> &middot; </span>
               <span className="block sm:inline">Advocate</span>
             </p>
-            <h1 className="hero-title mb-8 fade-in fade-in-delay-1 whitespace-nowrap">
-              <span>Robin Stephens</span>{" "}
-              <span>Rohr</span>
+            <h1 className="hero-title mb-4 fade-in fade-in-delay-1 whitespace-nowrap">
+              <span className="hero-title__word hero-title__word--robin">Robin</span>{" "}
+              <span className="hero-title__word hero-title__word--stephens">Stephens</span>{" "}
+              <span className="hero-title__word hero-title__word--rohr">Rohr</span>
             </h1>
             <blockquote className="fade-in fade-in-delay-2 relative hero-quote mx-auto px-4 sm:px-6">
               <p className="flex flex-col items-center">
@@ -248,7 +249,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative w-full md:pl-6 lg:pl-10 md:pr-6 lg:pr-10">
+        <div className="relative w-full md:pl-6 lg:pl-10 md:pr-6 lg:pr-10 -mt-2 md:-mt-3">
           <div className="grid md:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] lg:grid-cols-[minmax(0,24rem)_minmax(0,1.35fr)] gap-10 md:gap-12 items-start fade-in fade-in-delay-3 w-full">
             <div className="relative w-full max-w-sm mx-auto md:mx-0 md:max-w-none">
               <div className="absolute -inset-3 bg-gradient-to-br from-navy-600/20 via-gold/10 to-navy-800/20 rounded-3xl blur-sm" />
@@ -328,8 +329,9 @@ export default function Home() {
             <div className="space-y-5">
               <p className="reading-text">
                 There is impressive research from neuroscience and narrative
-                medicine, suggesting that wisdom-filled stories can positively
-                affect the mind and have a beneficial impact on our human biology.
+                medicine, suggesting that stories imbued with wisdom and shining a
+                light on human goodness, can positively affect the mind and have a
+                beneficial impact on our human biology.
               </p>
               <p className="reading-text">
                 The nervous system can respond to stories as real experience and
@@ -349,7 +351,11 @@ export default function Home() {
               <p className="reading-text">
                 The stories and the values they promote are how they entertain
                 and encourage us, how they teach our children and how
-                we can teach ourselves. Our prayers are that the teachings of these wisdom keepers will 'echo into eternity.'
+                we can teach ourselves.
+              </p>
+              <p className="reading-text">
+                Our prayers are that the teachings of these wisdom keepers will
+                reverberate throughout society and &lsquo;echo into eternity.&rsquo;
               </p>
             </div>
           </ThemeTopicCard>

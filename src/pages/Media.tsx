@@ -20,13 +20,20 @@ export default function Media() {
           <ChasingTheLightSection />
 
           <div className="space-y-8">
-            <h3 className="site-subheading text-ivory text-center">
-              The Power to Choose Courtyard
-            </h3>
+            <header className="text-center space-y-4 max-w-3xl mx-auto">
+              <h3 className="site-subheading text-gold leading-tight">
+                The Power to Choose Courtyard
+              </h3>
+              <p className="reading-text-on-dark">
+                Celebrates{" "}
+                <em className="italic">the power of words</em> to impact the
+                human being and produce profound and beneficial change.
+              </p>
+            </header>
 
             <div className="max-w-3xl md:max-w-4xl lg:max-w-5xl mx-auto space-y-5">
               <p className="reading-text-on-dark">
-                Beloved community leader Lynn Watanabe and Robin found funding for
+                Dynamic community leader Lynn Watanabe and Robin found funding for
                 and created The Power to Choose Courtyard, a garden of ideas and
                 messages.
               </p>
@@ -69,6 +76,11 @@ export default function Media() {
                 />
               </div>
             </div>
+
+            <p className="reading-text-on-dark text-center max-w-3xl mx-auto">
+              Our prayers are that the teachings of these wisdom keepers will
+              reverberate throughout society and &lsquo;echo into eternity.&rsquo;
+            </p>
           </div>
         </div>
       </div>
