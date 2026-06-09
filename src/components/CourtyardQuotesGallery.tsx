@@ -8,9 +8,16 @@ export default function CourtyardQuotesGallery() {
           return (
             <div
               key={`text-${index}`}
-              className="max-w-3xl md:max-w-4xl mx-auto rounded-2xl bg-white/[0.06] border border-ivory/10 p-4 md:p-5 text-center"
+              className="max-w-3xl md:max-w-4xl mx-auto rounded-2xl bg-white/[0.06] border border-ivory/10 p-4 md:p-5 text-center space-y-3 md:space-y-4"
             >
-              <p className="reading-text-on-dark-sm">{item.content}</p>
+              {item.paragraphs.map((paragraph, paragraphIndex) => (
+                <p
+                  key={paragraphIndex}
+                  className={`reading-text-on-dark-sm${paragraph.italic ? " italic" : ""}`}
+                >
+                  {paragraph.text}
+                </p>
+              ))}
             </div>
           );
         }

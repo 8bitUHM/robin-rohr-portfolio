@@ -6,7 +6,10 @@ export type CourtyardQuote = {
 
 export type CourtyardGalleryItem =
   | ({ kind: "image" } & CourtyardQuote)
-  | { kind: "text"; content: string };
+  | {
+      kind: "text";
+      paragraphs: Array<{ text: string; italic?: boolean }>;
+    };
 
 /** Cropped signage from Power to Choose Courtyard PDFs — order matches display. */
 export const courtyardGalleryItems: CourtyardGalleryItem[] = [
@@ -36,8 +39,15 @@ export const courtyardGalleryItems: CourtyardGalleryItem[] = [
   },
   {
     kind: "text",
-    content:
-      "Utilizing large metallic signage boards, the 80 aspirational quotes in the Courtyard have influenced and transformed many lives.",
+    paragraphs: [
+      {
+        text: "Lives that have been reshaped by positivity.",
+        italic: true,
+      },
+      {
+        text: "Utilizing large metallic signage boards, the 80 aspirational quotes in the Courtyard have influenced and transformed many lives.",
+      },
+    ],
   },
   {
     kind: "image",
