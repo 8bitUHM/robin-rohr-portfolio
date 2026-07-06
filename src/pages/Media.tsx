@@ -38,7 +38,7 @@ export default function Media() {
               <p className="reading-text-on-dark">
                 In this originally barren open space, at a Hawai&#699;i High School, trees and flowers were
                 planted, tables and chairs were installed, and it became a gathering
-                place for students to collaborate, to work together and to dream big.
+                place for students to collaborate, to work together and to dream.
               </p>
               <p className="reading-text-on-dark">
                 The students were surrounded by 80 inspirational quotes and a

@@ -5,139 +5,190 @@ type Article = {
   file: string;
   type: "pdf" | "image";
   previewImage?: string;
-  layout?: "portrait" | "landscape";
+  orientation: "portrait" | "landscape";
 };
 
-const pressFeatures: Article[] = [
+const leadingPressImages: Article[] = [
   {
-    title: "Press Feature — Island Life",
+    title: "MidWeek cover — Chicken Soup Local Style, April 9, 2003",
+    file: "/images/press/midweek-chicken-soup-cover.jpg",
+    type: "image",
+    orientation: "portrait",
+  },
+  {
+    title: "MidWeek cover story — Chicken Soup Goes Hawaiian, page 40",
+    file: "/images/press/midweek-chicken-soup-page-40.jpeg",
+    type: "image",
+    orientation: "landscape",
+  },
+  {
+    title: "MidWeek — Hawaii\u2019s Message For The World, page 71",
+    file: "/images/press/midweek-chicken-soup-page-71.jpeg",
+    type: "image",
+    orientation: "landscape",
+  },
+  {
+    title: "The Honolulu Advertiser Island Life — Local kine soup from the Hawaiian soul",
     file: "/images/press/island-life-feature.jpeg",
     type: "image",
-    layout: "portrait",
+    orientation: "landscape",
   },
+  {
+    title: "The Honolulu Advertiser Island Life — Soul: A distinctly local approach, page 2",
+    file: "/images/press/island-life-soul-page-2.jpeg",
+    type: "image",
+    orientation: "landscape",
+  },
+];
+
+const pressFeatures: Article[] = [
   {
     title: "Time for Pele\u2019s curse to take a rest — Star-Bulletin",
     file: "/images/press/powerstones-peles-curse-star-bulletin.jpeg",
     type: "image",
-    layout: "portrait",
+    orientation: "portrait",
   },
   {
     title: "Powerstones — Island Life, November 1994",
     file: "/images/press/powerstones-island-life-1994.jpg",
     type: "image",
-    layout: "landscape",
+    orientation: "landscape",
   },
   {
     title: "Chicken Soup from the Soul of Hawai\u2018i — Star-Bulletin",
     file: "/images/press/chicken-soup-star-bulletin.jpeg",
     type: "image",
-    layout: "landscape",
+    orientation: "landscape",
   },
 ];
 
-const portraitFeatures = pressFeatures.filter((a) => a.layout !== "landscape");
-const landscapeFeatures = pressFeatures.filter((a) => a.layout === "landscape");
+const PRESS_ROW_WIDTH =
+  "w-full max-w-[min(100%,56rem)] lg:max-w-[min(100%,64rem)] mx-auto";
 
-function MediaPreview({
-  article,
-  className = "",
-  fit = "cover",
-}: {
-  article: Article;
-  className?: string;
-  fit?: "cover" | "contain";
-}) {
+function MediaPreview({ article }: { article: Article }) {
   const [loaded, setLoaded] = useState(false);
-  const objectFit = fit === "contain" ? "object-contain" : "object-cover";
 
   return (
-    <div
-      className={`relative overflow-hidden bg-ivory/95 rounded-xl ring-1 ring-ivory/20 ${className}`}
-    >
+    <div className="relative overflow-hidden bg-ivory/95 rounded-lg ring-1 ring-ivory/20">
       {!loaded && (
-        <div className="absolute inset-0 z-10 flex items-center justify-center bg-navy-900/5">
+        <div className="absolute inset-0 z-10 flex items-center justify-center bg-navy-900/5 min-h-[10rem]">
           <div className="w-8 h-8 border-2 border-navy-800/15 border-t-gold/80 rounded-full animate-spin" />
         </div>
       )}
-      {article.type === "image" || article.previewImage ? (
-        <img
-          src={article.type === "image" ? article.file : article.previewImage!}
-          alt={article.title}
-          className={`w-full h-full ${objectFit} object-top transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
-          onLoad={() => setLoaded(true)}
-        />
-      ) : (
-        <object
-          data={article.file}
-          type="application/pdf"
-          className={`w-full h-full transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
-          onLoad={() => setLoaded(true)}
-          aria-label={article.title}
-        >
-          <div className="flex h-full min-h-[12rem] items-center justify-center p-6 text-center text-sm font-bold text-navy-800">
-            PDF preview unavailable
-          </div>
-        </object>
-      )}
+      <img
+        src={article.file}
+        alt={article.title}
+        className={`block w-full h-auto transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
+        loading="lazy"
+        onLoad={() => setLoaded(true)}
+      />
     </div>
   );
 }
 
-function PressFeatureCard({
+function PressCard({
   article,
   index,
 }: {
   article: Article;
   index: number;
 }) {
-  const cardClass = `fade-in fade-in-delay-${index + 1} overflow-hidden rounded-2xl bg-white/[0.06] border border-ivory/10 p-2 md:p-3`;
-
-  if (article.layout === "landscape") {
-    return (
-      <figure className={cardClass}>
-        <img
-          src={article.file}
-          alt={article.title}
-          className="block w-full h-auto rounded-lg"
-          loading="lazy"
-        />
-      </figure>
-    );
-  }
-
   return (
-    <figure className={cardClass}>
-      <div className="relative aspect-[3/4] w-full rounded-lg overflow-hidden">
-        <MediaPreview article={article} className="absolute inset-0 h-full ring-0" />
-      </div>
+    <figure
+      className={`fade-in fade-in-delay-${Math.min(index + 1, 6)} overflow-hidden rounded-xl bg-white/[0.06] border border-ivory/10 p-2 md:p-2.5 h-full`}
+    >
+      <MediaPreview article={article} />
     </figure>
   );
 }
 
+function chunkPairs(items: Article[]): Article[][] {
+  const rows: Article[][] = [];
+  for (let i = 0; i < items.length; i += 2) {
+    rows.push(items.slice(i, i + 2));
+  }
+  return rows;
+}
+
+function PressPairRow({
+  row,
+  startIndex,
+}: {
+  row: Article[];
+  startIndex: number;
+}) {
+  const isPair = row.length === 2;
+
+  return (
+    <div
+      className={`${PRESS_ROW_WIDTH} ${
+        isPair
+          ? "grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 items-start"
+          : "w-full"
+      }`}
+    >
+      {row.map((article, columnIndex) => {
+        const index = startIndex + columnIndex;
+        return (
+          <div key={article.file} className={isPair ? "min-w-0" : "w-full"}>
+            <PressCard article={article} index={index} />
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 export default function AlsoInThePressSection() {
+  const allPress = [...leadingPressImages, ...pressFeatures];
+  const portraits = allPress.filter((item) => item.orientation === "portrait");
+  const leadingLandscapes = leadingPressImages.filter(
+    (item) => item.orientation === "landscape",
+  );
+  const trailingLandscapes = pressFeatures.filter(
+    (item) => item.orientation === "landscape",
+  );
+  const portraitRows = chunkPairs(portraits);
+  const landscapeRows = [
+    ...chunkPairs(leadingLandscapes),
+    ...trailingLandscapes.map((item) => [item]),
+  ];
+
+  let itemIndex = 0;
+
   return (
     <div
       id="also-in-the-press"
-      className="space-y-4 lg:space-y-5 pt-5 md:pt-6 border-t border-ivory/10"
+      className="space-y-3 md:space-y-4 pt-5 md:pt-6 border-t border-ivory/10"
     >
-      <div className="border-b border-ivory/10 pb-3 text-center">
+      <div className="border-b border-ivory/10 pb-2 md:pb-3 text-center">
         <h4 className="site-subheading text-ivory">In the Media</h4>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-4 lg:gap-6">
-        {portraitFeatures.map((article, i) => (
-          <PressFeatureCard key={article.file} article={article} index={i} />
-        ))}
-      </div>
+      <div className="space-y-3 md:space-y-4">
+        {portraitRows.map((row, rowIndex) => {
+          const startIndex = itemIndex;
+          itemIndex += row.length;
+          return (
+            <PressPairRow
+              key={`portrait-row-${rowIndex}`}
+              row={row}
+              startIndex={startIndex}
+            />
+          );
+        })}
 
-      <div className="space-y-4 lg:space-y-5">
-        {landscapeFeatures.map((article, i) => (
-          <PressFeatureCard
-            key={article.file}
-            article={article}
-            index={portraitFeatures.length + i}
-          />
-        ))}
+        {landscapeRows.map((row, rowIndex) => {
+          const startIndex = itemIndex;
+          itemIndex += row.length;
+          return (
+            <PressPairRow
+              key={`landscape-row-${rowIndex}`}
+              row={row}
+              startIndex={startIndex}
+            />
+          );
+        })}
       </div>
     </div>
   );
