@@ -14,7 +14,7 @@ export default function Media() {
       </div>
 
       <div className="max-w-4xl md:max-w-5xl lg:max-w-6xl mx-auto relative space-y-5 md:space-y-6">
-        <div className="fade-in fade-in-delay-1 space-y-5 md:space-y-6">
+        <div className="space-y-5 md:space-y-6">
           <ChasingTheLightSection />
 
           <div className="space-y-5">

@@ -86,16 +86,10 @@ function MediaPreview({ article }: { article: Article }) {
   );
 }
 
-function PressCard({
-  article,
-  index,
-}: {
-  article: Article;
-  index: number;
-}) {
+function PressCard({ article }: { article: Article }) {
   return (
     <figure
-      className={`fade-in fade-in-delay-${Math.min(index + 1, 6)} overflow-hidden rounded-xl bg-white/[0.06] border border-ivory/10 p-2 md:p-2.5 h-full`}
+      className="overflow-hidden rounded-xl bg-white/[0.06] border border-ivory/10 p-2 md:p-2.5 h-full"
     >
       <MediaPreview article={article} />
     </figure>
@@ -110,13 +104,7 @@ function chunkPairs(items: Article[]): Article[][] {
   return rows;
 }
 
-function PressPairRow({
-  row,
-  startIndex,
-}: {
-  row: Article[];
-  startIndex: number;
-}) {
+function PressPairRow({ row }: { row: Article[] }) {
   const isPair = row.length === 2;
 
   return (
@@ -127,14 +115,11 @@ function PressPairRow({
           : "w-full"
       }`}
     >
-      {row.map((article, columnIndex) => {
-        const index = startIndex + columnIndex;
-        return (
-          <div key={article.file} className={isPair ? "min-w-0" : "w-full"}>
-            <PressCard article={article} index={index} />
-          </div>
-        );
-      })}
+      {row.map((article) => (
+        <div key={article.file} className={isPair ? "min-w-0" : "w-full"}>
+          <PressCard article={article} />
+        </div>
+      ))}
     </div>
   );
 }
@@ -154,8 +139,6 @@ export default function AlsoInThePressSection() {
     ...trailingLandscapes.map((item) => [item]),
   ];
 
-  let itemIndex = 0;
-
   return (
     <div
       id="also-in-the-press"
@@ -166,29 +149,13 @@ export default function AlsoInThePressSection() {
       </div>
 
       <div className="space-y-3 md:space-y-4">
-        {portraitRows.map((row, rowIndex) => {
-          const startIndex = itemIndex;
-          itemIndex += row.length;
-          return (
-            <PressPairRow
-              key={`portrait-row-${rowIndex}`}
-              row={row}
-              startIndex={startIndex}
-            />
-          );
-        })}
+        {portraitRows.map((row, rowIndex) => (
+          <PressPairRow key={`portrait-row-${rowIndex}`} row={row} />
+        ))}
 
-        {landscapeRows.map((row, rowIndex) => {
-          const startIndex = itemIndex;
-          itemIndex += row.length;
-          return (
-            <PressPairRow
-              key={`landscape-row-${rowIndex}`}
-              row={row}
-              startIndex={startIndex}
-            />
-          );
-        })}
+        {landscapeRows.map((row, rowIndex) => (
+          <PressPairRow key={`landscape-row-${rowIndex}`} row={row} />
+        ))}
       </div>
     </div>
   );
