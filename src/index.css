@@ -25,7 +25,7 @@
   --hero-quote-style: italic;
   --hero-quote-font-family: "Quicksand", sans-serif;
 
-  /* Typography — body 22.5px mobile / 34px desktop; other roles scaled from prior Tailwind ratios */
+  /* Typography — body 22.5px mobile / 26px desktop; other roles scaled from prior Tailwind ratios */
   --text-body: 22.5px;
   --text-heading: 27px;
   --text-subheading: 27px;
@@ -63,7 +63,7 @@
 
 @media (min-width: 768px) {
   :root {
-    --text-body: 34px;
+    --text-body: 26px;
     --text-heading: 45.33px;
     --text-subheading: 45.33px;
     --text-stat: 56.67px;
