@@ -256,6 +256,8 @@
     font-style: var(--hero-title-style);
     color: rgb(var(--hero-title-color));
     text-transform: uppercase;
+    width: 100%;
+    text-align: center;
     @apply leading-[1.05];
   }
 

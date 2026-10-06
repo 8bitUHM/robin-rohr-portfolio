@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
   ROBIN_HEADSHOT_FALLBACK_SRC,
   ROBIN_HEADSHOT_SRC,
@@ -196,7 +196,31 @@ function StatBlock({
 export default function Home() {
   const [imgLoaded, setImgLoaded] = useState(false);
   const [imgSrc, setImgSrc] = useState(ROBIN_HEADSHOT_SRC);
+  const heroTitleRef = useRef<HTMLHeadingElement>(null);
   useScrollAnimation();
+
+  useEffect(() => {
+    const title = heroTitleRef.current;
+    if (!title) return;
+
+    const fitHeroTitle = () => {
+      title.style.fontSize = "";
+      if (window.innerWidth >= 768) return;
+
+      const available = title.clientWidth;
+      const needed = title.scrollWidth;
+      if (needed <= available + 1) return;
+
+      const current = parseFloat(getComputedStyle(title).fontSize);
+      const next = Math.floor(current * ((available - 2) / needed) * 100) / 100;
+      title.style.fontSize = `${Math.max(next, 14)}px`;
+    };
+
+    fitHeroTitle();
+    document.fonts?.ready.then(fitHeroTitle);
+    window.addEventListener("resize", fitHeroTitle);
+    return () => window.removeEventListener("resize", fitHeroTitle);
+  }, []);
 
   return (
     <>
@@ -216,7 +240,10 @@ export default function Home() {
               <span className="hidden sm:inline"> &middot; </span>
               <span className="block sm:inline">Advocate</span>
             </p>
-            <h1 className="hero-title mb-7 fade-in fade-in-delay-1 whitespace-nowrap">
+            <h1
+              ref={heroTitleRef}
+              className="hero-title mb-7 fade-in fade-in-delay-1 whitespace-nowrap"
+            >
               <span className="hero-title__word hero-title__word--robin">Robin</span>{" "}
               <span className="hero-title__word hero-title__word--stephens">Stephens</span>{" "}
               <span className="hero-title__word hero-title__word--rohr">Rohr</span>
