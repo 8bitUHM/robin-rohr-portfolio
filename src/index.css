@@ -25,7 +25,7 @@
   --hero-quote-style: italic;
   --hero-quote-font-family: "Quicksand", sans-serif;
 
-  /* Typography — body 22.5px mobile / 26px desktop; other roles scaled from prior Tailwind ratios */
+  /* Typography — body 22.5px mobile / 22px desktop; other roles scaled from prior Tailwind ratios */
   --text-body: 22.5px;
   --text-heading: 27px;
   --text-subheading: 27px;
@@ -63,16 +63,17 @@
 
 @media (min-width: 768px) {
   :root {
-    --text-body: 26px;
-    --text-heading: 45.33px;
-    --text-subheading: 45.33px;
+    --text-body: 22px;
+    --text-heading: 33px;
+    --text-subheading: 33px;
     --text-stat: 56.67px;
     --text-stat-label: 17px;
-    --text-section-label: 34px;
-    --text-media-title: 28.33px;
-    --text-media-body: 18.89px;
-    --text-page-title: 45.33px;
-    --text-hero-title: 50px;
+    --text-section-label: 24.2px;
+    --text-media-title: 24.2px;
+    --text-media-body: 17.6px;
+    --text-page-title: 35.2px;
+    --text-hero-title: 44px;
+    --text-hero-quote: 28.6px;
     --text-hero-tagline: 29px;
     --text-ui: 15.11px;
     --text-ui-lg: 17px;
@@ -81,15 +82,15 @@
 
 @media (min-width: 1024px) {
   :root {
-    --text-page-title: 56.67px;
-    --text-hero-title: 62px;
+    --text-page-title: 39.6px;
+    --text-hero-title: 50.6px;
     --text-hero-tagline: 32px;
   }
 }
 
 @media (min-width: 1280px) {
   :root {
-    --text-hero-title: 75px;
+    --text-hero-title: 57.2px;
     --text-hero-tagline: 36px;
   }
 }
